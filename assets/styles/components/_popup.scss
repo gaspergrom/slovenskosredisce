@@ -1,0 +1,27 @@
+.popup{
+  max-height: 420px;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+  overflow: auto;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.popup__overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 999;
+  padding: 15px;
+  opacity: 0;
+  visibility: hidden;
+  @include transition();
+  &.open{
+    visibility: visible;
+    opacity: 1;
+  }
+}

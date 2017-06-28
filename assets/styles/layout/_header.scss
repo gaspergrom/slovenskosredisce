@@ -1,0 +1,104 @@
+/*----------------------------------*\
+    Header
+\*----------------------------------*/
+.header {
+    z-index: 997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+
+
+    &__links{
+        z-index: 998;
+
+        @media #{$header-down}{
+            visibility: hidden;
+            opacity: 0;
+            @include transition();
+
+            &.open{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn {
+        z-index: 999;
+        position: relative;
+        width: 25px;
+        height: 30px;
+        cursor: pointer;
+        @include transform(rotate(0deg));
+        @media #{$header-up} {
+            display: none;
+        }
+        span {
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 3px;
+            opacity: 1;
+            background: $color-black;
+            @include transform(rotate(0deg));
+            @include transition(.25s ease-in-out);
+            &:nth-child(even) {
+                left: 50%;
+                border-radius: 0 9px 9px 0;
+            }
+            &:nth-child(odd) {
+                left: 0;
+                border-radius: 9px 0 0 9px;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                top: 5px;
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+                top: 13px;
+            }
+            &:nth-child(5),
+            &:nth-child(6) {
+                top: 21px;
+            }
+        }
+        &.open span {
+            background-color: $color-black;
+            &:nth-child(1),
+            &:nth-child(6) {
+                @include transform(rotate(45deg));
+            }
+            &:nth-child(2),
+            &:nth-child(5) {
+                @include transform(rotate(-45deg));
+            }
+            &:nth-child(1) {
+                top: 9px;
+                left: 2.5px;
+            }
+            &:nth-child(2) {
+                top: 9px;
+                left: calc(50% - 2.5px);
+            }
+            &:nth-child(3) {
+                left: -50%;
+                opacity: 0;
+            }
+            &:nth-child(4) {
+                left: 100%;
+                opacity: 0;
+            }
+            &:nth-child(5) {
+                top: 17px;
+                left: 2.5px;
+            }
+            &:nth-child(6) {
+                top: 17px;
+                left: calc(50% - 2.5px);
+            }
+        }
+    }
+}

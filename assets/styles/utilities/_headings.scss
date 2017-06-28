@@ -1,0 +1,26 @@
+/*----------------------------------*\
+		Headings
+\*----------------------------------*/
+
+/* heading sizes */
+@each $name, $h in $headings{
+  #{$name} {
+    @each $area, $value in $h{
+      @media #{$area} {
+        font-size: $value;
+      }
+    }
+  }
+}
+
+/* additional styling */
+h1,.h1{}
+h2,.h2{
+  color: $color-grey-dark;
+}
+h3,.h3{
+  color: $color-grey-dark;
+}
+h4,.h4{}
+h5,.h5{}
+h6,.h6{}

@@ -1,0 +1,35 @@
+/*----------------------------------*\
+    Buttons
+\*----------------------------------*/
+.btn {
+
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 18px 40px;
+  border: none;
+  line-height: 13px;
+  @include transform(scale(1));
+  @include transition();
+  &:hover{
+    @include transform(scale(1.05));
+  }
+
+  &__default{
+    background-image: linear-gradient(to left, $color-blue-light, $color-blue-dark);
+    box-shadow: 0 10px 40px 0 rgba(46,184,231,0.25);
+    color: white;
+
+  }
+  &--round{
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+  }
+  &--full{
+    width: 100%;
+  }
+}
