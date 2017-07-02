@@ -19,3 +19,9 @@ $breakpoints: (
         'md': $md-up,
         'lg': $lg-up
 );
+$breakpoints-down: (
+        'xs': $xs-down,
+        'sm': $sm-down,
+        'md': $md-down,
+       // 'lg': $lg-down
+);

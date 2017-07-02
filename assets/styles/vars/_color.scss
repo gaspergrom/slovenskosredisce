@@ -8,8 +8,9 @@ $color-black: #000;
 $color-orange: #dd7815;
 $color-grey-dark: #404040;
 $color-grey-light: #8b8b8b;
-$color-blue-light: #71ff05;
-$color-blue-dark: #6ac30b;
+$color-grey-lighter: #f5f4f2;
+$color-green-light: #53d44c;
+$color-green-dark: #4dbc46;
 //$color-blue-light: #57d8ef;
 //$color-blue-dark: #2eb9e7;
 /* colors you want to include in text and background */
@@ -17,7 +18,9 @@ $colors: (
 
         'white': $color-white,
         'orange': $color-orange,
-        'grey': $color-grey-dark,
+        'grey': $color-grey-lighter,
+        'green': $color-green-dark,
+        'grey-dark': $color-grey-dark,
 
 );
 

@@ -10,7 +10,7 @@
         background-size: cover;
     }
     &--gradient{
-        background-image: linear-gradient(to left, $color-blue-light, $color-blue-dark);
+        background-image: linear-gradient(to left, $color-green-light, $color-green-dark);
     }
     /* background-colors */
     @each $name, $value in $colors{

@@ -237,7 +237,7 @@
   @include transition();
   &.active{
     @include transform(scale(1.5));
-    background-color: $color-blue-dark;
+    background-color: $color-green-dark;
   }
   &:hover{
     @include transform(scale(1.5));

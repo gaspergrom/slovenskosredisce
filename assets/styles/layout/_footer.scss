@@ -2,5 +2,27 @@
     Footer
 \*----------------------------------*/
 .footer {
-
+    background-color: black;
+    svg{
+        path{
+            fill:#8b8b8b;
+            @include transition();
+        }
+        &:hover{
+            path{
+                fill: #fff;
+            }
+        }
+    }
+    nav{
+        a{
+            @include transition();
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    .copyright{
+        border-top: solid 1px #8b8b8b;
+    }
 }

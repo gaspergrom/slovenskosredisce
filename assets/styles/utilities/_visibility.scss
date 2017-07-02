@@ -1,32 +1,38 @@
 /*----------------------------------*\
-    elements visibility
+    Element Visibility
 \*----------------------------------*/
-
-
-.show{
-  display: none;
-  
-  &-xs{
-    @media #{$xs-only} {
-      display: flex;
+/*
+	Element Visible
+*/
+/* "display: none;" for all visible classes */
+[class*=" show-"],
+[class^="show-"] {
+  display: none !important;
+}
+$display: (
+        flex,
+        block,
+        //inline,
+        //inline-block
+);
+/* Override none property with appropriate one (flex, block, inline, inline-block). Use it as "show-xs-flex" */
+@each $class, $point in $breakpoints-down {
+  @media #{$point} {
+    @each $property in $display {
+      .show-#{$class}-#{$property} {
+        display: $property !important;
+      }
     }
   }
-
-  &-sm{
-    @media #{$sm-only} {
-      display: flex;
-    }
-  }
-
-  &-md{
-    @media #{$md-only} {
-      display: flex;
-    }
-  }
-
-  &-lg{
-    @media #{$lg-only} {
-      display: flex;
+}
+/*
+	Element Hidden
+*/
+/* Add "display: none;" to the appropriate breakpoint. Use it as "hide-xs" */
+@each $class, $point in $breakpoints-down {
+  @media #{$point}{
+    .hide-#{$class} {
+      display: none !important;
     }
   }
 }

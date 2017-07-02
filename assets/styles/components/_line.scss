@@ -1,10 +1,12 @@
 .line{
-  border-top: solid 1px #fff;
+  &--bottom{
+    border-bottom: 1px solid #E5E5E5;
+  }
 }
 hr{
   margin: 5px auto 40px auto;
   height: 5px;
   width: 80px;
-  background-image: linear-gradient(to left, $color-blue-light, $color-blue-dark);
+  background-image: linear-gradient(to left, $color-green-light, $color-green-dark);
   border: 0;
 }
