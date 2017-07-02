@@ -1,7 +1,4 @@
-new WOW().init();
-
 $(function() {
-    $('.parallax-window').parallax();
     btn=$('.header__btn');
     navbar=$('.header__links');
     body=$('body');
@@ -10,6 +7,7 @@ $(function() {
         navbar.toggleClass('open');
         btn.toggleClass('open');
         body.toggleClass('overflow');
+        $("header").toggleClass('open');
     });
 
     $('.owl-carousel').owlCarousel({
@@ -20,6 +18,17 @@ $(function() {
         nav: false
     });
 
+    if ($(this).scrollTop() > 100) {
+        $('header').addClass("scroll");
+    }
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('header').addClass("scroll");
+        } else {
+            $('header').removeClass("scroll");
+        }
+    });
     //
     $("[data-popup]").click(function (e) {
         $("#"+$(this).attr("data-popup")).addClass("open");
