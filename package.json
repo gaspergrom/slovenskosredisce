@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gaspergrom/project"
+    "url": "git+https://github.com/gaspergrom/DEFAULT"
   },
   "author": "Gasper Grom",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/gaspergrom/project/issues"
+    "url": "https://github.com/gaspergrom/DEFAULT/issues"
   },
-  "homepage": "https://github.com/gaspergrom/project#readme",
+  "homepage": "https://github.com/gaspergrom/DEFAULT#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
@@ -25,11 +25,16 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-file-include": "^0.13.7",
     "gulp-flatten": "^0.3.0",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-sftp": "^0.1.5",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.8",
-    "run-sequence": "^1.2.1"
+    "gulp-zip": "^4.0.0",
+    "jquery": "^3.2.1",
+    "run-sequence": "^1.2.1",
+    "vinyl-ftp": "^0.6.0"
   }
 }
