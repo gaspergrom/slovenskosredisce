@@ -1,3 +1,12 @@
+var project=__dirname.split("\\").pop();
+
+//server details
+var hostname='gromgasper.com';
+var username='gromgasper';
+var remoteFolder = 'dev/'+project+"/";
+
+
+
 // Globals
 var browserSync = require('browser-sync'),
     gulp = require('gulp'),
@@ -11,7 +20,11 @@ cssNano = require('gulp-cssnano'),
     sftp = require('gulp-sftp'),
     sourcemaps = require('gulp-sourcemaps'),
     watch = require('gulp-watch'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    htmlmin = require('gulp-htmlmin'),
+    zip = require('gulp-zip'),
+    gutil = require( 'gulp-util' ),
+    ftp = require( 'vinyl-ftp' );
 
 // Paths
 var paths = {
@@ -50,13 +63,14 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(paths.dist + 'scripts'))
         .pipe(browserSync.stream());
 });
-gulp.task('js', function() {
-    return gulp.src([paths.src + 'js/*.js'])
-        .pipe(fileInclude())
-        .pipe(gulp.dest(paths.dist + 'js/'))
+gulp.task('jslibrary', function() {
+    return gulp.src(["node_modules/jquery/dist/jquery.min.js", paths.src + 'js/**/*.js'])
+        .pipe(sourcemaps.init())
+        .pipe(concat('libraries.js'))
+        .pipe(sourcemaps.write('sourcemaps'))
+        .pipe(gulp.dest(paths.dist + 'scripts'))
         .pipe(browserSync.stream());
 });
-
 // Images
 gulp.task('images', function() {
     return gulp.src(paths.src + 'images/*')
@@ -96,13 +110,93 @@ gulp.task('fonts', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('upload', function(callback) {
+    runSequence(
+        'build',
+        'ftp');
+});
+
+function getFtpConnection(d) {
+    return ftp.create({
+        host: hostname,
+        port: 21,
+        user: username,
+        password: d.toString().trim(),
+        parallel: 5,
+        log: gutil.log
+    });
+}
+
+var conn;
+
+gulp.task('ftp', function() {
+    process.stdout.write("Please enter password:            ");
+    var stdin = process.openStdin();
+    stdin.addListener("data", function(d) {
+        conn=getFtpConnection(d);
+        return gulp.src([paths.dist + '**/*'], { base: 'dist/', buffer: false })
+            .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+            .pipe( conn.dest( remoteFolder ) )
+
+    });
+});
+
+gulp.task('ftp-html', function(callback) {
+    return gulp.src( [paths.dist + "*.html" ], { base: 'dist/', buffer: false } )
+        .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+        .pipe( conn.dest( remoteFolder ) )
+        ;
+});
+
+gulp.task('ftp-styles', function(callback) {
+    return gulp.src( [paths.dist + "styles/**/*" ], { base: 'dist/', buffer: false } )
+        .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+        .pipe( conn.dest( remoteFolder ) )
+        ;
+});
+gulp.task('ftp-scripts', function(callback) {
+    return gulp.src( [paths.dist + "scripts/**/*" ], { base: 'dist/', buffer: false } )
+        .pipe( conn.newer( remoteFolder ) ) // only upload newer files
+        .pipe( conn.dest( remoteFolder ) )
+        ;
+});
+gulp.task('ftp-watch', function() {
+    process.stdout.write("Please enter password:            ");
+    var stdin = process.openStdin();
+    stdin.addListener("data", function(d) {
+        //single files
+        conn=getFtpConnection(d);
+        gulp.watch('./assets/templates/**/*.html')
+            .on('change', function(event) {
+                runSequence('html', 'ftp-html');
+                console.log('Changes detected! Uploading html files');
+            });
+        gulp.watch('./assets/styles/**/*.scss')
+            .on('change', function(event) {
+                runSequence('styles', 'ftp-styles');
+                console.log('Changes detected! Uploading styles');
+            });
+        gulp.watch('./assets/scripts/*.js')
+            .on('change', function(event) {
+                runSequence('scripts', 'ftp-scripts');
+                console.log('Changes detected! Uploading scripts');
+            });
+    });
+});
+
+gulp.task('zip', function(callback) {
+    return gulp.src(paths.dist + '**/*')
+        .pipe(zip(project+'.zip'))
+        .pipe(gulp.dest('.'))
+});
+
 // Default Gulp Build
 gulp.task('build', function(callback) {
     runSequence(
         'clean',
         'styles',
         'scripts',
-        'js',
+        'jslibrary',
         'fonts',
         'images',
         'html',
@@ -116,37 +210,17 @@ gulp.task('default', function() {
         'clean',
         'styles',
         'scripts',
-        'js',
+        'jslibrary',
         'fonts',
         'images',
         'html',
         'watch');
 });
 
-gulp.task('upload', function () {
-    return gulp.src(paths.dist + '**/*')
-        .pipe(sftp({
-            host: 'gromgasper.com',
-            user: 'gromgasper',
-            pass: 'pass',
-            remotePath: 'public_html/folder'
-        }));
-});
-
-gulp.task('serve', function(callback) {
-    runSequence(
-        'clean',
-        'styles',
-        'scripts',
-        'fonts',
-        'images',
-        'html',
-        'upload');
-});
 /* Gulp watch - watch changes of files in 'src' folder (run it by 'gulp watch') */
 gulp.task('watch', function() {
     browserSync.init({
-        proxy: 'localhost/slovenskosredisce',
+        proxy: 'localhost/'+project,
         port: 4000,
         ui: {
             port: 4001
@@ -157,7 +231,5 @@ gulp.task('watch', function() {
     });
     gulp.watch('./assets/templates/**/*', ['html']);
     gulp.watch('./assets/scripts/**/*', ['scripts']);
-    gulp.watch('./assets/fonts/**/*', ['fonts']);
-    gulp.watch('./assets/images/**/*', ['images']);
     gulp.watch('./assets/styles/**/*.scss', ['styles']);
 });
