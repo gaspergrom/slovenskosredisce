@@ -14,22 +14,34 @@
   line-height: 13px;
   @include transform(scale(1));
   @include transition();
-  &:hover{
+  &:hover {
     @include transform(scale(1.05));
   }
 
-  &__default{
+  &__default {
     background-image: linear-gradient(to left, $color-green-light, $color-green-dark);
     box-shadow: 0 10px 40px 0 transparentize($color-green-dark, 0.75);
     color: white;
 
   }
-  &--round{
+  &--round {
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
   }
-  &--full{
+  &--full {
     width: 100%;
+  }
+  &__delete{
+    border: 1px solid #d43f3a;
+    margin-top: 5px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #d9534f;
+    line-height: 1;
+    @include transition();
+    &:hover{
+      background-color: lighten(#d9534f, 5%);
+    }
   }
 }

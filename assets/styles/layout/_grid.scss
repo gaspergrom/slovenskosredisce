@@ -59,6 +59,13 @@
 	  Properties for parents - containers
 		Direction of displayed flex items
 	*/
+    &--one{
+        flex: 1;
+        -webkit-flex: 1;
+        max-width: 100%;
+        flex-basis: 100%;
+        -webkit-flex-basis: 100%;
+    }
     /* Direction of items left to right */
     &--row {
         flex-direction: row;
@@ -163,6 +170,7 @@
     width: 100%;
     padding-right: $padding;
     padding-left: $padding;
+    max-width: 100%;
 }
 /* set column width */
 @mixin col-width($per){
