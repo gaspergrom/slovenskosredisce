@@ -90,9 +90,10 @@
 				<h5 class="text--grey-dark mb5">Podjetje</h5>
 				<input type="text" v-model="podjetjeIme" placeholder="Ime podjetja" class="box mb10">
 				<input type="text" v-model="podjetjeNaslov" placeholder="Naslov" class="box mb10">
-				<input type="tel" v-model="podjetjeTelefon" placeholder="Telefon" class="box mb10">
-				<input type="tel" v-model="podjetjeFax" placeholder="Fax" class="box mb10">
-				<input type="email" v-model="podjetjeEmail" placeholder="Email" class="box mb10">
+				<input type="tel" v-model="podjetjeTelefon" placeholder="Telefonska številka" class="box mb10">
+				<input type="tel" v-model="podjetjeFax" placeholder="Faks" class="box mb10">
+				<input type="email" v-model="podjetjeEmail" placeholder="E-mail naslov" class="box mb10">
+				<input type="text" v-model="podjetjeRacun" placeholder="Poslovni račun" class="box mb10">
 				<input type="url" v-model="podjetjeSpletnaStran" placeholder="Spletna stran" class="box mb10">
 				<label class="radio flex flex--middle mb10">
 					<input type="checkbox" v-model="podjetjeDavcniZavezanec" value="1">
@@ -131,9 +132,12 @@
 				</div>
 				
 				<h5 class="text--grey-dark mb5">Ostalo</h5>
-				<textarea v-model="podjetjeAktivnosti" placeholder="Aktivnosti" class="box mb10"></textarea>
+				<textarea v-model="podjetjeAktivnosti" placeholder="Poslovne dejavnosti podjetja (ponudba)" class="box mb10"></textarea>
 				<input v-model="podjetjeZaposleni" type="number" placeholder="Število zaposlenih" class="box mb10">
 				<input v-model="podjetjePromet" type="number" placeholder="Promet podjetja (€)" class="box mb10">
+				<textarea v-model="podjetjeInteres" placeholder="Podrobna opredelitev poslovnega interesa" class="box mb10"></textarea>
+				<textarea v-model="podjetjeSodelovanje" placeholder="S katerimi podjetji bi želeli sodelovati?" class="box mb10"></textarea>
+				
 			</template>
 			
 			<template v-if="samoplacnik">
@@ -183,6 +187,7 @@
 	            podjetjeTelefon: "",
 	            podjetjeFax: "",
 	            podjetjeEmail: "",
+	            podjetjeRacun: "",
 	            podjetjeSpletnaStran: "",
 	            podjetjeDavcniZavezanec: false,
 	            podjetjeKontaktIme: "",
@@ -194,6 +199,8 @@
 	            podjetjeAktivnosti: "",
 	            podjetjeZaposleni: null,
 	            podjetjePromet: null,
+                podjetjeInteres: "",
+                podjetjeSodelovanje: "",
 	            
 	            ime: "",
 	            email: "",
@@ -201,12 +208,40 @@
                 status: 0,
 	            delo: "",
 	            sporocilo: ""
-	            
-	            
             },
 	        methods: {
                 prijava: function () {
-	                alert("test");
+	                var data={};
+                    data["samoplacnik"]=this.samoplacnik;
+	                if(this.samoplacnik){
+	                    data["samoplacnikIme"]=this.ime;
+	                    data["samoplacnikEmail"]=this.email;
+	                    data["samoplacnikTelefon"]=this.telefon;
+	                    data["samoplacnikStatus"]=this.status;
+	                    data["samoplacnikDelo"]=this.delo;
+	                    data["samoplacnikSporocilo"]=this.sporocilo;
+	                }
+	                else{
+                        data["podjetjeIme"]=this.podjetjeIme;
+                        data["podjetjeNaslov"]=this.podjetjeNaslov;
+                        data["podjetjeTelefon"]=this.podjetjeTelefon;
+                        data["podjetjeFax"]=this.podjetjeFax;
+                        data["podjetjeEmail"]=this.podjetjeEmail;
+                        data["podjetjeRacun"]=this.podjetjeRacun;
+                        data["podjetjeSpletnaStran"]=this.podjetjeSpletnaStran;
+                        data["podjetjeDavcniZavezanec"]=this.podjetjeDavcniZavezanec;
+                        data["podjetjeKontaktIme"]=this.podjetjeKontaktIme;
+                        data["podjetjeKontaktEmail"]=this.podjetjeKontaktEmail;
+                        data["podjetjeKontaktTelefon"]=this.podjetjeKontaktTelefon;
+                        data["podjetjeOsebe"]=this.podjetjeOsebe;
+                        data["podjetjeAktivnosti"]=this.podjetjeAktivnosti;
+                        data["podjetjeZaposleni"]=this.podjetjeZaposleni;
+                        data["podjetjePromet"]=this.podjetjePromet;
+                        data["podjetjeInteres"]=this.podjetjeInteres;
+                        data["podjetjeSodelovanje"]=this.podjetjeSodelovanje;
+	                }
+	                console.log(JSON.stringify(data));
+	                //TODO: send ajax
                 },
                 dodajOsebo: function () {
 	                this.podjetjeOsebe.push({ime: "", email: "", funkcija: "", telefon: ""});
