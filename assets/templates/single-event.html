@@ -48,31 +48,6 @@
 					ut tristique risus, et gravida mi. Donec porttitor lacus quis eros gravida sagittis. Integer nisi
 					augue, blandit pulvinar efficitur eget, consequat in sapien.
 				</p>
-				<div class="flex flex--center">
-					<div class="owl-carousel owl-theme pt60 wow slideInUp col-md-4">
-						<div class="item box"><h4>1</h4></div>
-						<div class="item box"><h4>2</h4></div>
-						<div class="item box"><h4>3</h4></div>
-						<div class="item box"><h4>4</h4></div>
-					</div>
-				</div>
-				<div class="pt20 pb10 pl15 pr15 bg--white box wow slideInUp">
-					<div class="flex">
-						<div class="col-md-3 pr0 mb10 pl0-sm">
-							<input type="text" placeholder="Ime in Priimek">
-						</div>
-						<div class="col-md-3 pr0 mb10 pl0-sm">
-							<input type="text" placeholder="Email">
-						</div>
-						<div class="col-md-4 pr0 mb10 pl0-sm">
-							<input type="text" placeholder="Tel">
-						</div>
-						<div class="col-md-2 mb10 flex flex--center">
-							<button class="btn btn__default btn--full text-center" data-popup="popup">click</button>
-						</div>
-					</div>
-				
-				</div>
 			</div>
 			<div class="col-md-3 pt60">
 				<div class="box">
@@ -99,74 +74,101 @@
 			<h4 class="text--white">Prijava na dogodek</h4>
 		</div>
 		
-		<form class="pt20 pl15 pr15 pb20 flex flex--column">
+		<div class="pt20 pl15 pr15 pb20 flex flex--column">
 			<div class="flex flex--middle flex--center pb20">
 				<p class="mb0">podjetje</p>
 				<label class="switch flex flex--middle ml10 mr15">
-					<input type="checkbox" v-model="samoplacnik" name="samoplacnik">
+					<input type="checkbox" v-model="samoplacnik"  name="samoplacnik">
 					<span></span>
 				</label>
 				<p class="mb0">samoplačnik</p>
 			</div>
-			<h5 class="text--grey-dark mb5">Kontaktni podatki</h5>
-			<input type="text" placeholder="Ime in priimek" class="box mb10">
-			<input type="email" placeholder="E-mail naslov" class="box mb10">
-			<input type="tel" placeholder="Telefon" class="box mb10">
+			
 			<!-- podjetje -->
 			<template v-if="!samoplacnik">
 				
-				
-				<h5 class="text--grey-dark mb5">Organizacija</h5>
-				<input type="number" placeholder="Število oseb" class="box mb10">
-				<input type="text" placeholder="Naziv" class="box mb10">
-				<input type="text" placeholder="Pošta in poštna številka" class="box mb10">
-				<input type="text" placeholder="Naslov" class="box mb10">
-				<input type="text" placeholder="TRR" class="box mb10">
-				<input type="email" placeholder="E-mail" class="box mb10">
-				<input type="number" placeholder="Davčna številka" class="box mb10">
+				<h5 class="text--grey-dark mb5">Podjetje</h5>
+				<input type="text" v-model="podjetjeIme" placeholder="Ime podjetja" class="box mb10">
+				<input type="text" v-model="podjetjeNaslov" placeholder="Naslov" class="box mb10">
+				<input type="tel" v-model="podjetjeTelefon" placeholder="Telefon" class="box mb10">
+				<input type="tel" v-model="podjetjeFax" placeholder="Fax" class="box mb10">
+				<input type="email" v-model="podjetjeEmail" placeholder="Email" class="box mb10">
+				<input type="url" v-model="podjetjeSpletnaStran" placeholder="Spletna stran" class="box mb10">
 				<label class="radio flex flex--middle mb10">
-					<input type="checkbox" name="davcnizavezanec" value="1">
+					<input type="checkbox" v-model="podjetjeDavcniZavezanec" value="1">
 					<span class="mr10"></span>
 					Davčni zavezanec
 				</label>
-				<h5 class="text--grey-dark mb5">Aktivnosti</h5>
-				<textarea placeholder="Aktivnosti" class="box mb10"></textarea>
+				<h5 class="text--grey-dark mb5">Kontaktna oseba</h5>
+				<input type="text" v-model="podjetjeKontaktIme" placeholder="Ime in priimek" class="box mb10">
+				<input type="email" v-model="podjetjeKontaktEmail" placeholder="E-mail naslov" class="box mb10">
+				<input type="tel" v-model="podjetjeKontaktTelefon" placeholder="Telefon" class="box mb10">
+				
+				
+				<h5 class="text--grey-dark mb5">Osebe</h5>
+				<template v-for="(oseba, i) in podjetjeOsebe">
+					<div class="row pb15">
+						<div class="col-xs-1">
+							<h5>{{i+1}}.</h5>
+							<button class="btn__delete" @click="odstraniOsebo(i)">
+								<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+									<path fill="#fff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+								</svg>
+							</button>
+						</div>
+						<div class="col-xs-11">
+							<input type="text" v-model="oseba.ime" placeholder="Ime in priimek" class="box mb10">
+							<input type="email" v-model="oseba.email" placeholder="E-mail naslov" class="box mb10">
+							<input type="text" v-model="oseba.funkcija" placeholder="Funkcija" class="box mb10">
+							<input type="tel" v-model="oseba.telefon" placeholder="Telefon" class="box mb10">
+						</div>
+					</div>
+				</template>
+				<div class="flex flex--center pb30">
+					<button @click="dodajOsebo" class="btn btn--round btn__default">
+							Dodaj osebo
+					</button>
+				</div>
+				
+				<h5 class="text--grey-dark mb5">Ostalo</h5>
+				<textarea v-model="podjetjeAktivnosti" placeholder="Aktivnosti" class="box mb10"></textarea>
+				<input v-model="podjetjeZaposleni" type="number" placeholder="Število zaposlenih" class="box mb10">
+				<input v-model="podjetjePromet" type="number" placeholder="Promet podjetja (€)" class="box mb10">
 			</template>
 			
+			<template v-if="samoplacnik">
+				<h5 class="text--grey-dark mb5">Kontaktni podatki</h5>
+				<input type="text" v-model="ime" placeholder="Ime in priimek" class="box mb10">
+				<input type="email" v-model="email" placeholder="E-mail naslov" class="box mb10">
+				<input type="tel" v-model="telefon" placeholder="Telefon" class="box mb10">
+				<h5 class="text--grey-dark mb5">Status</h5>
+				<div class="flex">
+					<label class="radio flex flex--middle mb10 round mr10">
+						<input type="radio" v-model="status" name="status" value="0">
+						<span class="mr10"></span>
+						Zaposlen
+					</label>
+					<label class="radio flex flex--middle mb10 round mr10">
+						<input type="radio" v-model="status" name="status" value="1">
+						<span class="mr10"></span>
+						Študent
+					</label>
+					<label class="radio flex flex--middle mb10 round">
+						<input type="radio" v-model="status" name="status" value="2">
+						<span class="mr10"></span>
+						Drugo
+					</label>
+				</div>
+				<input type="tel" v-model="delo" :placeholder="status==0?('Delovno mesto'):(status==1?'Smer Izobraževanja':'Drugo')" class="box mb10">
+				<textarea v-model="sporocilo" placeholder="Sporočilo" class="box mb10"></textarea>
+			</template>
 			<!-- samoplacnik -->
 			
-			<h5 class="text--grey-dark mb5">Status</h5>
-			<div class="flex">
-				<label class="radio flex flex--middle mb10 round mr10">
-					<input type="radio" v-model="status" name="status" value="0">
-					<span class="mr10"></span>
-					Zaposlen
-				</label>
-				<label class="radio flex flex--middle mb10 round mr10">
-					<input type="radio" v-model="status" name="status" value="1">
-					<span class="mr10"></span>
-					Študent
-				</label>
-				<label class="radio flex flex--middle mb10 round">
-					<input type="radio" v-model="status" name="status" value="2">
-					<span class="mr10"></span>
-					Drugo
-				</label>
-			</div>
-			<template v-if="status==0">
-				<input type="tel" placeholder="Delovno mesto" class="box mb10">
-			</template>
-			<template v-if="status==1">
-				<input type="tel" placeholder="Smer Izobraževanja" class="box mb10">
-			</template>
-			<template v-if="status==2">
-				<input type="tel" placeholder="Drugo" class="box mb10">
-			</template>
-			<textarea placeholder="Sporočilo" class="box mb10"></textarea>
+			
 			<div class="flex flex--center pt20">
-				<button class="btn btn__default btn--round">Prijava</button>
+				<button class="btn btn__default btn--round" @click="prijava">Prijava</button>
 			</div>
-		</form>
+		</div>
 		
 	</div>
 	<script src="https://unpkg.com/vue"></script>
@@ -175,8 +177,44 @@
             el: "#app",
             data: {
                 samoplacnik: false,
-                status: 0
-            }
+	            
+	            podjetjeIme: "",
+	            podjetjeNaslov: "",
+	            podjetjeTelefon: "",
+	            podjetjeFax: "",
+	            podjetjeEmail: "",
+	            podjetjeSpletnaStran: "",
+	            podjetjeDavcniZavezanec: false,
+	            podjetjeKontaktIme: "",
+	            podjetjeKontaktEmail: "",
+	            podjetjeKontaktTelefon: "",
+	            podjetjeOsebe: [
+		            {ime: "", email: "", funkcija: "", telefon: ""}
+	            ],
+	            podjetjeAktivnosti: "",
+	            podjetjeZaposleni: null,
+	            podjetjePromet: null,
+	            
+	            ime: "",
+	            email: "",
+	            telefon: "",
+                status: 0,
+	            delo: "",
+	            sporocilo: ""
+	            
+	            
+            },
+	        methods: {
+                prijava: function () {
+	                alert("test");
+                },
+                dodajOsebo: function () {
+	                this.podjetjeOsebe.push({ime: "", email: "", funkcija: "", telefon: ""});
+                },
+                odstraniOsebo: function (id) {
+	                this.podjetjeOsebe.splice(id, 1);
+                }
+	        }
         })
 	</script>
 </div>
