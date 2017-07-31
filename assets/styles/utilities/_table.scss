@@ -15,4 +15,17 @@
             vertical-align: middle;
         }
     }
+    thead{
+        background: linear-gradient(to left, $color-green-light, $color-green-dark);
+        color: black;
+        th{
+            padding: 10px 15px;
+        }
+    }
+    tbody{
+        td{
+            border-bottom: solid 1px #bcbcbc;
+            padding: 10px 15px;
+        }
+    }
 }

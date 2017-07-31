@@ -3,6 +3,7 @@
 \*----------------------------------*/
 .footer {
     background-color: black;
+    color: #aaaaaa;
     svg{
         path{
             fill:#8b8b8b;
@@ -14,12 +15,12 @@
             }
         }
     }
-    nav{
-        a{
-            @include transition();
-            &:hover{
-                color: white;
-            }
+    a{
+        font-weight: 300;
+        color: #aaaaaa;
+        @include transition();
+        &:hover{
+            color: white;
         }
     }
     .copyright{

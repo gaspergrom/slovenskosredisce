@@ -10,4 +10,17 @@
             @include transform(scale(1.02));
         }
     }
+    &--opacity{
+        @include transition();
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+p{
+    a{
+        color: $color-green-dark;
+        font-weight: 600;
+        @include transition();
+    }
 }

@@ -9,3 +9,18 @@
     padding-bottom: 70%;
   }
 }
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparentize($color-green-dark, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  @include transition();
+}
+.box:hover .overlay{
+  opacity: 1;
+  visibility: visible;
+}

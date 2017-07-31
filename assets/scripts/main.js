@@ -1,4 +1,5 @@
 $(function() {
+    lightGallery(document.getElementById('lightgallery'));
     btn=$('.header__btn');
     navbar=$('.header__links');
     body=$('body');
@@ -10,12 +11,44 @@ $(function() {
         $("header").toggleClass('open');
     });
 
-    $('.owl-carousel').owlCarousel({
+    $('#owl').owlCarousel({
         loop:true,
         dots:true,
         items:1,
         margin: 10,
         nav: false
+    });
+
+    $("[data-video]").click(function () {
+        $(".video__popup").addClass("open");
+        $("body").addClass("overflow");
+        $(".video__popup").append("<video controls><source src='"+ $(this).attr("data-video") +"' type='video/mp4'></source></video>")
+    });
+    $("#video-close").click(function () {
+        $(".video__popup").removeClass("open");
+        $("body").removeClass("overflow");
+        $(".video__popup video").remove();
+    });
+
+    $('#sponzorji').owlCarousel({
+        loop:true,
+        dots:false,
+        margin: 10,
+        nav: false,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:false,
+        responsive: {
+            0:{
+                items:3
+            },
+            768:{
+                items:5
+            },
+            991:{
+                items:6
+            }
+        }
     });
 
     if ($(this).scrollTop() > 100) {

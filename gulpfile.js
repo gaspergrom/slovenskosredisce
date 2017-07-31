@@ -64,7 +64,12 @@ gulp.task('scripts', function() {
         .pipe(browserSync.stream());
 });
 gulp.task('jslibrary', function() {
-    return gulp.src(["node_modules/jquery/dist/jquery.min.js", paths.src + 'js/**/*.js'])
+    return gulp.src([
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/lightgallery.js/dist/js/lightgallery.min.js" ,
+        "node_modules/lightgallery.js/dist/js/lg-thumbnail.min.js" ,
+        "node_modules/lightgallery.js/dist/js/llg-fullscreen.min.js" ,
+        paths.src + 'js/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('libraries.js'))
         .pipe(sourcemaps.write('sourcemaps'))

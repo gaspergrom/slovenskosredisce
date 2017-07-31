@@ -1,0 +1,31 @@
+@@include(markdown('includes/header.html'))
+
+<section>
+  <div class="container pt150 pb60">
+    <h1 class="text-center">Dogodki</h1>
+    <hr>
+    <div class="flex flex--center">
+      <div class="col-md-8">
+        <form>
+          <div class="flex flex--middle flex--center pb20">
+            <p class="mb0">slovensko središče</p>
+            <label class="switch flex flex--middle ml10 mr15">
+              <input type="checkbox" v-model="samoplacnik"  name="samoplacnik">
+              <span></span>
+            </label>
+            <p class="mb0">navijaško središče</p>
+          </div>
+          <input type="text" name="name" placeholder="Ime dogodka" class="box mb15">
+          <textarea class="box mb15" placeholder="opis"></textarea>
+          <div class="flex flex--center">
+            <button class="btn btn__default btn--round">
+              Dodaj
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+@@include(markdown('includes/footer.html'))

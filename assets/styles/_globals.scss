@@ -12,10 +12,11 @@ body {
     margin: 0;
     overflow-x: hidden;
     line-height: 1.2;
-    color: $color-grey-light;
+    color: $color-grey-dark;
     background-color: #f2f3f4;
     font-size: 17px;
     font-family: $font-primary;
+    text-align: justify;
 }
 ::selection{
     color: $color-black;
