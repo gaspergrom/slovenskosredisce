@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class EventController extends Controller
 {
 
     public function __construct()
@@ -14,10 +14,10 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
+
     }
 
-    public function show(Post $post)
+    public function show()
     {
 
     }
