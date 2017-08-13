@@ -1,0 +1,38 @@
+@extends('app')
+
+@section('content')
+    @include('includes.header_image', ['image' => 'Slo7.png'])
+
+    <section>
+        <div class="container pt45 pb60">
+            <h1 class="text-center h2 text-uppercase">Poslovno okolje</h1>
+            <hr>
+            <div class="flex flex--center">
+                <div class="col-md-10">
+                    <p>
+                        Slovensko poslovno okolje ima kar nekaj konkurenčnih prednosti. Prvenstveni prednosti za
+                        investitorje v Sloveniji zagotovo predstavljata geostrateška in logistična lega ter zelo
+                        izobražena delovna sila. Slovenija zaradi svoje ugodne geografske lege predstavlja povezavo med
+                        Balkanom in Zahodno Evropo, Koprsko pristanišče pa omogoča kakovostne logistične povezave tudi v
+                        Osrednjo Evropo. Prednost Slovenije po ocenah strokovnjakov predstavljajo tudi nizke cene
+                        vhodnih surovin, ki prihajajo iz Balkana in Vzhodne Evrope. Napovedi Evropske komisije glede
+                        gospodarske rasti za leti 2017 in 2018 sta za Slovenijo zelo ugodni in sta daleč nad povprečjem
+                        Evrskega območja. Sloveniji je napovedana 3,1% gospodarska rast za leto 2018, medtem ko je za
+                        Evrsko območje v istem obdobju napovedana 1,9 % gospodarska rast. Visoka gospodarska rast v letu
+                        2017 je zagotovo posledica tudi visoke rasti izvoza. Največje izvoznice so po podatkih Krka,
+                        Gorenje in Lek. Skupaj izvozijo za več milijard evrov svojih izdelkov.
+                        <br><br>
+                        V minulih letih je Slovenija odpravila kar nekaj ovir v delovanju poslovnega okolja in s tem
+                        omogočila investitorjem enostavno ustanovitev podjetja preko enotne vstopne točke E-vem.
+                        Novoustanovljenim podjetjem je omogočena strokovna pomoč in svetovanje, ki jo izvaja Javna
+                        agencija SPIRIT (<a href="http://www.spiritslovenia.si" target="_blank"
+                                            rel="noreferrer noopener">www.spiritslovenia.si</a>). Lokalne
+                        skupnosti so v minulih nekaj letih zagotovile precejšnji nabor komunalno opremljenih zemljišč v
+                        obrtno-industrijskih conah ter na ta način omogočile hiter dostop do prostorov za opravljanje
+                        poslovne dejavnosti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

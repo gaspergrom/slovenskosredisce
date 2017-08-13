@@ -1,0 +1,49 @@
+@extends('app')
+
+@section('content')
+    @include('includes.header_image', ['image' => '3.jpg'])
+
+    <section>
+        <div class="container pt45 pb60">
+            <h1 class="text-center h2 text-uppercase">Poslovno središče</h1>
+            <hr>
+            <div class="flex flex--center">
+                <div class="col-md-10">
+                    <p>
+                        Na osnovi pozitivnih preteklih izkušenj organizacije poslovnih in družabnih dogodkov v
+                        Slovenskem središču
+                        – I feel Slovenia ob večjih športnih prireditvah v Katarju, na Poljskem, Braziliji in Franciji,
+                        se je Rokometna
+                        zveza Slovenija ob podpori partnerjev odločila, da vzpostavi Slovensko središče – I feel
+                        Slovenia tudi na
+                        Hrvaškem, in sicer v mestu Zagreb.<br><br>
+                        SLOVENSKO SREDIŠČE - I FEEL SLOVENIA je iz organizacijskega vidika sestavljeno iz dveh delov, in
+                        sicer kot
+                        poslovno središče in kot navijaško-družabno središče v mestu Zagreb. Slovensko poslovno središče
+                        bo
+                        predstavljalo prostor (predstavitveni paviljon države) za gospodarska, politična, kulturna,
+                        družabna,
+                        medijska in športna srečevanja. <b>Častni pokrovitelj Slovenskega središča – I feel Slovenia je
+                            predsednik
+                            vlade Republike Slovenije dr. Miro Cerar.</b><br><br>
+                        Namen organiziranja in vzpostavitve takšnega središča je učinkovita promocija naše države, v
+                        okviru le-te
+                        pa tudi slovenskega gospodarstva in možnosti poslovnega sodelovanja z gostitelji prvenstva kot
+                        tudi vsemi
+                        ostalimi zainteresiranimi državami. Cilj Slovenskega središča na Hrvaškem je, da se (1) doseže
+                        poslovno
+                        sodelovanje slovenskih in hrvaških poslovnih subjektov ter ostalih gospodarskih subkjetov iz
+                        drugih držav,
+                        (2) izvede promocija države Slovenije kot celote, (3) na enem mestu združi slovensko in tujo
+                        zainteresirano
+                        javnost v sklopu Evropskega rokometnega prvenstva 2018.<br><br>
+                        Poslovno središče bo v enem izmed najprestižnejših hotelov v mestu Zagreb, in sicer ..... , ki
+                        je lociran v
+                        središču oziroma starem delu mesta. Poslovni in družabni dogodki bodo organizirani v notranjih
+                        konferenčnih prostorih.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

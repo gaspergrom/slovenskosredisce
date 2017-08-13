@@ -1,0 +1,39 @@
+@extends('app')
+
+@section('content')
+    @include('includes.header_image', ['image' => '9.jpg'])
+
+    <section>
+        <div class="container pt45 pb60">
+            <h1 class="text-center h2 text-uppercase">Klubska temovanja</h1>
+            <hr>
+            <div class="flex flex--center">
+                <div class="col-md-10">
+                    <p>
+                        Slovenska klubska tekmovanja se odvijajo na podlagi starostnih omejitev, katera se pričnejo pri
+                        osnovnošolcih oz. pri mini rokometu vse od mlajših in starejših dečkov/deklic, kadetov,
+                        mladincev ter vse do članov ali članic. Klubske ekipe tekmujejo v pokalnih in večih ligaških
+                        tekmovanjih. Lige so razdeljene po kakovosti, in sicer pri moških poznamo 1. A državno rokometno
+                        ligo (14 klubov), 1. B državno rokometno ligo (14 klubov) in 2. državno rokometno ligo (10
+                        klubov). Ženska članska tekmovanja pa prav tako uvrščamo v 1. A državno rokometno ligo (11
+                        klubov) in 1. B državno rokometno ligo (5 klubov).
+                        <br><br>Najmočnejšo rokometno klubsko tekmovanje deluje pod okriljem Slovenske rokometne zveze,
+                        ki deluje na principu dvokrožnega ligaškega tekmovanja (vsaka ekipa igra z vsako, enkrat doma
+                        drugič v gosteh). Razdeljena je na redni del in končnico za prvaka ter obstanek. Po koncu 22.
+                        krogov rednega dela najboljših šest napreduje v 10. krogov dolgo končnico za prvaka, preostalih
+                        šest pa v končnico za obstanek. Po končanem prvenstvu prva ekipa v končnici za prvaka postane
+                        državni prvak in se skupaj z drugouvrščenim uvrstiti v Ligo prvakov. Zadnji dve ekipi v končnici
+                        za obstanek izpadeta v 1. B moško državno rokometno ligo. Doslej so štirje klubi osvojili naslov
+                        državnih prvakov, rekorderji z daleč največ naslovi pa so rokometaši Celja.
+                        <br><br>Poleg državnih lig vsako leto v Sloveniji potekajo tudi moška in ženska klubska pokalna
+                        tekmovanja, v katerih sodeluje vseh 38 moških članskih moštev ter 16 ženskih članskih moštev iz
+                        vseh slovenskih rokometnih lig. V vsakem krogu ekipe odigrajo po eno tekmo, na kateri mora ena
+                        izmed ekip zmagati in se uvrstiti naprej. Na zaključni turnir se uvrstijo štiri najboljša
+                        moštva, in zmagovalca polfinalnih tekem se uvrstita v finale, drugi dve ekipi pa odigrata tekmo
+                        za tretje mesto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

@@ -12,5 +12,10 @@ class Event extends Model
 
     protected $guarded = [];
 
-    protected $translatable = [ 'name', 'description' ];
+    protected $translatable = [ 'name', 'description', 'excerpt' ];
+
+    public function scopeLatest($query, $number = 1)
+    {
+        $query->orderBy('created_at', 'DESC')->limit($number);
+    }
 }

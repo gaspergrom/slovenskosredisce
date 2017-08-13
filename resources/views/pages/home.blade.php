@@ -25,14 +25,14 @@
                              style="background-image: url('{{ asset('images/3.jpg') }}')">
                             <div class="overlay pt10 pb10 pl10 pr10 flex flex--middle flex--center">
                                 <div class="flex flex--column">
-                                    <a href="slovensko_sredisce_poslovno_sredisce.html"
+                                    <a href="{{ url('sredisce/poslovno_sredisce') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Predstavitev</a>
-                                    <a href="slovensko_sredisce_poslovno_sredisce_dogodki.html"
+                                    <a href="{{ url('sredisce/poslovno_sredisce/dogodki') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Dogodki</a>
-                                    <a href="slovensko_sredisce_poslovno_sredisce_podjetja.html"
+                                    <a href="{{ url('sredisce/poslovno_sredisce/sodelujoci') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Sodelujoča
                                         podjetja in organizacije</a>
-                                    <a href="slovensko_sredisce_poslovno_sredisce_sodelovanje.html"
+                                    <a href="{{ url('sredisce/poslovno_sredisce/poslovno_slovenija_hrvaska') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Poslovno
                                         sodelovanje Slovenija-Hrvaška</a>
                                 </div>
@@ -54,18 +54,18 @@
                              style="background-image: url('{{ asset('images/6.jpg') }}')">
                             <div class="overlay pt10 pb10 pl10 pr10 flex flex--middle flex--center">
                                 <div class="flex flex--column">
-                                    <a href="navijaci.html"
+                                    <a href="{{ url('navijaci') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Predstavitev</a>
-                                    <a href="navijaci_dogodki.html"
+                                    <a href="{{ url('navijaci/dogodki') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Dogodki</a>
-                                    <a target="_blank"
+                                    <a target="_blank" rel="noreferrer noopener"
                                        href="http://cro2018.ehf-euro.com/schedule-results/final-tournament/preliminary-round/group-c/"
                                        class="text-center text--white link--opacity pb10 text-medium">Razpored tekem
                                         reprezentance</a>
-                                    <a target="_blank"
+                                    <a target="_blank" rel="noreferrer noopener"
                                        href="http://www.ulaznice.hr/ehf-euro-2018/ctl_evt.jsp?act=priredbe_org&t=78&org_id=2"
                                        class="text-center text--white link--opacity pb10 text-medium">Vstopnice</a>
-                                    <a target="_blank"
+                                    <a target="_blank" rel="noreferrer noopener"
                                        href="https://www.stadionshop.com/si/slovenija/rokometna-zveza-slovenije.html"
                                        class="text-center text--white link--opacity pb10 text-medium">Navijaški
                                         rekviziti</a>
@@ -88,14 +88,15 @@
                              style="background-image: url('{{ asset('images/Slo4.jpg') }}')">
                             <div class="overlay pt10 pb10 pl10 pr10 flex flex--middle flex--center">
                                 <div class="flex flex--column">
-                                    <a href="slovenija.html"
+                                    <a href="{{ url('slovenija') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Predstavitev</a>
-                                    <a href="slovenija_poslovno_okolje.html"
+                                    <a href="{{ url('slovenija/poslovno_okolje') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Poslovno
                                         okolje</a>
-                                    <a href="slovenija_turizem.html"
+                                    <a href="{{ url('slovenija/turizem') }}"
                                        class="text-center text--white link--opacity pb10 text-medium">Turizem</a>
-                                    <a target="_blank" href="https://www.youtube.com/watch?v=QuTfeHM0Uk4"
+                                    <a target="_blank" rel="noreferrer noopener"
+                                       href="https://www.youtube.com/watch?v=QuTfeHM0Uk4"
                                        class="text-center text--white link--opacity pb10 text-medium">Čutim
                                         Slovenijo</a>
                                 </div>
@@ -112,7 +113,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 pb20 flex--one">
-                    <a href="novice.html">
+                    <a href="{{ url('novice') }}">
                         <div class="box link--zoom height100">
                             <div class="width100 quadric bg--image radius--top"
                                  style="background-image: url('{{ asset('images/bg2.jpg') }}')">
@@ -230,30 +231,12 @@
             <div class="row flex--center">
                 <div class="col-md-10">
                     <div id="sponzorji" class="owl-carousel">
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
-                        <div class="item flex flex--middle flex--center"><img src="{{ asset('images/logo_sredisce.png') }}"
-                                                                              style="height: 90px; width: auto;"></div>
+                        @foreach($sponsors as $sponsor_logo)
+                            @include('partials._sponsor_small')
+                        @endforeach
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 @endsection

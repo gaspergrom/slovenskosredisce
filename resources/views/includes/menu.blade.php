@@ -109,71 +109,74 @@
             </a>
             <nav class="header__links flex flex--middle">
                 <ul class="flex">
-                    <li><a href="slovensko_sredisce.html" class="text-uppercase">Slovensko središče</a>
+                    <li><a href="{{ url('sredisce/predstavitev') }}" class="text-uppercase">Slovensko središče</a>
                         <ul>
-                            <li><a href="slovensko_sredisce.html">Predstavitev</a>
+                            <li><a href="{{ url('sredisce/predstavitev') }}">Predstavitev</a>
                                 <ul>
-                                    <li><a href="slovensko_sredisce_predstavitev_katar.html">Katar</a></li>
-                                    <li><a href="slovensko_sredisce_predstavitev_poljska.html">Poljska</a></li>
-                                    <li><a href="slovensko_sredisce_predstavitev_brazilija.html">Brazilija</a></li>
-                                    <li><a href="slovensko_sredisce_predstavitev_hrvaska.html">Hrvaška</a></li>
+                                    <li><a href="{{ url('sredisce/predstavitev/katar') }}">Katar</a></li>
+                                    <li><a href="{{ url('sredisce/predstavitev/poljska') }}">Poljska</a></li>
+                                    <li><a href="{{ url('sredisce/predstavitev/brazilija') }}">Brazilija</a></li>
+                                    <li><a href="{{ url('sredisce/predstavitev/hrvaska') }}">Hrvaška</a></li>
                                 </ul>
                             </li>
-                            <li><a href="slovensko_sredisce_vodstvo_in_ekipa.html">Vodstvo in ekipa</a></li>
-                            <li><a href="slovensko_sredisce_poslovno_sredisce.html">Poslovno središče</a>
+                            <li><a href="{{ url('sredisce/vodstvo_in_ekipa') }}">Vodstvo in ekipa</a></li>
+                            <li><a href="{{ url('sredisce/poslovno_sredisce') }}">Poslovno središče</a>
                                 <ul>
-                                    <li><a href="slovensko_sredisce_poslovno_sredisce.html">Predstavitev</a></li>
-                                    <li><a href="slovensko_sredisce_poslovno_sredisce_dogodki.html">Dogodki v poslovnem
+                                    <li><a href="{{ url('sredisce/poslovno_sredisce') }}">Predstavitev</a>
+                                    </li>
+                                    <li><a href="{{ url('sredisce/poslovno_sredisce/dogodki') }}">Dogodki v poslovnem
                                             središču</a></li>
-                                    <li><a href="slovensko_sredisce_poslovno_sredisce_podjetja.html">Sodelujoča podjetja
+                                    <li><a href="{{ url('sredisce/poslovno_sredisce/sodelujoci') }}">Sodelujoča podjetja
                                             in organizacije</a></li>
-                                    <li><a href="slovensko_sredisce_poslovno_sredisce_sodelovanje.html">Poslovno
+                                    <li><a href="{{ url('sredisce/poslovno_sredisce/poslovno_slovenija_hrvaska') }}">Poslovno
                                             sodelovanje Slovenija - Hrvaška</a></li>
                                 </ul>
                             </li>
-                            <li><a href="slovensko_sredisce_navijasko_sredisce.html">Navijaško središče</a></li>
-                            <li><a href="slovensko_sredisce_dogodki.html">Dogodki v Slovenskem središču</a></li>
+                            <li><a href="{{ url('sredisce/navijasko_sredisce') }}">Navijaško središče</a></li>
+                            <li><a href="{{ url('sredisce/slovensko_sredisce_dogodki') }}">Dogodki v Slovenskem
+                                    središču</a></li>
                         </ul>
                     </li>
-                    <li><a href="navijaci.html" class="text-uppercase">Navijači</a>
+                    <li><a href="{{ url('navijaci') }}" class="text-uppercase">Navijači</a>
                         <ul>
-                            <li><a href="navijaci.html">Predstavitev</a></li>
-                            <li><a href="navijaci_dogodki.html">Dogodki v navijaškem središču</a></li>
-                            <li><a target="_blank"
+                            <li><a href="{{ url('navijaci') }}">Predstavitev</a></li>
+                            <li><a href="{{ url('navijaci/dogodki') }}">Dogodki v navijaškem središču</a></li>
+                            <li><a target="_blank" rel="noreferrer noopener"
                                    href="http://cro2018.ehf-euro.com/schedule-results/final-tournament/preliminary-round/group-c/">Razpored
                                     tekem reprezentance</a></li>
                             <li>
                                 <a href="http://www.ulaznice.hr/ehf-euro-2018/ctl_evt.jsp?act=priredbe_org&t=78&org_id=2"
-                                   target="_blank">Vstopnice</a></li>
-                            <li><a target="_blank"
+                                   target="_blank" rel="noreferrer noopener">Vstopnice</a></li>
+                            <li><a target="_blank" rel="noreferrer noopener" rel="noreferrer noopener"
                                    href="https://www.stadionshop.com/si/slovenija/rokometna-zveza-slovenije.html">Navijaški
                                     rekviziti</a></li>
                         </ul>
                     </li>
-                    <li><a href="slovenija.html" class="text-uppercase">Slovenija</a>
+                    <li><a href="{{ url('slovenija') }}" class="text-uppercase">Slovenija</a>
                         <ul>
-                            <li><a href="slovenija.html">Predstavitev</a></li>
-                            <li><a href="slovenija_poslovno_okolje.html">Poslovno okolje</a></li>
-                            <li><a href="slovenija_turizem.html">Turizem</a></li>
-                            <li><a target="_blank" href="https://www.youtube.com/watch?v=QuTfeHM0Uk4">Čutim
+                            <li><a href="{{ url('slovenija') }}">Predstavitev</a></li>
+                            <li><a href="{{ url('slovenija/poslovno_okolje') }}">Poslovno okolje</a></li>
+                            <li><a href="{{ url('slovenija/turizem') }}">Turizem</a></li>
+                            <li><a target="_blank" rel="noreferrer noopener"
+                                   href="https://www.youtube.com/watch?v=QuTfeHM0Uk4">Čutim
                                     Slovenijo</a></li>
                         </ul>
                     </li>
-                    <li><a href="rokomet.html" class="text-uppercase">Rokomet v sloveniji</a>
+                    <li><a href="{{ url('rokomet_v_sloveniji') }}" class="text-uppercase">Rokomet v sloveniji</a>
                         <ul>
-                            <li><a href="rokomet.html">Predstavitev</a></li>
-                            <li><a href="rokomet_reprezentance.html">Reprezentance</a></li>
-                            <li><a href="rokomet_klubska_tekmovanja.html">Klubska temovanja</a></li>
-                            <li><a href="rokomet_mladi.html">Mladi in rokomet</a></li>
+                            <li><a href="{{ url('rokomet_v_sloveniji') }}">Predstavitev</a></li>
+                            <li><a href="{{ url('rokomet_v_sloveniji/reprezentance') }}">Reprezentance</a></li>
+                            <li><a href="{{ url('rokomet_v_sloveniji/klubska_tekmovanja') }}">Klubska temovanja</a></li>
+                            <li><a href="{{ url('rokomet_v_sloveniji/mladi') }}">Mladi in rokomet</a></li>
                         </ul>
                     </li>
-                    <li><a href="galerija.html" class="text-uppercase">Multimedija</a>
+                    <li><a href="{{ url('multimedija/galerija') }}" class="text-uppercase">Multimedija</a>
                         <ul>
-                            <li><a href="galerija.html">Galerija</a></li>
-                            <li><a href="videoposnetki.html">Videoposnetki</a></li>
+                            <li><a href="{{ url('multimedija/galerija') }}">Galerija</a></li>
+                            <li><a href="{{ url('multimedija/videoposnetki') }}">Videoposnetki</a></li>
                         </ul>
                     </li>
-                    <li><a href="kontakt.html" class="text-uppercase">Kontakt</a></li>
+                    <li><a href="{{ url('kontakt') }}" class="text-uppercase">Kontakt</a></li>
                     <!--<li>
                         <a>
                             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
