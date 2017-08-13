@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function() {
-    return view('welcome');
+    return view('pages.home');
 });
 
 Route::prefix('sredisce')->group(function() {
