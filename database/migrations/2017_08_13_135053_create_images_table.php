@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVideosTable extends Migration
+class CreateImagesTable extends Migration
 {
 
     /**
@@ -14,10 +14,11 @@ class CreateVideosTable extends Migration
      */
     public function up()
     {
-        Schema::create('videos', function(Blueprint $table) {
+        Schema::create('images', function(Blueprint $table) {
             $table->increments('id');
-            $table->text('name');
             $table->string('path');
+            $table->unsignedInteger('gallery_id');
+            $table->foreign('gallery_id')->references('id')->on('galleries')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +30,10 @@ class CreateVideosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::table('images', function(Blueprint $table) {
+            $table->dropForeign([ 'gallery_id' ]);
+        });
+
+        Schema::dropIfExists('images');
     }
 }
