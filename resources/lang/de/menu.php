@@ -3,8 +3,8 @@
 return [
     'center'            => [
         'presentation' => [
-            'index'        => 'SLOWENISCHES ZENTRUM',
-            'presentation' => 'VORSTELLUNG',
+            'index'        => 'Slowenisches zentrum',
+            'presentation' => 'Vorstellung',
             'qatar'        => 'Katar',
             'poland'       => 'Polen',
             'brazil'       => 'Brasilien',
@@ -13,7 +13,7 @@ return [
         'team'         => 'Führungsteam',
         'business'     => [
             'index'        => 'Geschäftszentrum',
-            'presentation' => 'VORSTELLUNG',
+            'presentation' => 'Vorstellung',
             'events'       => 'Dogodki v poslovnem središču',
             'sponsors'     => 'Firmas und Organisationen, die im Zentrum vertreten sind',
             'slo_cro'      => 'Die slowenisch-kroatische Kooperation'
@@ -30,15 +30,15 @@ return [
         'gear'         => 'Navijaški rekviziti',
     ],
     'slovenia'          => [
-        'index'         => 'SLOWENIEN',
-        'presentation'  => 'VORSTELLUNG',
+        'index'         => 'Slowenien',
+        'presentation'  => 'Vorstellung',
         'business'      => 'Geschäftsumfeld',
         'tourism'       => 'Tourismus',
         'feel_slovenia' => 'Čutim Slovenijo',
     ],
     'handball_slovenia' => [
-        'index'             => 'HANDBALL IN SLOWENIEN',
-        'presentation'      => 'VORSTELLUNG',
+        'index'             => 'Handball in Slowenien',
+        'presentation'      => 'Vorstellung',
         'handball'          => 'Nationalteams',
         'club_competitions' => 'Klubwettbewerbe',
         'youth'             => 'Jugend Handball'
