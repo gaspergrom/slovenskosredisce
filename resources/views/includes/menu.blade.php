@@ -1,5 +1,5 @@
 <div style="position: fixed; top: 0; right: 10px;z-index: 9999;" class="flex">
-    <a href="#" class="ml5 mr5">
+    <a href="{{ url('locale/sl') }}" class="ml5 mr5">
         <svg xmlns="http://www.w3.org/2000/svg" height="18" width="30" version="1.1"
              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 12 6">
             <title>Flag of Slovenia</title>
@@ -31,7 +31,7 @@
             </g>
         </svg>
     </a>
-    <a href="#" class="ml5 mr5">
+    <a href="{{ url('locale/en') }}" class="ml5 mr5">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30" height="18">
             <clipPath id="t">
                 <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
@@ -44,7 +44,7 @@
         </svg>
 
     </a>
-    <a href="#" class="ml5 mr5">
+    <a href="{{ url('locale/de') }}" class="ml5 mr5">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 5 3">
             <desc>Flag of Germany</desc>
             <rect id="black_stripe" width="5" height="3" y="0" x="0" fill="#000"/>

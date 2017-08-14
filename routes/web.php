@@ -86,6 +86,12 @@ Route::get('kontakt', function() {
 
 Route::get('novice', 'PagesController@news');
 
+Route::get('locale/{locale}', function($locale) {
+    $cookie = cookie('locale', $locale, 60 * 24 * 365 * 5);
+
+    return redirect()->back()->withCookie($cookie);
+});
+
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
 

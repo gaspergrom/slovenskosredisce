@@ -1,5 +1,5 @@
 <?php
-// SI
+// EN
 return [
     'gallery' => [
         'title' => 'Galerija'

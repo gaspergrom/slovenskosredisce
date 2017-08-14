@@ -1,8 +1,8 @@
 <?php
-// SI
+// EN
 return [
     'presentation' => [
-        'title' => 'Navijači',
+        'title' => 'Fans',
         'text'  => 'Slovenska rokometna reprezentanca se je z uspešnimi igrami uvrstila na Evropsko rokometno
                         prvenstvo 2018, ki ga bo gostila Hrvaška. Slednje je vsekakor izjemna priložnost za množično
                         podporo in obisk slovenske športne in poslovne javnosti na Hrvaškem. Slovenija bo svoje nastope
@@ -16,6 +16,6 @@ return [
                         je povezan z vidikom povezovanja in druženja navijačev Slovenije na eni lokaciji.'
     ],
     'events'       => [
-        'title' => 'Dogodki v navijaškem središču'
+        'title' => 'Events in the Fanzone'
     ]
 ];

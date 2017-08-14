@@ -1,5 +1,5 @@
 <?php
-// SI
+// DE
 return [
     'home'    => [
         'title'                => 'Z ROKO V ROKI. <span class="text--green">ROKOMET.</span>',

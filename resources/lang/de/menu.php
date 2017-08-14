@@ -1,5 +1,5 @@
 <?php
-// SI
+// DE
 return [
     'center'            => [
         'presentation' => [
@@ -8,7 +8,7 @@ return [
             'qatar'        => 'Katar',
             'poland'       => 'Poljska',
             'brazil'       => 'Brazilija',
-            'croatia'      => 'Hrvaška',
+            'croatia'      => 'Hrvaša',
         ],
         'team'         => 'Vodstvo in ekipa',
         'business'     => [
