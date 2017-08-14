@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         factory(App\Event::class, 6)->create([ 'type' => 'business' ]);
         factory(App\Event::class, 6)->create([ 'type' => 'slo' ]);
         factory(App\Event::class, 6)->create([ 'type' => 'fans' ]);
+        factory(App\Post::class, 8)->create();
     }
 }

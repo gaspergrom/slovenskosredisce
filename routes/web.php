@@ -83,6 +83,8 @@ Route::get('kontakt', function() {
 });
 
 Route::get('novice', 'PagesController@news');
+Route::get('novice/{post}', 'PagesController@post');
+Route::get('event/{event}', 'PagesController@event');
 
 Route::get('locale/{locale}', function($locale) {
     $cookie = cookie('locale', $locale, 60 * 24 * 365 * 5);

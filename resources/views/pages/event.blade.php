@@ -80,7 +80,7 @@
                     <template v-for="(oseba, i) in podjetjeOsebe">
                         <div class="row pb15">
                             <div class="col-xs-1">
-                                <h5>{{i+1}}.</h5>
+                                <h5>@{{ i+1 }}.</h5>
                                 <button class="btn__delete" @click="odstraniOsebo(i)">
                                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                                         <path fill="#fff"
@@ -148,101 +148,102 @@
                         <label class="radio flex flex--middle mb10 round">
                             <input type="radio" v-model="status" name="status" value="2">
                             <span class="mr10"></span>
-                            @lang('pages.events.popup.person.other)
+                            @lang('pages.events.popup.person.other')
                         </label>
                     </div>
-                    <input type="tel" v-model="delo"
-                           :placeholder="status==0?('@lang('pages.events.popup.person.work_place')'):(status==1?'@lang('pages.events.popup.person.study_field')':'@lang('pages.events.popup.person.other')')"
-                           class="box mb10">
+
                     <textarea v-model="sporocilo" placeholder="@lang('pages.events.popup.person.message')"
                               class="box mb10"></textarea>
                 </template>
                 <!-- samoplacnik -->
-
-
+                <input type="text" v-model="delo"
+                       :placeholder="status==0?('@lang('pages.events.popup.person.work_place')'):(status==1?'@lang('pages.events.popup.person.study_field')':'@lang('pages.events.popup.person.other')')"
+                       class="box mb10">
                 <div class="flex flex--center pt20">
                     <button class="btn btn__default btn--round"
                             @click="prijava">@lang('pages.events.popup.submit')</button>
                 </div>
             </div>
-
         </div>
-        <script src="https://unpkg.com/vue"></script>
-        <script>
-            new Vue({
-                el: "#app",
-                data: {
-                    samoplacnik: false,
-
-                    podjetjeIme: "",
-                    podjetjeNaslov: "",
-                    podjetjeTelefon: "",
-                    podjetjeFax: "",
-                    podjetjeEmail: "",
-                    podjetjeRacun: "",
-                    podjetjeSpletnaStran: "",
-                    podjetjeDavcniZavezanec: false,
-                    podjetjeKontaktIme: "",
-                    podjetjeKontaktEmail: "",
-                    podjetjeKontaktTelefon: "",
-                    podjetjeOsebe: [
-                        {ime: "", email: "", funkcija: "", telefon: ""}
-                    ],
-                    podjetjeAktivnosti: "",
-                    podjetjeZaposleni: null,
-                    podjetjePromet: null,
-                    podjetjeInteres: "",
-                    podjetjeSodelovanje: "",
-
-                    ime: "",
-                    email: "",
-                    telefon: "",
-                    status: 0,
-                    delo: "",
-                    sporocilo: ""
-                },
-                methods: {
-                    prijava: function () {
-                        var data = {};
-                        data["samoplacnik"] = this.samoplacnik;
-                        if (this.samoplacnik) {
-                            data["samoplacnikIme"] = this.ime;
-                            data["samoplacnikEmail"] = this.email;
-                            data["samoplacnikTelefon"] = this.telefon;
-                            data["samoplacnikStatus"] = this.status;
-                            data["samoplacnikDelo"] = this.delo;
-                            data["samoplacnikSporocilo"] = this.sporocilo;
-                        }
-                        else {
-                            data["podjetjeIme"] = this.podjetjeIme;
-                            data["podjetjeNaslov"] = this.podjetjeNaslov;
-                            data["podjetjeTelefon"] = this.podjetjeTelefon;
-                            data["podjetjeFax"] = this.podjetjeFax;
-                            data["podjetjeEmail"] = this.podjetjeEmail;
-                            data["podjetjeRacun"] = this.podjetjeRacun;
-                            data["podjetjeSpletnaStran"] = this.podjetjeSpletnaStran;
-                            data["podjetjeDavcniZavezanec"] = this.podjetjeDavcniZavezanec;
-                            data["podjetjeKontaktIme"] = this.podjetjeKontaktIme;
-                            data["podjetjeKontaktEmail"] = this.podjetjeKontaktEmail;
-                            data["podjetjeKontaktTelefon"] = this.podjetjeKontaktTelefon;
-                            data["podjetjeOsebe"] = this.podjetjeOsebe;
-                            data["podjetjeAktivnosti"] = this.podjetjeAktivnosti;
-                            data["podjetjeZaposleni"] = this.podjetjeZaposleni;
-                            data["podjetjePromet"] = this.podjetjePromet;
-                            data["podjetjeInteres"] = this.podjetjeInteres;
-                            data["podjetjeSodelovanje"] = this.podjetjeSodelovanje;
-                        }
-                        console.log(JSON.stringify(data));
-                        //TODO: send ajax
-                    },
-                    dodajOsebo: function () {
-                        this.podjetjeOsebe.push({ime: "", email: "", funkcija: "", telefon: ""});
-                    },
-                    odstraniOsebo: function (id) {
-                        this.podjetjeOsebe.splice(id, 1);
-                    }
-                }
-            })
-        </script>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                samoplacnik: false,
+
+                podjetjeIme: "",
+                podjetjeNaslov: "",
+                podjetjeTelefon: "",
+                podjetjeFax: "",
+                podjetjeEmail: "",
+                podjetjeRacun: "",
+                podjetjeSpletnaStran: "",
+                podjetjeDavcniZavezanec: false,
+                podjetjeKontaktIme: "",
+                podjetjeKontaktEmail: "",
+                podjetjeKontaktTelefon: "",
+                podjetjeOsebe: [
+                    {ime: "", email: "", funkcija: "", telefon: ""}
+                ],
+                podjetjeAktivnosti: "",
+                podjetjeZaposleni: null,
+                podjetjePromet: null,
+                podjetjeInteres: "",
+                podjetjeSodelovanje: "",
+
+                ime: "",
+                email: "",
+                telefon: "",
+                status: 0,
+                delo: "",
+                sporocilo: ""
+            },
+            methods: {
+                prijava: function () {
+                    var data = {};
+                    data["samoplacnik"] = this.samoplacnik;
+                    if (this.samoplacnik) {
+                        data["samoplacnikIme"] = this.ime;
+                        data["samoplacnikEmail"] = this.email;
+                        data["samoplacnikTelefon"] = this.telefon;
+                        data["samoplacnikStatus"] = this.status;
+                        data["samoplacnikDelo"] = this.delo;
+                        data["samoplacnikSporocilo"] = this.sporocilo;
+                    }
+                    else {
+                        data["podjetjeIme"] = this.podjetjeIme;
+                        data["podjetjeNaslov"] = this.podjetjeNaslov;
+                        data["podjetjeTelefon"] = this.podjetjeTelefon;
+                        data["podjetjeFax"] = this.podjetjeFax;
+                        data["podjetjeEmail"] = this.podjetjeEmail;
+                        data["podjetjeRacun"] = this.podjetjeRacun;
+                        data["podjetjeSpletnaStran"] = this.podjetjeSpletnaStran;
+                        data["podjetjeDavcniZavezanec"] = this.podjetjeDavcniZavezanec;
+                        data["podjetjeKontaktIme"] = this.podjetjeKontaktIme;
+                        data["podjetjeKontaktEmail"] = this.podjetjeKontaktEmail;
+                        data["podjetjeKontaktTelefon"] = this.podjetjeKontaktTelefon;
+                        data["podjetjeOsebe"] = this.podjetjeOsebe;
+                        data["podjetjeAktivnosti"] = this.podjetjeAktivnosti;
+                        data["podjetjeZaposleni"] = this.podjetjeZaposleni;
+                        data["podjetjePromet"] = this.podjetjePromet;
+                        data["podjetjeInteres"] = this.podjetjeInteres;
+                        data["podjetjeSodelovanje"] = this.podjetjeSodelovanje;
+                    }
+                    console.log(JSON.stringify(data));
+                    //TODO: send ajax
+                },
+                dodajOsebo: function () {
+                    this.podjetjeOsebe.push({ime: "", email: "", funkcija: "", telefon: ""});
+                },
+                odstraniOsebo: function (id) {
+                    this.podjetjeOsebe.splice(id, 1);
+                }
+            }
+        })
+    </script>
 @endsection

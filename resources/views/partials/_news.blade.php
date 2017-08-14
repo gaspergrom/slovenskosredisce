@@ -4,7 +4,7 @@
             <h4 class="text-center">{{ $post->title }}</h4>
             <hr>
             <p>
-                {{ $post->exceprt }}
+                {{ $post->excerpt }}
             </p>
             <p class="text--green text-bold">@lang('pages.news.read_more')</p>
         </div>

@@ -82,4 +82,14 @@ class PagesController extends Controller
 
         return view('pages.multimedia.videos', compact('videos'));
     }
+
+    public function event(Event $event)
+    {
+        return view('pages.event', compact('event'));
+    }
+
+    public function post(Post $post)
+    {
+        return view('pages.news_full', compact('post'));
+    }
 }

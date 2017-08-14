@@ -30,11 +30,13 @@ $factory->define(App\Sponsor::class, function(Faker\Generator $faker) {
     return [
         'name'        => [
             'sl' => $name,
-            'en' => $name
+            'en' => $name,
+            'de' => $name
         ],
         'description' => [
             'sl' => $description,
-            'en' => $description
+            'en' => $description,
+            'de' => $description
         ],
         'logo'        => 'images/logo.png'
     ];
@@ -47,11 +49,13 @@ $factory->define(App\Leadership::class, function(Faker\Generator $faker) {
     return [
         'name'     => [
             'sl' => $name,
-            'en' => $name
+            'en' => $name,
+            'de' => $name
         ],
         'position' => [
             'sl' => $position,
-            'en' => $position
+            'en' => $position,
+            'de' => $position
         ],
         'image'    => 'images/bg2.jpg'
     ];
@@ -65,18 +69,42 @@ $factory->define(App\Event::class, function(Faker\Generator $faker) {
         'name'        => [
             'sl' => $faker->sentence(3, true),
             'en' => $faker->sentence(3, true),
+            'de' => $faker->sentence(3, true),
         ],
         'description' => [
             'sl' => $faker->sentences(3, true),
             'en' => $faker->sentences(3, true),
+            'de' => $faker->sentences(3, true),
         ],
         'excerpt'     => [
             'sl' => $faker->sentences(3, true),
             'en' => $faker->sentences(3, true),
+            'de' => $faker->sentences(3, true),
         ],
         'image'       => 'images/bg2.jpg',
         'price'       => random_int(5, 70),
         'begins_at'   => $start,
         'ends_at'     => $end
+    ];
+});
+
+$factory->define(App\Post::class, function(Faker\Generator $faker) {
+    return [
+        'title'   => [
+            'sl' => $faker->sentence(6),
+            'en' => $faker->sentence(6),
+            'de' => $faker->sentence(6),
+        ],
+        'content' => [
+            'sl' => $faker->sentences(18, true),
+            'en' => $faker->sentences(18, true),
+            'de' => $faker->sentences(18, true),
+        ],
+        'excerpt' => [
+            'sl' => $faker->sentences(5, true),
+            'en' => $faker->sentences(5, true),
+            'de' => $faker->sentences(5, true),
+        ],
+        'image'   => 'image/bg2.jpg'
     ];
 });

@@ -12,5 +12,5 @@ class Post extends Model
 
     protected $guarded = [];
 
-    protected $translatable = [ 'title', 'content', 'slug' ];
+    protected $translatable = [ 'title', 'content', 'excerpt' ];
 }
