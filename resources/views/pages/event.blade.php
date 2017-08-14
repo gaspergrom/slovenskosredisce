@@ -152,7 +152,7 @@
                         </label>
                     </div>
                     <input type="tel" v-model="delo"
-                           :placeholder="status==0?('Delovno mesto'):(status==1?'Smer Izobraževanja':'Drugo')"
+                           :placeholder="status==0?('@lang('pages.events.popup.person.work_place')'):(status==1?'@lang('pages.events.popup.person.study_field')':'@lang('pages.events.popup.person.other')')"
                            class="box mb10">
                     <textarea v-model="sporocilo" placeholder="@lang('pages.events.popup.person.message')"
                               class="box mb10"></textarea>

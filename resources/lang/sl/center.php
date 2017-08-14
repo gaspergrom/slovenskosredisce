@@ -121,8 +121,8 @@ return [
                         SLOVENSKO SREDIŠČE - I FEEL SLOVENIA je iz organizacijskega vidika sestavljeno iz dveh delov, in
                         sicer kot poslovno središče in kot navijaško-družabno središče v mestu Zagreb. Slovensko
                         poslovno središče bo predstavljalo prostor (predstavitveni paviljon države) za gospodarska,
-                        politična, kulturna, družabna, medijska in športna srečevanja. Častni pokrovitelj Slovenskega
-                        središča – I feel Slovenia je predsednik vlade Republike Slovenije dr. Miro Cerar.
+                        politična, kulturna, družabna, medijska in športna srečevanja. <b>Častni pokrovitelj Slovenskega
+                        središča – I feel Slovenia je predsednik vlade Republike Slovenije dr. Miro Cerar.</b>
                         <br><br>
                         Namen organiziranja in vzpostavitve takšnega središča je učinkovita promocija naše države, v
                         okviru le-te pa tudi slovenskega gospodarstva in možnosti poslovnega sodelovanja z gostitelji

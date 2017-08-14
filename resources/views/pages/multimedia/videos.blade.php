@@ -10,24 +10,9 @@
             <div class="flex flex--center">
                 <div class="col-md-10">
                     <div class="row">
-                        <div class="col-md-4 pb30">
-                            <div class="quadric--medium bg--image"
-                                 data-video="http://techslides.com/demos/sample-videos/small.mp4"
-                                 style="background-image: url('{{ asset('images/bg2.jpg') }}')"></div>
-                        </div>
-                        <div class="col-md-4 pb30">
-                            <div class="quadric--medium bg--image" data-video="images/main.mp4"
-                                 style="background-image: url('{{ asset('images/bg2.jpg') }}')"></div>
-                        </div>
-                        <div class="col-md-4 pb30">
-                            <div class="quadric--medium bg--image"
-                                 data-video="http://techslides.com/demos/sample-videos/small.mp4"
-                                 style="background-image: url('{{ asset('images/bg2.jpg') }}')"></div>
-                        </div>
-                        <div class="col-md-4 pb30">
-                            <div class="quadric--medium bg--image" data-video="images/main.mp4"
-                                 style="background-image: url('{{ asset('images/bg2.jpg') }}')"></div>
-                        </div>
+                        @foreach($videos as $video)
+                            @include('partials._video')
+                        @endforeach
                     </div>
                 </div>
             </div>

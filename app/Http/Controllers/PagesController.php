@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Gallery;
 use App\Leadership;
 use App\Post;
 use App\Sponsor;
+use App\Video;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -65,5 +67,19 @@ class PagesController extends Controller
         $news = Post::orderBy('created_at', 'DESC')->get();
 
         return view('pages.news', compact('news'));
+    }
+
+    public function gallery()
+    {
+        $galleries = Gallery::all();
+
+        return view('pages.multimedia.gallery', compact('galleries'));
+    }
+
+    public function videos()
+    {
+        $videos = Video::all();
+
+        return view('pages.multimedia.videos', compact('videos'));
     }
 }

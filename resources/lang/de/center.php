@@ -155,17 +155,37 @@ Handball und die Europameisterschaft 2018 zusammenzubringen.',
     'business'     => [
         'presentation' => [
             'title' => 'Geschäftszentrum',
-            'text'  => 'Während der Europameisterschaft 2018, wird das Slowenisches Zentrum als Promotion-Center
-eingerichtet, wo wir Slowenien als harmonisches Ganzes präsentieren werden. Das Business Center
-ist ein Raum, welches vor allem für geschäftliche und politische Treffen gemacht wurde. Das
-umfangreiche Programm umfasst Veranstaltungen, die die geschäftliche Zusammenarbeit zwischen
-slowenischen und kroatischen Unternehmen verstärken, sowie ein regionales Wirtschafts- und
-politisches Treffen, ein Tourismusforum, ein Sportforum, ein Business-Lunch zwischen den beiden
-Delegationen, individuelle Geschäftspartnertreffen und ähnliche Veranstaltungen.<br><br>
-                        Das Slowenisches Zentrum in Kroatien findet in einem der prestigeträchtigsten Hotels in Zagreb statt,
-das im Herzen der Altstadt liegt. Um die Ziele des Geschäftszentrums zu verwirklichen, werden in den
-Konferenzräumen des Hotels diverse soziale und geschäftliche Veranstaltungen abgehalten, weshalb
-wir im Slowenisches ein Geschäftstätigkeitsprogramm vorbereitet haben.'
+            'text'  => 'Na osnovi pozitivnih preteklih izkušenj organizacije poslovnih in družabnih dogodkov v
+                        Slovenskem središču
+                        – I feel Slovenia ob večjih športnih prireditvah v Katarju, na Poljskem, Braziliji in Franciji,
+                        se je Rokometna
+                        zveza Slovenija ob podpori partnerjev odločila, da vzpostavi Slovensko središče – I feel
+                        Slovenia tudi na
+                        Hrvaškem, in sicer v mestu Zagreb.<br><br>
+                        SLOVENSKO SREDIŠČE - I FEEL SLOVENIA je iz organizacijskega vidika sestavljeno iz dveh delov, in
+                        sicer kot
+                        poslovno središče in kot navijaško-družabno središče v mestu Zagreb. Slovensko poslovno središče
+                        bo
+                        predstavljalo prostor (predstavitveni paviljon države) za gospodarska, politična, kulturna,
+                        družabna,
+                        medijska in športna srečevanja. <b>Častni pokrovitelj Slovenskega središča – I feel Slovenia je
+                            predsednik
+                            vlade Republike Slovenije dr. Miro Cerar.</b><br><br>
+                        Namen organiziranja in vzpostavitve takšnega središča je učinkovita promocija naše države, v
+                        okviru le-te
+                        pa tudi slovenskega gospodarstva in možnosti poslovnega sodelovanja z gostitelji prvenstva kot
+                        tudi vsemi
+                        ostalimi zainteresiranimi državami. Cilj Slovenskega središča na Hrvaškem je, da se (1) doseže
+                        poslovno
+                        sodelovanje slovenskih in hrvaških poslovnih subjektov ter ostalih gospodarskih subkjetov iz
+                        drugih držav,
+                        (2) izvede promocija države Slovenije kot celote, (3) na enem mestu združi slovensko in tujo
+                        zainteresirano
+                        javnost v sklopu Evropskega rokometnega prvenstva 2018.<br><br>
+                        Poslovno središče bo v enem izmed najprestižnejših hotelov v mestu Zagreb, in sicer ..... , ki
+                        je lociran v
+                        središču oziroma starem delu mesta. Poslovni in družabni dogodki bodo organizirani v notranjih
+                        konferenčnih prostorih.'
         ],
         'events'       => [
             'title'      => 'Dogodki v poslovnem središču',
