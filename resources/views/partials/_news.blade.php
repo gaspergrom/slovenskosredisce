@@ -6,7 +6,7 @@
             <p>
                 {{ $post->exceprt }}
             </p>
-            <p class="text--green text-bold">Preberi več</p>
+            <p class="text--green text-bold">@lang('pages.news.read_more')</p>
         </div>
     </a>
 </div>

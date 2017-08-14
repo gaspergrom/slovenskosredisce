@@ -5,7 +5,7 @@
 
     <section>
         <div class="container pt45 pb60">
-            <h1 class="text-center h2 text-uppercase">Sodelujoča podjetja in organizacije</h1>
+            <h1 class="text-center h2 text-uppercase">@lang('center.business.sponsors.title')</h1>
             <hr>
             <div class="flex flex--center">
                 @foreach($sponsors as $sponsor)

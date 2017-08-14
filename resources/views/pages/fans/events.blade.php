@@ -5,7 +5,7 @@
 
     <section>
         <div class="container pt45 pb60">
-            <h1 class="text-center h2 text-uppercase">Dogodki v navijaškem središču</h1>
+            <h1 class="text-center h2 text-uppercase">@lang('fans.events.title')</h1>
             <hr>
             <div class="flex flex--center">
                 <div class="col-md-10">

@@ -5,37 +5,22 @@
 
     <section>
         <div class="container pt45 pb60">
-            <h1 class="text-center h2 text-uppercase">Brazilija</h1>
+            <h1 class="text-center h2 text-uppercase">@lang('center.presentation.brazil.title')</h1>
             <hr>
             <div class="flex flex--center">
                 <div class="col-md-10">
                     <p class="pb30">
-                        Olimpijske igre so zgodovinsko, kulturno in športno najbolj prestižen in odmeven športni dogodek
-                        na svetu. Slednje velja tako za športnike, športne funkcionarje, poslovneže, politike in tudi
-                        športne navdušence. Na olimpijskih igrah v Braziliji leta 2016 je Rokometna zveza Slovenije
-                        skupaj z nosilcem projekta Olimpijskim komitejem Slovenije in ostalimi partnerji
-                        (Veleposlaništvo RS v Braziliji, Slovenska turistična agencija, Javna agencija SPIRIT, Urad
-                        Vlade RS za komuniciranje, Turizem Ljubljana) vzpostavila Slovensko središče v manjši obliki kot
-                        je bilo to v Katarju in na Poljskem. Slovensko središče je bilo vzpostavljeno od 9. -13. avgusta
-                        2016 v tem obdobju so bili organizirani različni poslovni in družabni dogodki. Odzivi
-                        udeležencev dogodkov so bili pozitivni in zato nam je bilo v posebno radost, da je bil projekt
-                        realiziran na način, da so imeli udeleženci možnost vzpostaviti različne oblike stikov in
-                        sodelovanja. Častni pokrovitelj Slovenskega središča je bil predsednik Republike Slovenije Borut
-                        Pahor.
+                        @lang('center.presentation.brazil.text')
                     </p>
                 </div>
                 <div class="col-md-8">
                     <img src="{{ asset('images/slsredisce_brazilija1.jpg') }}" class="img">
                     <p class="pb30">
-                        Slika: Poslovni dogodek o možnostih sodelovanja med Slovenijo in Brazilijo na področju znanosti
-                        in gospodarstva, ki je bil organiziran v Braziliji (Rio de Janeiru) v času Olimpijskih iger v
-                        Braziliji leta 2016.
+                        @lang('center.presentation.brazil.first_image')
                     </p>
                     <img src="{{ asset('images/slsredisce_brazilija2.jpg') }}" class="img">
                     <p class="pb30">
-                        Slika: Poslovni dogodek o možnostih sodelovanja med Slovenijo in Brazilijo na področju znanosti
-                        in gospodarstva, ki je bil organiziran v Braziliji (Rio de Janeiru) v času Olimpijskih iger v
-                        Braziliji leta 2016.
+                        @lang('center.presentation.brazil.second_image')
                     </p>
                 </div>
             </div>

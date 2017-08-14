@@ -5,50 +5,25 @@
 
     <section>
         <div class="container pt45 pb60">
-            <h1 class="text-center h2 text-uppercase">Poslovno sodelovanje Slovenija-Hrvaška</h1>
+            <h1 class="text-center h2 text-uppercase">@lang('center.business.slo_cro.title')</h1>
             <hr>
             <div class="flex flex--center">
                 <div class="col-md-10">
                     <p>
-                        Slovenija in Hrvaška na področju gospodarstva vse od samostojnosti obeh držav dobro sodelujeta
-                        in sta
-                        druga drugi med najpomembnejšimi gospodarskimi partnericami. Hrvaško poslovno okolje se je od
-                        vstopa v
-                        Evropsko unijo spremenilo in odprlo za tuje investitorje. Gospodarstvo Hrvaške temeljni predvsem
-                        na
-                        prihodkih iz turizma , ki predstavlja 2/3 celotnega BDP. Hrvaška glede na skupno vrednost
-                        blagovne
-                        menjave, ki predstavlja približno 7 odstotkov celotne blagovne menjave Slovenije s svetom, med
-                        gospodarskimi partnericami s Slovenijo zaseda 4. mesto.<br><br>
-                        Blagovna menjave med državama zadnja leta beleži konstanten trend rasti, tako pri izvozu kot
-                        tudi pri
-                        uvoza. Skupna blagovna menjava je v letu 2015 presegla 3,2 mlrd. evrov, saldo menjave pa je za
-                        Slovenijo
-                        ves čas pozitiven. Skupna vrednost blagovne menjave je v letu 2015 dosegla rekordno vrednost
-                        3,24 mlrd.
-                        evrov, kar predstavlja 13,4 % rast glede na leto 2014 (2,86 mlrd. EUR). Vrednost slovenskega
-                        izvoza na
-                        Hrvaško je v letu 2015 znašala 1,87 mlrd. EUR in je bila za 5,4 % višja kot leta 2014, vrednost
-                        uvoza pa je
-                        dosegla vrednost 1,37 mlrd. EUR in je bila 26,4 % večja kot leta 2014. Zadnja leta je zabeležena
-                        občutna
-                        rast skupne blagovne menjave (leta 2013 9 %, leta 2014 12 % in leta 2015 13,4 %), k čemur je
-                        brez dvoma
-                        pomembno prispeval vstop Hrvaške v EU. (Vir: Ministrstvo Repubike Slovenije za zunanje zadeve,
-                        Veleposlanišvo v Zagrebu)<br><br>
+                        @lang('center.business.slo_cro.text')
                     </p>
                     <div class="table pt30">
                         <p>
-                            Blagovna menjava med Slovenijo in Hrvaško 2009 – 2015 (v 1.000 EUR)
+                            @lang('center.business.slo_cro.table_text')
                         </p>
                         <table class="responsive">
                             <thead>
                             <tr>
-                                <th class="text-center text-bold">Leto</th>
-                                <th class="text-center text-bold">Izvoz blaga</th>
-                                <th class="text-center text-bold">Uvoz blaga</th>
-                                <th class="text-center text-bold">Skupaj</th>
-                                <th class="text-center text-bold">Saldo</th>
+                                <th class="text-center text-bold">@lang('center.business.slo_cro.year')</th>
+                                <th class="text-center text-bold">@lang('center.business.slo_cro.export')</th>
+                                <th class="text-center text-bold">@lang('center.business.slo_cro.import')</th>
+                                <th class="text-center text-bold">@lang('center.business.slo_cro.sum')</th>
+                                <th class="text-center text-bold">@lang('center.business.slo_cro.saldo')</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -103,9 +78,8 @@
                             </tr>
                             </tbody>
                         </table>
-
                         <p>
-                            Vir: Ministrstvo Republike Slovenije za zunanje zadeve, Veleposlaništvo v ZagrebU (2017)
+                            @lang('center.business.slo_cro.source')
                         </p>
                     </div>
                 </div>
