@@ -57,7 +57,7 @@
 <header class="header">
     <div class="container">
         <div class="flex flex--between flex--middle header__box">
-            <a href="." class="header__logo flex">
+            <a href="/" class="header__logo flex">
                 <img src="{{ asset('images/logo_sredisce.png') }}">
                 <svg
                         xmlns:dc="http://purl.org/dc/elements/1.1/"
