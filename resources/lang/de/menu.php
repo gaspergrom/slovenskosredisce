@@ -3,22 +3,22 @@
 return [
     'center'            => [
         'presentation' => [
-            'index'        => 'Slovensko središče',
-            'presentation' => 'Predstavitev',
+            'index'        => 'SLOWENISCHES ZENTRUM',
+            'presentation' => 'VORSTELLUNG',
             'qatar'        => 'Katar',
-            'poland'       => 'Poljska',
-            'brazil'       => 'Brazilija',
-            'croatia'      => 'Hrvaša',
+            'poland'       => 'Polen',
+            'brazil'       => 'Brasilien',
+            'croatia'      => 'Kroatien',
         ],
-        'team'         => 'Vodstvo in ekipa',
+        'team'         => 'Führungsteam',
         'business'     => [
-            'index'        => 'Poslovno središče',
-            'presentation' => 'Predstavitev',
+            'index'        => 'Geschäftszentrum',
+            'presentation' => 'VORSTELLUNG',
             'events'       => 'Dogodki v poslovnem središču',
-            'sponsors'     => 'Sodelujoča podjetja in organizacije',
-            'slo_cro'      => 'Poslovno sodelovanje Slovenija - Hrvaška'
+            'sponsors'     => 'Firmas und Organisationen, die im Zentrum vertreten sind',
+            'slo_cro'      => 'Die slowenisch-kroatische Kooperation'
         ],
-        'fans'         => 'Navijaško središče',
+        'fans'         => 'Fanzone',
         'events'       => 'Dogodki v Slovenskem središču'
     ],
     'fans'              => [
@@ -30,18 +30,18 @@ return [
         'gear'         => 'Navijaški rekviziti',
     ],
     'slovenia'          => [
-        'index'         => 'Slovenija',
-        'presentation'  => 'Predstavitev',
-        'business'      => 'Poslovno okolje',
-        'tourism'       => 'Turizem',
+        'index'         => 'SLOWENIEN',
+        'presentation'  => 'VORSTELLUNG',
+        'business'      => 'Geschäftsumfeld',
+        'tourism'       => 'Tourismus',
         'feel_slovenia' => 'Čutim Slovenijo',
     ],
     'handball_slovenia' => [
-        'index'             => 'Rokomet v Sloveniji',
-        'presentation'      => 'Predstavitev',
-        'handball'          => 'Reprezentance',
-        'club_competitions' => 'Klubska tekmovanja',
-        'youth'             => 'Mladi in rokomet'
+        'index'             => 'HANDBALL IN SLOWENIEN',
+        'presentation'      => 'VORSTELLUNG',
+        'handball'          => 'Nationalteams',
+        'club_competitions' => 'Klubwettbewerbe',
+        'youth'             => 'Jugend Handball'
     ],
     'multimedia'        => [
         'index'   => 'Multimedija',
