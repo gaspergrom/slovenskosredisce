@@ -14,8 +14,15 @@ class Event extends Model
 
     protected $translatable = [ 'name', 'description', 'excerpt' ];
 
+    protected $dates = [ 'begins_at', 'ends_at', 'updated_at', 'created_at' ];
+
     public function scopeLatest($query, $number = 1)
     {
-        $query->orderBy('created_at', 'DESC')->limit($number);
+        return $query->orderBy('created_at', 'DESC')->limit($number);
+    }
+
+    public function scopeInFuture($query)
+    {
+        return $query->where('begins_at', '>', date('Y.m.d'));
     }
 }

@@ -14,5 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         factory(App\Sponsor::class, 7)->create();
         factory(App\Leadership::class, 6)->create();
+        factory(App\Event::class, 6)->create([ 'type' => 'business' ]);
+        factory(App\Event::class, 6)->create([ 'type' => 'slo' ]);
+        factory(App\Event::class, 6)->create([ 'type' => 'fans' ]);
     }
 }

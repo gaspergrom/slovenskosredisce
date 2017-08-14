@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Leadership;
+use App\Post;
 use App\Sponsor;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class PagesController extends Controller
     public function home()
     {
         $sponsors = Sponsor::pluck('logo');
-        $events   = Event::whereType('fans')->latest(5)->get();
+        $events   = Event::whereType('slo')->latest(6)->get();
 
         return view('pages.home', compact('sponsors', 'events'));
     }
@@ -36,6 +37,33 @@ class PagesController extends Controller
     {
         $events = Event::whereType('business')->get();
 
-        return view('pages.center.business.events');
+        $events = $events->sortBy('begins_at')->map(function($event) {
+            $event['day'] = $event['begins_at']->format('Y-m-d');
+
+            return $event;
+        })->groupBy('day');
+
+        return view('pages.center.business.events', compact('events'));
+    }
+
+    public function slo_events()
+    {
+        $events = Event::inFuture()->whereType('slo')->orderBy('begins_at', 'DESC')->get();
+
+        return view('pages.center.events', compact('events'));
+    }
+
+    public function fans_events()
+    {
+        $events = Event::inFuture()->whereType('fans')->orderBy('begins_at', 'DESC')->get();
+
+        return view('pages.fans.events', compact('events'));
+    }
+
+    public function news()
+    {
+        $news = Post::orderBy('created_at', 'DESC')->get();
+
+        return view('pages.news', compact('news'));
     }
 }

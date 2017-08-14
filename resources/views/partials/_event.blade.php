@@ -5,7 +5,7 @@
                  style="background-image: url('{{ $event->image }}')">
                 <div class="event__date bg--gradient pt20">
                     <div class="pl5 pr5 text-center" style="padding-bottom: 2px;">
-                        <span class="text-normal text--white">{{ $event->begins_at->format->('d. m.') }}</span>
+                        <span class="text-normal text--white">{{ $event->begins_at->format('d. m.') }}</span>
                     </div>
                     <div class="bg--grey-dark text-center" style="padding: 2px;">
                         <span class="text--white">{{ $event->begins_at->format('Y') }}</span>

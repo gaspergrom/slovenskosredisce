@@ -56,3 +56,27 @@ $factory->define(App\Leadership::class, function(Faker\Generator $faker) {
         'image'    => 'images/bg2.jpg'
     ];
 });
+
+$factory->define(App\Event::class, function(Faker\Generator $faker) {
+    $start = $faker->date("Y-m-d H:i:s", "+2 week");
+    $end   = date("Y-m-d H:i:s", strtotime($start) + 60 * 60 * 2);
+
+    return [
+        'name'        => [
+            'sl' => $faker->sentence(3, true),
+            'en' => $faker->sentence(3, true),
+        ],
+        'description' => [
+            'sl' => $faker->sentences(3, true),
+            'en' => $faker->sentences(3, true),
+        ],
+        'excerpt'     => [
+            'sl' => $faker->sentences(3, true),
+            'en' => $faker->sentences(3, true),
+        ],
+        'image'       => 'images/bg2.jpg',
+        'price'       => random_int(5, 70),
+        'begins_at'   => $start,
+        'ends_at'     => $end
+    ];
+});

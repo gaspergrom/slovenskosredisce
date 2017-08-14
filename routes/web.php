@@ -34,18 +34,14 @@ Route::prefix('sredisce')->group(function() {
     Route::get('navijasko_sredisce', function() {
         return view('pages.center.fans');
     });
-    Route::get('slovensko_sredisce_dogodki', function() {
-        return view('pages.center.events');
-    });
+    Route::get('slovensko_sredisce_dogodki', 'PagesController@slo_events');
 });
 
 Route::prefix('navijaci')->group(function() {
     Route::get('/', function() {
         return view('pages.fans.presentation');
     });
-    Route::get('dogodki', function() {
-        return view('pages.fans.events');
-    });
+    Route::get('dogodki', 'PagesController@fans_events');
 });
 
 Route::prefix('slovenija')->group(function() {
@@ -88,9 +84,7 @@ Route::get('kontakt', function() {
     return view('pages.contact');
 });
 
-Route::get('novice', function() {
-    return view('pages.news');
-});
+Route::get('novice', 'PagesController@news');
 
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
