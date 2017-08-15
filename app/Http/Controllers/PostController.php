@@ -31,7 +31,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $data = $request->all();
-        Validator::make($data, [
+        $this->validate($data, [
             'image' => 'required|file|image'
         ]);
         $path = $request->file('image')->store('public/posts');
@@ -48,7 +48,7 @@ class PostController extends Controller
         $data = $request->all();
 
         if ( $request->hasFile('image') ) {
-            Validator::make($data, [
+            $this->validate($data, [
                 'image' => 'file|image|required'
             ]);
             $path = $request->file('image')->store('public/posts');

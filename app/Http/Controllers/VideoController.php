@@ -30,7 +30,7 @@ class VideoController extends Controller
 
     public function store(VideoRequest $request)
     {
-        Validator::make($request, [
+        $this->validate($request, [
             'image' => 'required|file|image'
         ]);
 
@@ -49,7 +49,7 @@ class VideoController extends Controller
     {
         $data = [];
         if ( $request->hasFile('image') ) {
-            Validator::make($request, [
+            $this->validate($request, [
                 'image' => 'required|file|image'
             ]);
 

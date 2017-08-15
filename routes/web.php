@@ -106,7 +106,7 @@ Route::get('storage/{filename}', function($filename) {
 
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
-
+        
     });
     Route::middleware('auth')->group(function() {
         Route::resource('events', 'EventController');

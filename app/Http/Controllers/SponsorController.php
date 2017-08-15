@@ -32,7 +32,7 @@ class SponsorController extends Controller
     {
         $data = $request->all();
 
-        Validator::make($request, [
+        $this->validate($request, [
             'logo' => 'required|file|image'
         ]);
 
@@ -51,7 +51,7 @@ class SponsorController extends Controller
         $data = $request->all();
 
         if ( $request->hasFile('logo') ) {
-            Validator::make($request, [
+            $this->validate($request, [
                 'logo' => 'required|file|image'
             ]);
             $path = $request->file('logo')->store('public/sponsors');

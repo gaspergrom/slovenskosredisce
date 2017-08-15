@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LeadershipRequest;
 use App\Leadership;
+use Illuminate\Support\Facades\Validator;
 
 class LeadershipController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     public function index()
@@ -30,7 +31,7 @@ class LeadershipController extends Controller
 
     public function store(LeadershipRequest $request)
     {
-        Validator::make($request, [
+        $this->validate($request, [
             'image' => 'required|file|image'
         ]);
 
@@ -48,7 +49,7 @@ class LeadershipController extends Controller
     {
         $data = $request->all();
         if ( $request->hasFile('image') ) {
-            Validator::make($request, [
+            $this->validate($request, [
                 'image' => 'required|file|image'
             ]);
             $path = $request->file('image')->store('public/leadership');
