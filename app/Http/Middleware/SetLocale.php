@@ -21,19 +21,16 @@ class SetLocale
      */
     public function handle($request, Closure $next)
     {
-        try {
-            app()->setLocale($lang = Crypt::decrypt($request->cookie('locale')) ? : 'sl');
-            Carbon::setLocale($lang);
 
-            $lc_time = [
-                'sl' => 'sl_SI',
-                'en' => '',
-                'de' => 'de_DE'
-            ];
-            setlocale(LC_TIME, $lc_time[$lang]);
-        } catch ( DecryptException $ex ) {
-            
-        }
+        app()->setLocale($lang = ! $request->hasCookie('locale') ? 'sl' : Crypt::decrypt($request->cookie('locale')));
+        Carbon::setLocale($lang);
+
+        $lc_time = [
+            'sl' => 'sl_SI',
+            'en' => '',
+            'de' => 'de_DE'
+        ];
+        setlocale(LC_TIME, $lc_time[$lang]);
 
         return $next($request);
     }

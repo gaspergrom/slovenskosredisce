@@ -3,9 +3,7 @@
 return [
     'home'    => [
         'title'                => 'Z ROKO V ROKI. <span class="text--green">ROKOMET.</span>',
-        'business_description' => 'Rokomet v Sloveniji uvrščamo med bolj razvite
-                                športne panoge. Temu primerni so klubski in
-                                reprezentančni dosežki ter podpora javnosti.',
+        'business_description' => '',
         'fans_description'     => '',
         'tourism_description'  => '',
         'news_description'     => '',

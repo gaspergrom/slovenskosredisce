@@ -92,6 +92,18 @@ Route::get('locale/{locale}', function($locale) {
     return redirect()->back()->withCookie($cookie);
 });
 
+Route::get('storage/{filename}', function($filename) {
+    $path = storage_path() . '/app/public/' . $filename;
+    if ( ! File::exists($path) )
+        abort(404, "I'm not here!");
+    $file     = File::get($path);
+    $type     = File::mimeType($path);
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
 
