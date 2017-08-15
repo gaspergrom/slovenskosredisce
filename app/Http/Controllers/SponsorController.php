@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\SponsorRequest;
+use App\Sponsor;
 
 class SponsorController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth')->except([ 'index', 'show' ]);
+        $this->middleware('auth');
     }
 
     public function index()
     {
-
+        $sponsors = Sponsor::all();
     }
 
-    public function show()
+    public function show(Sponsor $sponsor)
     {
 
     }
@@ -27,23 +28,41 @@ class SponsorController extends Controller
 
     }
 
-    public function store()
+    public function store(SponsorRequest $request)
+    {
+        $data = $request->all();
+
+        Validator::make($request, [
+            'logo' => 'required|file|image'
+        ]);
+
+        $path = $request->file('logo')->store('public/sponsors');
+
+        Sponsor::create(array_merge($data, [ 'logo' => $path ]));
+    }
+
+    public function edit(Sponsor $sponsor)
     {
 
     }
 
-    public function edit()
+    public function update(Sponsor $sponsor, SponsorRequest $request)
     {
+        $data = $request->all();
 
+        if ( $request->hasFile('logo') ) {
+            Validator::make($request, [
+                'logo' => 'required|file|image'
+            ]);
+            $path = $request->file('logo')->store('public/sponsors');
+            $data = array_merge($data, [ 'logo' => $path ]);
+        }
+
+        $sponsor->update($data);
     }
 
-    public function update()
+    public function destroy(Sponsor $sponsor)
     {
-
-    }
-
-    public function destroy()
-    {
-
+        $sponsor->delete();
     }
 }

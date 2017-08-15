@@ -4,8 +4,6 @@ namespace App\Http\Middleware;
 
 use Carbon\Carbon;
 use Closure;
-use Illuminate\Contracts\Encryption\DecryptException;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Crypt;
 
 class SetLocale

@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Event;
+use App\Http\Requests\EventRequest;
 
 class EventController extends Controller
 {
 
     public function __construct()
     {
-        $this->middleware('auth')->except([ 'index', 'show' ]);
+        $this->middleware('auth');
     }
 
     public function index()
     {
-
+        $events = Event::all();
     }
 
-    public function show()
+    public function show(Event $event)
     {
 
     }
@@ -27,23 +28,37 @@ class EventController extends Controller
 
     }
 
-    public function store()
+    public function store(EventRequest $request)
+    {
+        $data = $request->all();
+
+        if ( $request->hasFile('image') ) {
+            $path = $request->file('image')->store('public/events');
+            $data = array_merge($data, [ 'image' => $path ]);
+        }
+
+        Event::create($data);
+    }
+
+    public function edit(Event $event)
     {
 
     }
 
-    public function edit()
+    public function update(Event $event, EventRequest $request)
     {
+        $data = $request->all();
 
+        if ( $request->hasFile('image') ) {
+            $path = $request->file('image')->store('public/events');
+            $data = array_merge($data, [ 'image' => $path ]);
+        }
+
+        $event->update($data);
     }
 
-    public function update()
+    public function destroy(Event $event)
     {
-
-    }
-
-    public function destroy()
-    {
-
+        $event->delete();
     }
 }

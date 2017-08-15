@@ -19,12 +19,12 @@ class CreateEventsTable extends Migration
             $table->text('name');
             $table->text('description');
             $table->text('excerpt');
-            $table->string('image');
-            $table->integer('price');
+            $table->string('image')->nullable();
+            $table->integer('price')->nullable();
             $table->enum('type', [ 'business', 'fans', 'slo' ])->default('fans');
             $table->timestamps();
             $table->dateTime('begins_at');
-            $table->dateTime('ends_at');
+            $table->dateTime('ends_at')->nullable();
         });
     }
 
