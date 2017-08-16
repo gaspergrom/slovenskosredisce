@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Gallery;
+use App\Http\Requests\ContactRequest;
 use App\Leadership;
+use App\Mail\Contact;
 use App\Post;
 use App\Sponsor;
 use App\Video;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
@@ -91,5 +93,13 @@ class PagesController extends Controller
     public function post(Post $post)
     {
         return view('pages.news_full', compact('post'));
+    }
+
+    public function contact(ContactRequest $request)
+    {
+        // TODO Ask for email address
+        Mail::to('')->send(new Contact($request));
+
+        return view('pages.contact');
     }
 }

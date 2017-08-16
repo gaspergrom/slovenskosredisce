@@ -27,55 +27,82 @@ return [
     ],
     'teams'             => [
         'title' => 'Reprezentance',
-        'text'  => 'Slovenska rokometna reprezentanca je državna rokometna selekcija Rokometne zveze Slovenije, ki
-                        zastopa Slovenijo na mednarodni ravni v sestavi moške in ženske rokometne reprezentance: obe sta
-                        sestavljeni iz treh ekip, ki so razporejene glede na starost igralcev. Ženske ekipe so tako
-                        kadetinje, mladinke in članice, moške pa kadeti, mladinci ter člani. Od maja 2015 je selektor
-                        moške reprezentance gospod Veselin Vujović, ki je poleg drugih dosežkov, leta 1988 prejel
-                        nagrado Svetovne rokometne zveze za najboljšega rokometaša. Trenutni naziv kapetana
-                        reprezentance si lasti Vid Kavtičnik, član francoskega kluba Montpellier HB, njegov namestnik pa
-                        je Marko Bezjak, član nemškega kluba SC Magdeburg.
+        'text'  => 'Slovenska rokometna reprezentanca je državna selekcija Rokometne zveze Slovenije, ki zastopa državo na mednarodni ravni v sestavi moške in ženske rokometne reprezentance. Obe sta sestavljeni iz treh ekip, razporejene glede na starost igralcev: kadetinje, mladinke in članice za ženske ekipe in kadeti, mladinci in člani za moške ekipe.
                         <br><br>
-                        Reprezentanca Slovenije je doslej sodelovala na treh olimpijskih igrah, in sicer leta 2008 v
-                        Sydneyu (8. mesto), Atene 2004 (11. mesto) ter Rio de Janeiro leta 2016, kjer je zasedla šesto
-                        mesto. Nastopila je tudi na osmih svetovnih prvenstvih: Islandija leta 1995 (18. mesto),
-                        Francija 2001 (17. mesto), Portugalska 2003 (11. mesto), Tunizija 2005 (12. mesto), Nemčija 2007
-                        (10. mesto), Španija 2013 (4. mesto), Katar 2015 (8. mesto) in Francija 2017 (3. mesto). Poleg
-                        tega je nastopila tudi na desetih evropskih prvenstvih: Portugalska 1994 (10. mesto), Španija
-                        1996 (11. mesto), Hrvaška 2000 (5. mesto), Švedska 2002 (12. mesto), Slovenija 2004 (2. mesto),
-                        Švica 2006 (8. mesto), Norveška 2008 (10. mesto), Avstrija 2010 (11. mesto), Srbija 2012 (6.
-                        mesto) in leta 2016 na Poljskem (14. mesto).
+                        Selektor moške reprezentance je od maja 2015 dalje črnogorec Veselin Vujović, ki je poleg drugih dosežkov leta 1988 prejel nagrado za najboljšega rokometaša leta s strani Svetovne rokometne zveze. Trenutni naziv kapetana reprezentance si lasti Vid Kavtičnik, član francoskega kluba Montpellier HB, njegov namestnik pa je Marko Bezjak, član Nemškega kluba SC Magdeburg.
                         <br><br>
-                        Največja uspeha sta prav gotovo srebrna medalja z Evropskega prvenstva leta 2004, ki je potekalo
-                        v Sloveniji ter bronasta medalja na svetovnem prvenstvu v Franciji leta 2017'
+                        Moška reprezentanca Slovenije je doslej sodelovala na treh olimpijskih igrah:
+                        <ul>
+                            <li>Atene (2004): 11. mesto,</li>
+                            <li>Sydney (2008): 8. mesto in</li>
+                            <li>Rio de Janeiro (2016): 6. mesto,</li>
+                        </ul>
+                        <br/>
+                        nastopila je tudi na osmih svetovnih prvenstvih: 
+                        <br><br>
+                        <ul>
+                            <li>Islandija (1995): 18. mesto,</li>
+                            <li>Francija (2001): 17. mesto,</li>
+                            <li>Portugalska (2003): 11. mesto,</li>
+                            <li>Tunizija (2005): 12. mesto,</li>
+                            <li>Nemčija (2007): 10. mesto,</li>
+                            <li>Španija (2013): 4. mesto,</li>
+                            <li>Katar (2015): 8. mesto in</li>
+                            <li>Francija (2017): 3. mesto,</li>
+                        </ul>
+                        <br>
+                        poleg tega pa je nastopila tudi na desetih evropskih prvenstvih:
+                        <br>
+                        <br>
+                        <ul>
+                            <li>Portugalska (1994): 10. mesto, </li>
+                            <li>Španija (1996): 11. mesto,</li>
+                            <li>Hrvaška (2000): 5. mesto,</li>
+                            <li>Švedska (2002): 12. mesto,</li>
+                            <li>Slovenija (2004): 2. mesto,</li>
+                            <li>Švica (2006): 8. mesto,</li>
+                            <li>Norveška (2008): 10. mesto,</li>
+                            <li>Avstrija (2010): 11. mesto,</li>
+                            <li>Srbija (2012): 6. mesto in</li>
+                            <li>Poljska (2016): 14. mesto.</li>
+                        </ul>
+                        <br/><br/>
+                        Selektor ženske reprezentance pa je od septembra 2015 dalje Uroš Bregar, ki je na slovensko klop sedel kot naslednik svojevrstne mentorice Marte Bon, kateri je v preteklosti pomagal tako v klubu kot reprezentanci. Položaja kapetanke si je lastila Nina Jeriček, ki pa je svojo slovo naznanila ob uvrstitvi reprezentance na svetovno prvenstvo v Nemčiji, katero se bo odvijalo proti koncu leta.
+Ženska reprezentanca je nastopila na štirih svetovnih prvenstvih:
+                        <br><br>
+                        <ul>
+                            <li>Nemčija (1997): 18. mesto,</li>
+                            <li>Italija (2001): 9. mesto,</li>
+                            <li>Hrvaška (2003): 8. mesto,</li>
+                            <li>Rusija (2005): 14. mesto.</li>
+                        </ul>
+                        <br>
+                        nastopila je tudi na petih evropskih prvenstvih:
+                        <br>
+                        <br>
+                        <ul>
+                            <li>Danska (2002): 10. mesto,</li>
+                            <li>Madžarska (2004): 9. mesto,</li>
+                            <li>Švedska (2006): 16. mesto,</li>
+                            <li>Danska/Norveška (2010): 16. mesto,</li>
+                            <li>Švedska (2016): 14. mesto.</li>
+                        </ul>
+                        <br><br>
+                        Največja uspeha sta tako moška srebrna medalja z Evropskega prvenstva leta 2004 na <b>domačem terenu</b> in moška bronasta medalja na svetovnem prvenstvu 2017 v Franciji.'
     ],
     'club_competitions' => [
         'title' => 'Klubska temovanja',
-        'text'  => 'Slovenska klubska tekmovanja se odvijajo na podlagi starostnih omejitev, katera se pričnejo pri
-                        osnovnošolcih oz. pri mini rokometu vse od mlajših in starejših dečkov/deklic, kadetov,
-                        mladincev ter vse do članov ali članic. Klubske ekipe tekmujejo v pokalnih in večih ligaških
-                        tekmovanjih. Lige so razdeljene po kakovosti, in sicer pri moških poznamo 1. A državno rokometno
-                        ligo (14 klubov), 1. B državno rokometno ligo (14 klubov) in 2. državno rokometno ligo (10
-                        klubov). Ženska članska tekmovanja pa prav tako uvrščamo v 1. A državno rokometno ligo (11
-                        klubov) in 1. B državno rokometno ligo (5 klubov).
-                        <br><br>Najmočnejšo rokometno klubsko tekmovanje deluje pod okriljem Slovenske rokometne zveze,
-                        ki deluje na principu dvokrožnega ligaškega tekmovanja (vsaka ekipa igra z vsako, enkrat doma
-                        drugič v gosteh). Razdeljena je na redni del in končnico za prvaka ter obstanek. Po koncu 22.
-                        krogov rednega dela najboljših šest napreduje v 10. krogov dolgo končnico za prvaka, preostalih
-                        šest pa v končnico za obstanek. Po končanem prvenstvu prva ekipa v končnici za prvaka postane
-                        državni prvak in se skupaj z drugouvrščenim uvrstiti v Ligo prvakov. Zadnji dve ekipi v končnici
-                        za obstanek izpadeta v 1. B moško državno rokometno ligo. Doslej so štirje klubi osvojili naslov
-                        državnih prvakov, rekorderji z daleč največ naslovi pa so rokometaši Celja.
-                        <br><br>Poleg državnih lig vsako leto v Sloveniji potekajo tudi moška in ženska klubska pokalna
-                        tekmovanja, v katerih sodeluje vseh 38 moških članskih moštev ter 16 ženskih članskih moštev iz
-                        vseh slovenskih rokometnih lig. V vsakem krogu ekipe odigrajo po eno tekmo, na kateri mora ena
-                        izmed ekip zmagati in se uvrstiti naprej. Na zaključni turnir se uvrstijo štiri najboljša
-                        moštva, in zmagovalca polfinalnih tekem se uvrstita v finale, drugi dve ekipi pa odigrata tekmo
-                        za tretje mesto.'
+        'text'  => 'Slovenska klubska tekmovanja se odvijajo glede na starost igralcev. Začnejo se pri osnovnošolcih (cici rokomet za mlajše in mini rokomet za starejše) in se nadaljujejo od mlajših in starejših dečkov/deklic, kadetov, mladincev do članov ali članic. 
+                        <br><br>Klubske ekipe tekmujejo v pokalnih in številnih ligaških tekmovanjih, razdeljenih po kakovosti. Pri moških poznamo 1. A in 1. B državno rokometno ligo, obe trenutno zavzemata 14 klubov, in 2. državno rokometno ligo, v kateri je trenutno 10 klubov. Ženska članska tekmovanja prav tako uvrščamo v 1. A in 1. B državno rokometno ligo, trenutno z 11 in 5 klubi.
+                        <br><br>Najmočnejše moško rokometno klubsko tekmovanje, ki ga organizira Slovenska rokometna zveza, deluje na principu dvokrožnega ligaškega tekmovanja: med seboj se spopadejo vse ekipe 1. A državne rokometne lige, enkrat doma in drugič v gosteh.
+                        <br/><br/>Prvenstvo je razdeljeno na redni del, končnico za prvaka in končnico za obstanek. Po 22. krogu rednega dela se boljša polovica spopade v 10 krogov dolgi končnici za prvaka, preostali pa v končnici za obstanek. Tako najboljša ekipa v končnici za prvaka postane državni prvak in skupaj z drugouvrščenim nadaljuje v Ligo prvakov, zadnji dve ekipi v končnici za obstanek pa izpadeta v 1. B državno rokometno ligo.
+                        <br/><br/>Doslej so naslov državnih prvakov osvojili štirje klubi, rekorderji z 20 naslovi pa so rokometaši Celja. 
+Žensko rokometno klubsko tekmovanje prav tako organizira Slovenska rokometna zveza pri katerem se igra redni del in končnici. Redni del tekmovanja se odvija v obliki trokrožnega točkovnega sistema z 21. krogi. Številke v tretjem delu se dodelijo na podlagi razvrstitve na lestvici po končanem dvokrožnem delu in sicer dobi 1. uvrščena ekipa število ena, drugo uvrščena število dve in tako dalje. V obe končnici se prenašajo vse točke iz rednega dela tekmovanja. V primeru enakega števila točk, se pri končni razvrstitvi upoštevajo vse medsebojne tekme.
+<br/><br/>Poleg državnih lig letno potekajo tudi moška in ženska klubska pokalna tekmovanja, v katerih sodelujejo vsa članska moštva slovenskih rokometnih lig. V vsakem krogu ekipe odigrajo eno tekmo, na kateri se zmagovalna uvrsti naprej. Na zaključnjem turnirju se spopadejo štiri najboljša moštva: zmagovalca polfinalnih tekem se uvrstita v finale, drugi dve ekipi pa odigrata tekmo za tretje mesto.'
     ],
     'youth'             => [
         'title' => 'Mladi in rokomet',
-        'text' => 'Rokomet je prav zagotovo eden izmed najuspešnejši športov v Sloveniji. Mladi rokometaši si
+        'text'  => 'Rokomet je prav zagotovo eden izmed najuspešnejši športov v Sloveniji. Mladi rokometaši si
                         pričnejo nabirati izkušnje že v osnovni šoli, kjer Rokometna zveza Slovenije vodi osnovnošolska
                         tekmovanja, organizira rokometno taborjenje in izvaja projekt »Rokomet moja igra«, vse z namenom
                         navduševanja in izobraževanja najmlajših rokometnih igralcev in igralk. Nekateri od njih pa

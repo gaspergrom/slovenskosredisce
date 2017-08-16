@@ -81,6 +81,7 @@ Route::prefix('multimedija')->group(function() {
 Route::get('kontakt', function() {
     return view('pages.contact');
 });
+Route::post('kontakt', 'PagesController@contact');
 
 Route::get('novice', 'PagesController@news');
 Route::get('novice/{post}', 'PagesController@post');
@@ -106,7 +107,7 @@ Route::get('storage/{filename}', function($filename) {
 
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
-        
+
     });
     Route::middleware('auth')->group(function() {
         Route::resource('events', 'EventController');
