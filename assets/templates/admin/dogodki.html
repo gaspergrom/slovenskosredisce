@@ -1,31 +1,62 @@
 @@include(markdown('includes/header.html'))
 
 <section>
-  <div class="container pt150 pb60">
-    <h1 class="text-center">Dogodki</h1>
-    <hr>
-    <div class="flex flex--center">
-      <div class="col-md-8">
-        <form>
-          <div class="flex flex--middle flex--center pb20">
-            <p class="mb0">slovensko središče</p>
-            <label class="switch flex flex--middle ml10 mr15">
-              <input type="checkbox" v-model="samoplacnik"  name="samoplacnik">
-              <span></span>
-            </label>
-            <p class="mb0">navijaško središče</p>
-          </div>
-          <input type="text" name="name" placeholder="Ime dogodka" class="box mb15">
-          <textarea class="box mb15" placeholder="opis"></textarea>
-          <div class="flex flex--center">
-            <button class="btn btn__default btn--round">
-              Dodaj
-            </button>
-          </div>
-        </form>
-      </div>
+    <div class="container pt150 pb60">
+        <h1 class="text-center">Dogodki</h1>
+        <hr>
+        <div class="flex flex--center">
+            <div class="col-md-8">
+                <form>
+                    <div class="flex flex--middle flex--center pb20">
+                        <p class="mb0">slovensko središče</p>
+                        <label class="switch flex flex--middle ml10 mr15">
+                            <input type="checkbox" v-model="samoplacnik" name="samoplacnik">
+                            <span></span>
+                        </label>
 
+                        <p class="mb0">navijaško središče</p>
+                    </div>
+                    <div class="flex flex--center">
+                        <label for="file" class="flex flex--middle mb20">
+                            Dodaj sliko
+                            <input type="file" id="file">
+                            <span type="button" class="btn btn--round btn__default flex flex--middle ml20">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#ffffff" d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+
+                    @@include(markdown('includes/tabs.html'))
+                    <div>
+                        <div id="slo">
+                            <h4>Slo</h4>
+                            <input type="text" name="name" placeholder="Ime dogodka (slo)" class="box mb15">
+                            <textarea class="box mb15" placeholder="opis (slo)"></textarea>
+                        </div>
+                        <div id="eng" style="display: none">
+                            <h4>Eng</h4>
+                            <input type="text" name="name" placeholder="Ime dogodka (eng)" class="box mb15">
+                            <textarea class="box mb15" placeholder="opis (eng)"></textarea>
+                        </div>
+                        <div id="ger" style="display: none">
+                            <h4>Ger</h4>
+                            <input type="text" name="name" placeholder="Ime dogodka (ger)" class="box mb15">
+                            <textarea class="box mb15" placeholder="opis (ger)"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex--center">
+                        <button class="btn btn__default btn--round">
+                            Dodaj
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
-  </div>
 </section>
 @@include(markdown('includes/footer.html'))

@@ -7,8 +7,37 @@
     <div class="flex flex--center">
       <div class="col-md-8">
         <form>
-          <input type="text" name="name" placeholder="Naslov novice" class="box mb15">
-          <textarea class="box mb15" placeholder="vsebina"></textarea>
+        <div class="flex flex--center">
+          <label for="file" class="flex flex--middle mb20">
+            Dodaj sliko
+            <input type="file" id="file">
+            <span type="button" class="btn btn--round btn__default flex flex--middle ml20">
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                    <path fill="#ffffff" d="M9,16V10H5L12,3L19,10H15V16H9M5,20V18H19V20H5Z"/>
+                                </svg>
+                            </span>
+          </label>
+        </div>
+        @@include(markdown('includes/tabs.html'))
+
+          <div>
+            <div id="slo">
+              <h4>Slo</h4>
+              <input type="text" name="name" placeholder="Naslov novice (slo)" class="box mb15">
+              <textarea class="box mb15" placeholder="vsebina (slo)"></textarea>
+            </div>
+            <div id="eng" style="display: none">
+              <h4>Eng</h4>
+              <input type="text" name="name" placeholder="Naslov novice (eng)" class="box mb15">
+              <textarea class="box mb15" placeholder="vsebina (eng)"></textarea>
+            </div>
+            <div id="ger" style="display: none">
+              <h4>Ger</h4>
+              <input type="text" name="name" placeholder="Naslov novice (ger)" class="box mb15">
+              <textarea class="box mb15" placeholder="vsebina (ger)"></textarea>
+            </div>
+          </div>
+
           <div class="flex flex--center">
             <button class="btn btn__default btn--round">
               Dodaj
