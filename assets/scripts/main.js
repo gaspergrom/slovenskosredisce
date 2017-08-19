@@ -18,7 +18,12 @@ $(function() {
         margin: 10,
         nav: false
     });
-
+    $("[data-tab]").click(function () {
+       $($(this).attr("data-tab")).siblings().each(function () {
+           $(this).slideUp();
+       });
+       $($(this).attr("data-tab")).slideDown();
+    });
     $("[data-video]").click(function () {
         $(".video__popup").addClass("open");
         $("body").addClass("overflow");
