@@ -36,7 +36,7 @@ class SponsorController extends Controller
             'logo' => 'required|file|image'
         ]);
 
-        $path = $request->file('logo')->store('public/sponsors');
+        $path = $request->file('logo')->store('sponsors', [ 'disk' => 'public' ]);
 
         Sponsor::create(array_merge($data, [ 'logo' => $path ]));
     }
@@ -54,7 +54,7 @@ class SponsorController extends Controller
             $this->validate($request, [
                 'logo' => 'required|file|image'
             ]);
-            $path = $request->file('logo')->store('public/sponsors');
+            $path = $request->file('logo')->store('sponsors', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'logo' => $path ]);
         }
 

@@ -28,9 +28,9 @@ class EventRequest extends FormRequest
             'name.*'        => 'required|string|min:3',
             'description.*' => 'required|string',
             'excerpt.*'     => 'required|string',
-            'price'         => 'required_if:type,fans,slo|integer',
-            'type'          => 'in:business,fans,slo|required',
-            'image'         => 'required_if:type,fans,slo|file|sometimes|image',
+            'price'         => 'required_if:type,fans,slo|integer|nullable',
+            'type'          => 'in:fans,slo',
+            //'image'         => 'required_if:type,fans,slo|file|sometimes|image',
             'begins_at'     => 'required|date',
             'ends_at'       => 'sometimes|date',
         ];

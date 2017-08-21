@@ -34,8 +34,8 @@ class VideoController extends Controller
             'image' => 'required|file|image'
         ]);
 
-        $image = $request->file('image')->store('public/videos/images');
-        $video = $request->file('video')->store('public/videos');
+        $image = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);
+        $video = $request->file('video')->store('videos', [ 'disk' => 'public' ]);
 
         Video::create([ 'path' => $video, 'image' => $image ]);
     }
@@ -53,9 +53,9 @@ class VideoController extends Controller
                 'image' => 'required|file|image'
             ]);
 
-            $data['image'] = $request->file('image')->store('public/videos/images');
+            $data['image'] = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);
         }
-        $data['path'] = $request->file('video')->store('public/videos');
+        $data['path'] = $request->file('video')->store('videos', [ 'disk' => 'public' ]);
         $video->update($data);
     }
 

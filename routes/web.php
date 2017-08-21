@@ -107,12 +107,16 @@ Route::get('storage/{filename}', function($filename) {
 
 Route::prefix('admin')->group(function() {
     Route::get('/', function() {
-
+        return view('admin.index');
     });
     Route::middleware('auth')->group(function() {
-        Route::resource('events', 'EventController');
-        Route::resource('leadership', 'LeadershipController');
-        Route::resource('sponsors', 'SponsorController');
-        Route::resource('posts', 'PostController');
+        Route::resource('dogodki', 'EventController');
+        Route::resource('vodstvo', 'LeadershipController');
+        Route::resource('sponzorji', 'SponsorController');
+        Route::resource('novice', 'PostController');
+        Route::resource('galerija', 'GalleryController');
+        Route::resource('videos', 'VideoController');
     });
 });
+
+Auth::routes();

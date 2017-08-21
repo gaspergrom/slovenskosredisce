@@ -34,7 +34,7 @@ class PostController extends Controller
         $this->validate($data, [
             'image' => 'required|file|image'
         ]);
-        $path = $request->file('image')->store('public/posts');
+        $path = $request->file('image')->store('posts', [ 'disk' => 'public' ]);
         Post::create(array_merge($data, [ 'image' => $path ]));
     }
 
@@ -51,7 +51,7 @@ class PostController extends Controller
             $this->validate($data, [
                 'image' => 'file|image|required'
             ]);
-            $path = $request->file('image')->store('public/posts');
+            $path = $request->file('image')->store('posts', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 

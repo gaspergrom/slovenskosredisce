@@ -35,7 +35,7 @@ class LeadershipController extends Controller
             'image' => 'required|file|image'
         ]);
 
-        $path = $request->file('image')->store('public/leadership');
+        $path = $request->file('image')->store('leadership', [ 'disk' => 'public' ]);
 
         Leadership::create(array_merge($request->all(), [ 'image' => $path ]));
     }
@@ -52,7 +52,7 @@ class LeadershipController extends Controller
             $this->validate($request, [
                 'image' => 'required|file|image'
             ]);
-            $path = $request->file('image')->store('public/leadership');
+            $path = $request->file('image')->store('leadership', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 

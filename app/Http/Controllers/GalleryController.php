@@ -35,7 +35,7 @@ class GalleryController extends Controller
         $gallery = Gallery::create($request->all());
 
         foreach ( $request->images as $image ) {
-            $path = $image->store('public/galleries/' . $gallery->id);
+            $path = $image->store('galleries/' . $gallery->id, [ 'disk' => 'public' ]);
             $gallery->images()->create([ 'path' => $path ]);
         }
     }
@@ -50,7 +50,7 @@ class GalleryController extends Controller
         $gallery->update($request->all());
 
         foreach ( $request->images as $image ) {
-            $path = $image->store('public/galleries/' . $gallery->id);
+            $path = $image->store('galleries/' . $gallery->id, [ 'disk' => 'public' ]);
             $gallery->images()->create([ 'path' => $path ]);
         }
     }

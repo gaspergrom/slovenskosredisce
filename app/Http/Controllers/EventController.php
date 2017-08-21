@@ -16,16 +16,8 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-    }
 
-    public function show(Event $event)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.events.index', compact('events'));
     }
 
     public function store(EventRequest $request)
@@ -33,16 +25,18 @@ class EventController extends Controller
         $data = $request->all();
 
         if ( $request->hasFile('image') ) {
-            $path = $request->file('image')->store('public/events');
+            $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 
         Event::create($data);
+
+        return redirect("admin/dogodki");
     }
 
     public function edit(Event $event)
     {
-
+        return view('admin.events.event', compact('event'));
     }
 
     public function update(Event $event, EventRequest $request)
@@ -50,7 +44,7 @@ class EventController extends Controller
         $data = $request->all();
 
         if ( $request->hasFile('image') ) {
-            $path = $request->file('image')->store('public/events');
+            $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 
