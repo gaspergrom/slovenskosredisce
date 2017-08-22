@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SponsorRequest;
 use App\Sponsor;
+use Illuminate\Support\Facades\Storage;
 
 class SponsorController extends Controller
 {
@@ -16,16 +17,8 @@ class SponsorController extends Controller
     public function index()
     {
         $sponsors = Sponsor::all();
-    }
 
-    public function show(Sponsor $sponsor)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.sponsors.index', compact('sponsors'));
     }
 
     public function store(SponsorRequest $request)
@@ -39,14 +32,16 @@ class SponsorController extends Controller
         $path = $request->file('logo')->store('sponsors', [ 'disk' => 'public' ]);
 
         Sponsor::create(array_merge($data, [ 'logo' => $path ]));
+
+        return redirect('admin/sponzorji');
     }
 
-    public function edit(Sponsor $sponsor)
+    public function edit(Sponsor $sponzorji)
     {
-
+        return view('admin.sponsors.edit')->with([ 'sponsor' => $sponzorji->toArray() ]);
     }
 
-    public function update(Sponsor $sponsor, SponsorRequest $request)
+    public function update(Sponsor $sponzorji, SponsorRequest $request)
     {
         $data = $request->all();
 
@@ -54,15 +49,21 @@ class SponsorController extends Controller
             $this->validate($request, [
                 'logo' => 'required|file|image'
             ]);
+            Storage::delete('public/' . $sponzorji->logo);
             $path = $request->file('logo')->store('sponsors', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'logo' => $path ]);
         }
 
-        $sponsor->update($data);
+        $sponzorji->update($data);
+
+        return redirect('admin/sponzorji');
     }
 
-    public function destroy(Sponsor $sponsor)
+    public function destroy(Sponsor $sponzorji)
     {
-        $sponsor->delete();
+        Storage::delete('public/' . $sponzorji->logo);
+        $sponzorji->delete();
+
+        return "success";
     }
 }
