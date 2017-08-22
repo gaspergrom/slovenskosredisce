@@ -74,9 +74,7 @@ Route::prefix('rokomet_v_sloveniji')->group(function() {
 Route::prefix('multimedija')->group(function() {
     Route::get('galerija', 'PagesController@gallery');
     Route::get('galerija/{gallery}', 'PagesController@singleGallery');
-    Route::get('videoposnetki', function() {
-        return view('pages.multimedia.videos');
-    });
+    Route::get('videoposnetki', 'PagesController@videos');
 });
 
 Route::get('kontakt', function() {

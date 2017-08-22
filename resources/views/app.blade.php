@@ -39,7 +39,6 @@
                             <img src="{{ asset('images/logo_white.png') }}" style="height: 90px">
                         </div>
                     </div>
-
                 </div>
                 <div class="col-md-3 pb20">
                     <h4 class="text--white">@lang('footer.contact')</h4>
