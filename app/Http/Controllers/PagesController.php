@@ -78,6 +78,11 @@ class PagesController extends Controller
         return view('pages.multimedia.gallery', compact('galleries'));
     }
 
+    public function singleGallery(Gallery $gallery)
+    {
+        return view('pages.multimedia.gallery_single', compact('gallery'));
+    }
+
     public function videos()
     {
         $videos = Video::all();

@@ -19,7 +19,7 @@ class Gallery extends Model
         return $this->hasMany(Image::class);
     }
 
-    public function image()
+    public function getImageAttribute()
     {
         return $this->images->first();
     }

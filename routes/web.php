@@ -73,6 +73,7 @@ Route::prefix('rokomet_v_sloveniji')->group(function() {
 
 Route::prefix('multimedija')->group(function() {
     Route::get('galerija', 'PagesController@gallery');
+    Route::get('galerija/{gallery}', 'PagesController@singleGallery');
     Route::get('videoposnetki', function() {
         return view('pages.multimedia.videos');
     });
@@ -91,18 +92,6 @@ Route::get('locale/{locale}', function($locale) {
     $cookie = cookie('locale', $locale, 60 * 24 * 365 * 5);
 
     return redirect()->back()->withCookie($cookie);
-});
-
-Route::get('storage/{filename}', function($filename) {
-    $path = storage_path() . '/app/public/' . $filename;
-    if ( ! File::exists($path) )
-        abort(404, "I'm not here!");
-    $file     = File::get($path);
-    $type     = File::mimeType($path);
-    $response = Response::make($file, 200);
-    $response->header("Content-Type", $type);
-
-    return $response;
 });
 
 Route::prefix('admin')->group(function() {
