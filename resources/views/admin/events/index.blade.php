@@ -11,16 +11,16 @@
                     @include('admin.events._form', ['submitBtn' => 'Dodaj'])
                     {!! Form::close() !!}
                 </div>
-                <div class="col-md-8">
-                    <table>
+                <div class="col-md-8 pt60 table">
+                    <table class="responsive">
                         <tr>
-                            <td>
+                            <td class="text-center text-bold">
                                 Ime dogodka
                             </td>
-                            <td>
+                            <td class="text-center text-bold">
                                 Datum dogodka
                             </td>
-                            <td>
+                            <td class="text-center text-bold">
                                 Akcija
                             </td>
                         </tr>

@@ -1,11 +1,11 @@
 <tr data-id="{{ $event->id }}">
-    <td>
+    <td class="text-center text-bold">
         {{ $event->name }}
     </td>
-    <td>
+    <td class="text-center">
         {{ $event->begins_at->format('d. m. Y H:i') }}
     </td>
-    <td>
+    <td class="text-center">
         <a href="{{ route('dogodki.edit', $event->id) }}">Uredi</a>
         &nbsp;
         <a onClick="deleteEvent({{ $event->id }});">Zbriši</a>

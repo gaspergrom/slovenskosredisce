@@ -15,7 +15,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = Event::all();
+        $events = Event::orderBy('begins_at', 'DESC')->get();
 
         return view('admin.events.index', compact('events'));
     }
@@ -44,6 +44,7 @@ class EventController extends Controller
         $data = $request->all();
 
         if ( $request->hasFile('image') ) {
+            Storage::delete('public/' . $dogodki->image);
             $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
@@ -55,6 +56,7 @@ class EventController extends Controller
 
     public function destroy(Event $dogodki)
     {
+        Storage::delete('public/' . $dogodki->image);
         $dogodki->delete();
 
         return "success";

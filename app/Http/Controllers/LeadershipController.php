@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LeadershipRequest;
 use App\Leadership;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class LeadershipController extends Controller
@@ -18,17 +19,7 @@ class LeadershipController extends Controller
     {
         $leaderships = Leadership::all();
 
-        return view('admin.leadership.index');
-    }
-
-    public function show(Leadership $leadership)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.leadership.index', compact('leaderships'));
     }
 
     public function store(LeadershipRequest $request)
@@ -40,29 +31,37 @@ class LeadershipController extends Controller
         $path = $request->file('image')->store('leadership', [ 'disk' => 'public' ]);
 
         Leadership::create(array_merge($request->all(), [ 'image' => $path ]));
+
+        return redirect('/admin/vodstvo');
     }
 
-    public function edit(Leadership $leadership)
+    public function edit(Leadership $vodstvo)
     {
-
+        return view('admin.leadership.edit')->with([ 'leadership' => $vodstvo->toArray() ]);
     }
 
-    public function update(Leadership $leadership, LeadershipRequest $request)
+    public function update(Leadership $vodstvo, LeadershipRequest $request)
     {
         $data = $request->all();
         if ( $request->hasFile('image') ) {
             $this->validate($request, [
                 'image' => 'required|file|image'
             ]);
+            Storage::delete('public/' . $vodstvo->image);
             $path = $request->file('image')->store('leadership', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 
-        $leadership->update($data);
+        $vodstvo->update($data);
+
+        return redirect('admin/vodstvo');
     }
 
-    public function destroy(Leadership $leadership)
+    public function destroy(Leadership $vodstvo)
     {
-        $leadership->delete();
+        Storage::delete('public/' . $vodstvo->image);
+        $vodstvo->delete();
+
+        return "success";
     }
 }
