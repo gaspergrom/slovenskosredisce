@@ -7,6 +7,7 @@
                 <h1 class="h2 text-center">Prijava</h1>
                 <hr>
                 <form action="{{ route('login') }}" method="POST" novalidate>
+                    {{ csrf_field() }}
                     <input name="email" required data-required="" data-invalid="" type="email"
                            placeholder="E-naslov" class="inp--round">
                     <input name="password" type="password" placeholder="Geslo" class="mt10 inp--round">

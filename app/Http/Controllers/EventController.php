@@ -34,12 +34,12 @@ class EventController extends Controller
         return redirect("admin/dogodki");
     }
 
-    public function edit(Event $event)
+    public function edit(Event $dogodki)
     {
-        return view('admin.events.event', compact('event'));
+        return view('admin.events.edit')->with([ 'event' => $dogodki->toArray() ]);
     }
 
-    public function update(Event $event, EventRequest $request)
+    public function update(Event $dogodki, EventRequest $request)
     {
         $data = $request->all();
 
@@ -48,11 +48,15 @@ class EventController extends Controller
             $data = array_merge($data, [ 'image' => $path ]);
         }
 
-        $event->update($data);
+        $dogodki->update($data);
+
+        return redirect('admin/dogodki');
     }
 
-    public function destroy(Event $event)
+    public function destroy(Event $dogodki)
     {
-        $event->delete();
+        $dogodki->delete();
+
+        return "success";
     }
 }
