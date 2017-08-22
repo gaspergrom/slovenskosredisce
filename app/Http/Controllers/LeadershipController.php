@@ -11,12 +11,14 @@ class LeadershipController extends Controller
 
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
     public function index()
     {
         $leaderships = Leadership::all();
+
+        return view('admin.leadership.index');
     }
 
     public function show(Leadership $leadership)

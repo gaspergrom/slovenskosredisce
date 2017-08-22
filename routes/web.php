@@ -117,6 +117,7 @@ Route::prefix('admin')->group(function() {
         Route::resource('galerija', 'GalleryController');
         Route::resource('videos', 'VideoController');
     });
+    Route::delete('/images/{image}', 'GalleryController@deleteImage');
 });
 
 Auth::routes();

@@ -6,6 +6,7 @@ use App\Gallery;
 use App\Http\Requests\GalleryRequest;
 use App\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -18,50 +19,52 @@ class GalleryController extends Controller
     public function index()
     {
         $galleries = Gallery::all();
-    }
 
-    public function show(Gallery $gallery)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.gallery.index', compact('galleries'));
     }
 
     public function store(GalleryRequest $request)
     {
-        $gallery = Gallery::create($request->all());
+        $gallery = Gallery::create($request->except([ 'images' ]));
 
         foreach ( $request->images as $image ) {
             $path = $image->store('galleries/' . $gallery->id, [ 'disk' => 'public' ]);
             $gallery->images()->create([ 'path' => $path ]);
         }
+
+        return redirect('admin/galerija');
     }
 
-    public function edit(Gallery $gallery)
+    public function edit(Gallery $galerija)
     {
-
+        return view('admin.gallery.edit')->with([ 'gallery' => $galerija->toArray(), 'images' => $galerija->images ]);
     }
 
-    public function update(Gallery $gallery, GalleryRequest $request)
+    public function update(Gallery $galerija, GalleryRequest $request)
     {
-        $gallery->update($request->all());
+        $galerija->update($request->except([ 'images' ]));
 
         foreach ( $request->images as $image ) {
-            $path = $image->store('galleries/' . $gallery->id, [ 'disk' => 'public' ]);
-            $gallery->images()->create([ 'path' => $path ]);
+            $path = $image->store('galleries/' . $galerija->id, [ 'disk' => 'public' ]);
+            $galerija->images()->create([ 'path' => $path ]);
         }
+
+        return redirect('admin/galerija');
     }
 
-    public function destroy(Gallery $gallery)
+    public function destroy(Gallery $galerija)
     {
-        $gallery->delete();
+        Storage::deleteDirectory("public/galleries/" . $galerija->id);
+        $galerija->delete();
+
+        return "success";
     }
 
     public function deleteImage(Image $image)
     {
+        Storage::delete("public/" . $image->path);
         $image->delete();
+
+        return "success";
     }
 }

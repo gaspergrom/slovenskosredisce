@@ -3,15 +3,17 @@
 @section('content')
     <section>
         <div class="container pt150 pb60">
-            <h1 class="text-center">Galerija</h1>
+            <h1 class="text-center">Naslov albuma</h1>
             <hr>
             <div class="flex flex--center">
                 <div class="col-md-8">
-                    {!! Form::open(['url' => '/admin/galerija', 'files' => true]) !!}
-                    @include('admin.gallery._form', ['submitBtn' => 'Dodaj'])
+                    {!! Form::model($gallery, ['method' => 'PATCH', 'files' => true, 'route' => ['galerija.update', $gallery['id']]]) !!}
+                    @include('admin.gallery._form', ['submitBtn' => 'Uredi'])
                     {!! Form::close() !!}
+                </div>
+                <div class="col-md-12">
                     <div class="flex pt60">
-                        @each('admin.gallery._gallery', $galleries, 'gallery')
+                        @each('admin.gallery._image', $images, 'image')
                     </div>
                 </div>
             </div>
@@ -21,13 +23,13 @@
 
 @section('scripts')
     <script>
-        function deleteGallery(id) {
+        function deleteImage(id) {
             $.ajax({
-                url: '/admin/galerija/' + id,
+                url: "/admin/images/" + id,
                 type: 'DELETE',
                 data: {'_token': '{{ csrf_token() }}'},
                 success: function () {
-                    $("div[data-gallery=" + id + "]").remove();
+                    $("div[data-image=" + id + "]").remove();
                 }
             })
         }
