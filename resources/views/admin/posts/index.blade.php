@@ -25,3 +25,18 @@
         </div>
     </section>
 @endsection
+
+@section('scripts')
+    <script>
+        function deletePost(id) {
+            $.ajax({
+                url: '/admin/novice' + id,
+                type: 'DELETE',
+                data: {'_token': '{{ csrf_token() }}'},
+                success: function () {
+                    $("tr[data-post=" + id + "]").remove()
+                }
+            })
+        }
+    </script>
+@endsection
