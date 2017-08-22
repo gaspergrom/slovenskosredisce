@@ -26,7 +26,7 @@
         <div class="container pt45">
             <div class="row pb30">
                 <div class="col-md-6 pb20">
-                    <h4 class="text--white">@lang('footer.contact')</h4>
+                    <h4 class="text--white">@lang('footer.center')</h4>
                     <hr class="ml0 mb30">
                     <p>
                         @lang('footer.center_text')
