@@ -1,5 +1,5 @@
 <div data-image="{{ $image['id'] }}" class="col-md-4 mb20">
-    <div class="quadric--medium bg--image" style="background-image: url('{{ asset('storage/'.$image['path']) }}')">
+    <div class="quadric--medium bg--image" style="background-image: url('{{ asset($image['path']) }}')">
 
     </div>
     <div class="box pl10 pr10 pt10">
