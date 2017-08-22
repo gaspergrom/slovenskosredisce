@@ -155,55 +155,38 @@ Handball und die Europameisterschaft 2018 zusammenzubringen.',
     'business'     => [
         'presentation' => [
             'title' => 'Geschäftszentrum',
-            'text'  => 'Na osnovi pozitivnih preteklih izkušenj organizacije poslovnih in družabnih dogodkov v
-                        Slovenskem središču
-                        – I feel Slovenia ob večjih športnih prireditvah v Katarju, na Poljskem, Braziliji in Franciji,
-                        se je Rokometna
-                        zveza Slovenija ob podpori partnerjev odločila, da vzpostavi Slovensko središče – I feel
-                        Slovenia tudi na
-                        Hrvaškem, in sicer v mestu Zagreb.<br><br>
-                        SLOVENSKO SREDIŠČE - I FEEL SLOVENIA je iz organizacijskega vidika sestavljeno iz dveh delov, in
-                        sicer kot
-                        poslovno središče in kot navijaško-družabno središče v mestu Zagreb. Slovensko poslovno središče
-                        bo
-                        predstavljalo prostor (predstavitveni paviljon države) za gospodarska, politična, kulturna,
-                        družabna,
-                        medijska in športna srečevanja. <b>Častni pokrovitelj Slovenskega središča – I feel Slovenia je
-                            predsednik
-                            vlade Republike Slovenije dr. Miro Cerar.</b><br><br>
-                        Namen organiziranja in vzpostavitve takšnega središča je učinkovita promocija naše države, v
-                        okviru le-te
-                        pa tudi slovenskega gospodarstva in možnosti poslovnega sodelovanja z gostitelji prvenstva kot
-                        tudi vsemi
-                        ostalimi zainteresiranimi državami. Cilj Slovenskega središča na Hrvaškem je, da se (1) doseže
-                        poslovno
-                        sodelovanje slovenskih in hrvaških poslovnih subjektov ter ostalih gospodarskih subkjetov iz
-                        drugih držav,
-                        (2) izvede promocija države Slovenije kot celote, (3) na enem mestu združi slovensko in tujo
-                        zainteresirano
-                        javnost v sklopu Evropskega rokometnega prvenstva 2018.<br><br>
-                        Poslovno središče bo v enem izmed najprestižnejših hotelov v mestu Zagreb, in sicer ..... , ki
-                        je lociran v
-                        središču oziroma starem delu mesta. Poslovni in družabni dogodki bodo organizirani v notranjih
-                        konferenčnih prostorih.'
+            'text'  => 'Von früherer Erfahrung in der Organisation von Geschäfts- und Gesellschaftsveranstaltungen im
+Slowenisches Zentrum – Ich fühle Slowenien&quot;, hat der Handballverband von Slowenien zusammen
+
+mit seinen Partnern neben den großen Sportereignissen in Katar, Polen, Brasilien und Frankreich
+beschlossen, auch in Kroatien einen Zentrum zu gründen, und zwar in Zagreb.<br><br>
+                        Das Hotel liegt im Zentrum von Zagreb, das Slowenisches Zentrum – I feel Slovenia besteht aus zwei
+Teilen; einerseits ist es ein Business-Center und eine Fanzone, andererseits ein Platz, wo die
+Unterstützer der slowenischen Nationalmannschaft zusammenkommen und sich gesellig unterhalten
+können. Das Business-Center verfügt über einen einzigartigen Bereich
+(Ausstellungsraum/Showroom), der sich speziell für wirtschaftliche, politische, kulturelle, mediale,
+sportliche und andere Treffen sowie für Geselligkeit eignet. <b>Dieses Projekt wird unter der
+Ehrenpatronage des Premierministers von Slowenien, Herrn Miro Cerar, organisiert.</b>b><br><br>
+                        Ziel ist es, dieses Projekt zu organisieren und zu etablieren, um unser Land sowie die slowenische
+Wirtschaft und die endlosen Netzwerkmöglichkeiten zwischen den Gastgebern der
+Sportveranstaltung und allen anderen interessierten Ländern effizient zu fördern. Das Ziel des
+Zentrums in Kroatien ist es, (1) die geschäftliche Zusammenarbeit zwischen Wirtschaftssubjekten aus
+Slowenien, Kroatien sowie aus anderen Staaten zu etablieren, (2) eine umfassende Förderung
+Sloweniens durchzuführen, (3) die slowenische und ausländische interessierte Öffentlichkeit durch
+Handball und die Europameisterschaft 2018 zusammenzubringen.<br><br>
+                        Das Slowenisches Zentrum in Kroatien findet in einem der prestigeträchtigsten Hotels in Zagreb statt, das im Herzen der Altstadt liegt.'
         ],
         'events'       => [
-            'title'      => 'Dogodki v poslovnem središču',
-            'text'       => 'Poslovno središče predstavlja prostor za organizacijo srečanj na poslovni in politični ravni. Iz
-                        vsebinskega
-                        vidika bodo v sklopu tega organizirani dogodki, ki so namenjeni okrepitvi poslovnega sodelovanja
-                        med
-                        podjetji iz Slovenije in Hrvaške, regionalno gospodarsko in politično srečanje, turistični
-                        forum, športni
-                        forum, poslovno kosilo med gospodarskima delegacijama, individualna srečanja med poslovnimi
-                        partnerji,
-                        itd. Poslovni in družabni dogodki bodo organizirani v notranjih konferenčnih prostorih
-                        hotela......
-                        <br><br>Z namenom, da se realizira cilje poslovnega središča, bodo v poslovnem središču
-                        organizirani različni
-                        poslovni in družabno-kulturni dogodki. Izhajajoč iz tega je pripravljen poslovni program izvedbe
-                        aktivnosti
-                        oziroma organizacije dogodkov v Slovenskem središču - I feel Slovenia.',
+            'title'      => 'Veranstaltungen im Slowenisches Zentrumu',
+            'text'       => 'Das Business Center ist ein Raum, welches vor allem für geschäftliche und politische Treffen gemacht
+wurde. Das umfangreiche Programm umfasst Veranstaltungen, die die geschäftliche
+Zusammenarbeit zwischen slowenischen und kroatischen Unternehmen verstärken, sowie ein
+regionales Wirtschafts- und politisches Treffen, ein Tourismusforum, ein Sportforum, ein Business-
+Lunch zwischen den beiden Delegationen, individuelle Geschäftspartnertreffen und ähnliche
+Veranstaltungen.
+                        <br><br>Um die Ziele des Geschäftszentrums zu verwirklichen, werden in den Konferenzräumen des Hotels
+diverse soziale und geschäftliche Veranstaltungen abgehalten, weshalb wir im Slowenisches ein
+Geschäftstätigkeitsprogramm vorbereitet haben.',
             'date'       => 'Datum',
             'hour'       => 'Zeit',
             'activities' => 'Aktivität',
@@ -229,13 +212,13 @@ Jahr 2014 entspricht. Die Importe im Jahr 2015 beliefen sich auf 1,37 Mrd. € u
 über dem Vorjahresniveau. In letzter Zeit haben wir einen spürbaren Trend des gesamten Handels
 (9% im Jahr 2013, 12% im Jahr 2014 und 13,4% im Jahr 2015) gesehen, und der Beitritt Kroatiens zur
 EU hat sicherlich einen großen Teil in diesem Trend gespielt.<br><br>',
-            'table_text' => 'Blagovna menjava med Slovenijo in Hrvaško 2009 – 2015 (v 1.000 EUR)',
-            'year'       => 'Leto',
-            'export'     => 'Izvoz blaga',
-            'import'     => 'Uvoz blaga',
-            'sum'        => 'Skupaj',
-            'saldo'      => 'Saldo',
-            'source'     => 'Vir: Ministrstvo Republike Slovenije za zunanje zadeve, Veleposlaništvo v ZagrebU (2017)',
+            'table_text' => 'Warenhandel zwischen Slowenien und Kroatien 2009 – 2015 (in 1.000 Euro)',
+            'year'       => 'Jahr',
+            'export'     => 'Ausfuhr',
+            'import'     => 'Einfuhr',
+            'sum'        => 'Total',
+            'saldo'      => 'Bilanzsumme',
+            'source'     => 'Quelle: Ministerium für Auswärtige Angelegenheiten der Republik Slowenien, Botschaft der Republik Slowenien in Zagreb (2017)',
         ]
     ],
     'fans'         => [
@@ -255,6 +238,6 @@ für Vernetzung und gesellschaftliches Treffen für die Unterstützer der slowen
 Nationalmannschaft schaffen.'
     ],
     'events'       => [
-        'title' => 'Dogodki v slovenskem središču'
+        'title' => 'Veranstaltungen im Slowenisches Zentrum'
     ]
 ];

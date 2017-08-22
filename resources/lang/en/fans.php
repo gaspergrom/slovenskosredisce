@@ -3,17 +3,18 @@
 return [
     'presentation' => [
         'title' => 'Fans',
-        'text'  => 'Slovenska rokometna reprezentanca se je z uspešnimi igrami uvrstila na Evropsko rokometno
-                        prvenstvo 2018, ki ga bo gostila Hrvaška. Slednje je vsekakor izjemna priložnost za množično
-                        podporo in obisk slovenske športne in poslovne javnosti na Hrvaškem. Slovenija bo svoje nastope
-                        začela v skupini z Nemčijo, Makedonijo in Črno goro, in sicer v mestu Zagreb.
-                        <br><br>Rokometna zveza Slovenije bo v času Evropskega rokometnega prvenstva 2018 na Hrvaškem s
-                        partnerji vzpostavila Slovensko središče – I feel Slovenia. Organizacijska entiteta projekta je
-                        v enem delu namenjena tudi navijačem slovenske rokometne reprezentance.
+        'text'  => 'With their good performance on the court, the Slovenian national handball team qualified for the 2018 European Handball Championship in Croatia. With regard to sports as well as
+business, this is definitely a tremendous opportunity for Slovenia and Slovenians to come
+together in numbers and not only support our national team but also promote our business
+environment. In the group stage, Slovenia will play in Zagreb against Germany, Macedonia
+and Montenegro.
+                        <br><br>During the 2018 European Handball Championship, the Handball Federation of Slovenia is
+going to put up the Slovenia Center – I feel Slovenia, whereas one part of this center will be
+dedicated exclusively to supporters of the Slovenian national handball team.
                         <br><br>
-                        Navijaško-družabno središče bo v enem izmed lokalov v centru mesta Zagreb in bo namenjeno
-                        zbiranju in druženju navijačev slovenske rokometne reprezentance. Namen vzpostavitve slednjega
-                        je povezan z vidikom povezovanja in druženja navijačev Slovenije na eni lokaciji.'
+                        Providing a unique location for networking and social gathering for supporters of the
+Slovenian national handball team, the Fanzone will unfold in one of the many establishments
+in the center of Zagreb.'
     ],
     'events'       => [
         'title' => 'Events in the Fanzone'

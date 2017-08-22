@@ -190,13 +190,14 @@ balance has been positive all the time. The €3.24 billion transposes into a 13
 the year 2014. Imports in 2015 reached €1.37 billion, which is 26.4% higher than the previous year. Lately,
 we have seen a noticeable trend of growth of total trade (9% in 2013, 12% in 2014, and 13.4% in 2015), and
 the accession of Croatia to the EU has certainly played a major part in this trend.<br><br>',
-            'table_text' => 'Blagovna menjava med Slovenijo in Hrvaško 2009 – 2015 (v 1.000 EUR)',
+            'table_text' => 'Slovenia-Croatia trade of goods 2009–2015 (in 1 000 EUR)',
             'year'       => 'Year',
             'export'     => 'Export',
             'import'     => 'Import',
             'sum'        => 'Total',
             'saldo'      => 'Balance',
-            'source'     => 'Vir: Ministrstvo Republike Slovenije za zunanje zadeve, Veleposlaništvo v ZagrebU (2017)',
+            'source'     => 'Source: Ministry of Foreign Affairs of the Republic of Slovenia, Embassy of the Republic of
+Slovenia in Zagreb (2017)',
         ]
     ],
     'fans'         => [

@@ -1,5 +1,5 @@
 <?php
 // DE
 return [
-    'more_events' => 'Več dogodkov',
+    'more_events' => 'Weitere Veranstaltungen',
 ];

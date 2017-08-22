@@ -2,9 +2,9 @@
 // DE
 return [
     'gallery' => [
-        'title' => 'Galerija'
+        'title' => 'Galerie'
     ],
     'videos' => [
-        'title' => 'Videoposnetki'
+        'title' => 'Videoclips'
     ]
 ];

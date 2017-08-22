@@ -7,7 +7,7 @@ return [
         'fans_description'     => '',
         'tourism_description'  => '',
         'news_description'     => '',
-        'news'                 => 'Novice',
+        'news'                 => 'Neuigkeiten',
         'upcoming_events'      => 'PRIHAJAJOČI DOGODKI',
         'partners_sponsors'    => 'PARTNERJI IN SPONZORJI'
     ],
@@ -22,8 +22,8 @@ return [
         'button'         => 'Pošlji'
     ],
     'news'    => [
-        'title'     => 'Novice',
-        'read_more' => 'Preberi več'
+        'title'     => 'Neuigkeiten',
+        'read_more' => 'Mehr sehen'
     ],
     'events'  => [
         'button' => 'Prijava',

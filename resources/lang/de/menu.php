@@ -14,17 +14,17 @@ return [
         'business'     => [
             'index'        => 'Geschäftszentrum',
             'presentation' => 'Vorstellung',
-            'events'       => 'Dogodki v poslovnem središču',
+            'events'       => 'Veranstaltungen in der Geschäftszentrum',
             'sponsors'     => 'Firmas und Organisationen, die im Zentrum vertreten sind',
             'slo_cro'      => 'Die slowenisch-kroatische Kooperation'
         ],
         'fans'         => 'Fanzone',
-        'events'       => 'Dogodki v Slovenskem središču'
+        'events'       => 'Veranstaltungen im Slowenisches Zentrum'
     ],
     'fans'              => [
-        'index'        => 'Navijači',
-        'presentation' => 'Predstavitev',
-        'events'       => 'Dogodki v navijaškem središču',
+        'index'        => 'Fanzone',
+        'presentation' => 'Vorstellung',
+        'events'       => 'Veranstaltungen im der Fanzone',
         'schedule'     => 'Razpored tekem reprezentance',
         'tickets'      => 'Vstopnice',
         'gear'         => 'Navijaški rekviziti',
@@ -44,10 +44,10 @@ return [
         'youth'             => 'Jugend Handball'
     ],
     'multimedia'        => [
-        'index'   => 'Multimedija',
-        'gallery' => 'Galerija',
-        'videos'  => 'Videoposnetki'
+        'index'   => 'Multimedia',
+        'gallery' => 'Galerie',
+        'videos'  => 'Videoclips'
     ],
     'contact'           => 'Kontakt',
-    'news'              => 'Novice'
+    'news'              => 'Neuigkeiten'
 ];

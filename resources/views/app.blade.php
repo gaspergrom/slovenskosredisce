@@ -26,16 +26,10 @@
         <div class="container pt45">
             <div class="row pb30">
                 <div class="col-md-6 pb20">
-                    <h4 class="text--white">Slovensko središče</h4>
+                    <h4 class="text--white">@lang('footer.contact')</h4>
                     <hr class="ml0 mb30">
                     <p>
-                        Prestižni mednarodni športni dogodki se vse pogosteje izkoriščajo za številna poslovna
-                        sodelovanja oziroma za organizacijo vzporednih poslovnih aktivnosti, ki so organizirane ob
-                        športnih prireditvah. V želji, da se Slovenija v okviru večjih rokometnih prvenstev predstavi
-                        kot povezana celota je Rokometna zveza Slovenije v sodelovanju s slovenskimi partnerji,
-                        vzpostavila tako imenovano Slovensko središče - I feel Slovenia. Slovensko središče predstavlja
-                        poslovno in družabno središče (center) oziroma prostor za gospodarska, politična, kulturna,
-                        družabna, medijska in športna srečevanja.
+                        @lang('footer.center_text')
                     </p>
                     <div class="flex pt20">
                         <div class="pr30 pb20">
@@ -48,7 +42,7 @@
 
                 </div>
                 <div class="col-md-3 pb20">
-                    <h4 class="text--white">Kontakt</h4>
+                    <h4 class="text--white">@lang('footer.contact')</h4>
                     <hr class="ml0 mb30">
                     <p>
                         Rokometna zveza Slovenije<br>
@@ -57,7 +51,7 @@
                         <a href="#">+386 1 547 66 22</a><br>
                         <a href="#">info@slovensko-sredisce.si</a>
                     </p>
-                    <h4 class="pt45 text--white">Pridruži se nam</h4>
+                    <h4 class="pt45 text--white">@lang('footer.join_us')</h4>
                     <hr class="ml0 mb30">
                     <div class="flex">
                         <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/rokometnazveza/"
@@ -90,15 +84,15 @@
                     </div>
                 </div>
                 <div class="col-md-3 pb20">
-                    <h4 class="text--white">Povezave</h4>
+                    <h4 class="text--white">@lang('footer.links')</h4>
                     <hr class="ml0">
                     <nav class="flex flex--column">
                         <a target="_blank" rel="noreferrer noopener" href="http://www.rokometna-zveza.si/si/"
-                           class="mb5">Rokometna zveza Slovenije</a>
-                        <a target="_blank" rel="noreferrer noopener" href="https://www.slovenia.info/sl" class="mb5">Slovenska
-                            turistična organizacija</a>
-                        <a target="_blank" rel="noreferrer noopener" href="http://www.eurohandball.com/" class="mb5">Evropska
-                            rokometna zveza</a>
+                           class="mb5">@lang('footer.rzs')</a>
+                        <a target="_blank" rel="noreferrer noopener" href="https://www.slovenia.info/sl"
+                           class="mb5">@lang('footer.tourist_org')</a>
+                        <a target="_blank" rel="noreferrer noopener" href="http://www.eurohandball.com/"
+                           class="mb5">@lang('footer.euro_handball')</a>
                     </nav>
                 </div>
             </div>
