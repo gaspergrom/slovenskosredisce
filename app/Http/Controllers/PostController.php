@@ -16,16 +16,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-    }
 
-    public function show(Post $post)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.posts.index', compact('posts'));
     }
 
     public function store(PostRequest $request)
@@ -36,14 +28,16 @@ class PostController extends Controller
         ]);
         $path = $request->file('image')->store('posts', [ 'disk' => 'public' ]);
         Post::create(array_merge($data, [ 'image' => $path ]));
+
+        return redirect('admin/novice');
     }
 
-    public function edit(Post $post)
+    public function edit(Post $novice)
     {
-
+        return view('admin.posts.edit')->with([ 'post' => $novice->toArray() ]);
     }
 
-    public function update(Post $post, PostRequest $request)
+    public function update(Post $novice, PostRequest $request)
     {
         $data = $request->all();
 
@@ -51,15 +45,21 @@ class PostController extends Controller
             $this->validate($data, [
                 'image' => 'file|image|required'
             ]);
+            Storage::delete('public/' . $novice->image);
             $path = $request->file('image')->store('posts', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
 
-        $post->update($data);
+        $novice->update($data);
+
+        return redirect('admin/novice');
     }
 
-    public function destroy(Post $post)
+    public function destroy(Post $novice)
     {
-        $post->delete();
+        Storage::delete('public/' . $novice->image);
+        $novice->delete();
+
+        return "success";
     }
 }
