@@ -14,7 +14,7 @@ class CreateLeadershipsTable extends Migration
      */
     public function up()
     {
-        Schema::create('leaderships', function(Blueprint $table) {
+        Schema::create('leaderships', function (Blueprint $table) {
             $table->increments('id');
             $table->text('name');
             $table->text('position');

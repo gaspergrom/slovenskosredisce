@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -42,7 +41,7 @@ class PostController extends Controller
     {
         $data = $request->all();
 
-        if ( $request->hasFile('image') ) {
+        if ($request->hasFile('image')) {
             $this->validate($data, [
                 'image' => 'file|image|required'
             ]);

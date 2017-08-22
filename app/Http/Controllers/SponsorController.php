@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class SponsorController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -45,7 +44,7 @@ class SponsorController extends Controller
     {
         $data = $request->all();
 
-        if ( $request->hasFile('logo') ) {
+        if ($request->hasFile('logo')) {
             $this->validate($request, [
                 'logo' => 'required|file|image'
             ]);

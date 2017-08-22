@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -27,7 +26,7 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::create($request->except([ 'images' ]));
 
-        foreach ( $request->images as $image ) {
+        foreach ($request->images as $image) {
             $path = $image->store('galleries/' . $gallery->id, [ 'disk' => 'public' ]);
             $gallery->images()->create([ 'path' => $path ]);
         }
@@ -44,7 +43,7 @@ class GalleryController extends Controller
     {
         $galerija->update($request->except([ 'images' ]));
 
-        foreach ( $request->images as $image ) {
+        foreach ($request->images as $image) {
             $path = $image->store('galleries/' . $galerija->id, [ 'disk' => 'public' ]);
             $galerija->images()->create([ 'path' => $path ]);
         }

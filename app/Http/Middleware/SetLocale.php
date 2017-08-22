@@ -19,7 +19,6 @@ class SetLocale
      */
     public function handle($request, Closure $next)
     {
-
         app()->setLocale($lang = ! $request->hasCookie('locale') ? 'sl' : Crypt::decrypt($request->cookie('locale')));
         Carbon::setLocale($lang);
 

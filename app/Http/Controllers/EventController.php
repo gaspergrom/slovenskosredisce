@@ -7,7 +7,6 @@ use App\Http\Requests\EventRequest;
 
 class EventController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -24,7 +23,7 @@ class EventController extends Controller
     {
         $data = $request->all();
 
-        if ( $request->hasFile('image') ) {
+        if ($request->hasFile('image')) {
             $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);
         }
@@ -43,7 +42,7 @@ class EventController extends Controller
     {
         $data = $request->all();
 
-        if ( $request->hasFile('image') ) {
+        if ($request->hasFile('image')) {
             Storage::delete('public/' . $dogodki->image);
             $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
             $data = array_merge($data, [ 'image' => $path ]);

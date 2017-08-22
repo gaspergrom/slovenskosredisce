@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
-
     public function home()
     {
         $sponsors = Sponsor::pluck('logo');
@@ -41,7 +40,7 @@ class PagesController extends Controller
     {
         $events = Event::whereType('business')->get();
 
-        $events = $events->sortBy('begins_at')->map(function($event) {
+        $events = $events->sortBy('begins_at')->map(function ($event) {
             $event['day'] = $event['begins_at']->format('Y-m-d');
 
             return $event;

@@ -12,7 +12,7 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function(Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -23,7 +23,7 @@ $factory->define(App\User::class, function(Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Sponsor::class, function(Faker\Generator $faker) {
+$factory->define(App\Sponsor::class, function (Faker\Generator $faker) {
     $name        = $faker->words(random_int(1, 3), true);
     $description = $faker->sentences(4, true);
 
@@ -42,7 +42,7 @@ $factory->define(App\Sponsor::class, function(Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Leadership::class, function(Faker\Generator $faker) {
+$factory->define(App\Leadership::class, function (Faker\Generator $faker) {
     $position = $faker->word;
     $name     = $faker->name;
 
@@ -61,7 +61,7 @@ $factory->define(App\Leadership::class, function(Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Event::class, function(Faker\Generator $faker) {
+$factory->define(App\Event::class, function (Faker\Generator $faker) {
     $start = $faker->date("Y-m-d H:i:s", "+2 week");
     $end   = date("Y-m-d H:i:s", strtotime($start) + 60 * 60 * 2);
 
@@ -88,7 +88,7 @@ $factory->define(App\Event::class, function(Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Post::class, function(Faker\Generator $faker) {
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
         'title'   => [
             'sl' => $faker->sentence(6),

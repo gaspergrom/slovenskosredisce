@@ -14,7 +14,7 @@ class CreateImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('images', function(Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->string('path');
             $table->unsignedInteger('gallery_id');
@@ -30,7 +30,7 @@ class CreateImagesTable extends Migration
      */
     public function down()
     {
-        Schema::table('images', function(Blueprint $table) {
+        Schema::table('images', function (Blueprint $table) {
             $table->dropForeign([ 'gallery_id' ]);
         });
 

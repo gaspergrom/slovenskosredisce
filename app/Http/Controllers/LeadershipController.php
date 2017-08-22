@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Validator;
 
 class LeadershipController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -43,7 +42,7 @@ class LeadershipController extends Controller
     public function update(Leadership $vodstvo, LeadershipRequest $request)
     {
         $data = $request->all();
-        if ( $request->hasFile('image') ) {
+        if ($request->hasFile('image')) {
             $this->validate($request, [
                 'image' => 'required|file|image'
             ]);

@@ -7,7 +7,6 @@ use Spatie\Translatable\HasTranslations;
 
 class Leadership extends Model
 {
-
     use HasTranslations;
 
     protected $guarded = [];
