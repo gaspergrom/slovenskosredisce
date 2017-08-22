@@ -104,7 +104,7 @@ Route::prefix('admin')->group(function() {
         Route::resource('sponzorji', 'SponsorController');
         Route::resource('novice', 'PostController');
         Route::resource('galerija', 'GalleryController');
-        Route::resource('videos', 'VideoController');
+        Route::resource('videoposnetki', 'VideoController');
     });
     Route::delete('/images/{image}', 'GalleryController@deleteImage');
 });

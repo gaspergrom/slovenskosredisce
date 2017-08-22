@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -17,7 +18,7 @@ class CreateVideosTable extends Migration
         Schema::create('videos', function(Blueprint $table) {
             $table->increments('id');
             $table->string('path');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

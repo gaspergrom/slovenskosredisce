@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\VideoRequest;
 use App\Video;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
@@ -16,51 +17,41 @@ class VideoController extends Controller
     public function index()
     {
         $videos = Video::all();
-    }
 
-    public function show(Video $video)
-    {
-
-    }
-
-    public function create()
-    {
-
+        return view('admin.videos.index', compact('videos'));
     }
 
     public function store(VideoRequest $request)
     {
-        $this->validate($request, [
+        /*$this->validate($request, [
             'image' => 'required|file|image'
         ]);
 
-        $image = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);
+        $image = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);*/
         $video = $request->file('video')->store('videos', [ 'disk' => 'public' ]);
 
-        Video::create([ 'path' => $video, 'image' => $image ]);
+        Video::create([ 'path' => $video ]);
     }
 
-    public function edit(Video $video)
-    {
-
-    }
-
-    public function update(Video $video, VideoRequest $request)
+    public function update(Video $videoposnetki, VideoRequest $request)
     {
         $data = [];
-        if ( $request->hasFile('image') ) {
+        /*if ( $request->hasFile('image') ) {
             $this->validate($request, [
                 'image' => 'required|file|image'
             ]);
 
             $data['image'] = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);
-        }
+        }*/
         $data['path'] = $request->file('video')->store('videos', [ 'disk' => 'public' ]);
-        $video->update($data);
+        $videoposnetki->update($data);
     }
 
-    public function destroy(Video $video)
+    public function destroy(Video $videoposnetki)
     {
-        $video->delete();
+        Storage::delete('public/' . $videoposnetki->path);
+        $videoposnetki->delete();
+
+        return "success";
     }
 }
