@@ -187,6 +187,141 @@ Veranstaltungen.
                         <br><br>Um die Ziele des Geschäftszentrums zu verwirklichen, werden in den Konferenzräumen des Hotels
 diverse soziale und geschäftliche Veranstaltungen abgehalten, weshalb wir im Slowenisches ein
 Geschäftstätigkeitsprogramm vorbereitet haben.',
+            'table'      => '<tbody>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									13. 1. 2018
+(Samstag)
+								</td>
+								<td class="text-center text-bold">16:00 – 17:00</td>
+								<td class="text-center">Slovenia Fanzone in Zagreb Eröffnungszeremonie mit dem
+
+Präsidenten der SHV in Anwesenheit</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">19:30 – 21:30</td>
+								<td class="text-center">Handballspiel: Slowenien vs. Mazedonien</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">
+									14. 1. 2018
+(Sonntag)
+								</td>
+								<td class="text-center text-bold">18:00 – 20:00</td>
+								<td class="text-center">Einweihung des Slowenischen Zentrums (Hotel) und Empfang des
+Präsidenten der SHV Für Unternehmer, Medien, Fans und andere
+interessierte Öffentlichkeit (Unterhaltung / Catering)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									15. 1. 2018
+(Montag)
+								</td>
+								<td class="text-center text-bold">18:10 – 20:10</td>
+								<td class="text-center">Handballspiel: Slowenien vs. Deutschland</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">20:30 – 23:00</td>
+								<td class="text-center">Businesstreffen in der Fanzone in Zagrebs Hauptplatz nach dem
+
+Spiel</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="3">
+									16. 1. 2018
+(Dienstag)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Regionales politisches Treffen - "Regionale Kooperationsmöglichkeiten im Lichte wichtiger
+Sportveranstaltungen" (ehrenamtlicher Gastgeber:
+Ministerpräsident der Republik Slowenien)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">
+									12:00 – 14:00
+								</td>
+								<td class="text-center">Informelles Treffen zwischen Politikern und Geschäftsleuten</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">von 20:00 - </td>
+								<td class="text-center">Informelle unterhaltung in der Fanzone</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="4">
+									17. 1. 2018
+(Mittwoch)
+								</td>
+								<td class="text-center text-bold">10:00 – 13:30</td>
+								<td class="text-center">Regionale Wirtschaftssitzung - &quot;Regionale
+Kooperationsmöglichkeiten im Lichte wichtiger
+Sportveranstaltungen&quot; (ehrenamtlicher Gastgeber:
+Ministerpräsident der Republik Slowenien)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">13:30 – 15:00</td>
+								<td class="text-center">Slowenische und kroatische Wirtschaftsdelegation Business-
+Lunch (ehrenamtlicher Gastgeber: der slowenische Minister für
+wirtschaftliche Entwicklung und Technologie)
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">20:30 – 22:30</td>
+								<td class="text-center">Handballspiel: Slowenien vs. Montenegro</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">von 22:30 - </td>
+								<td class="text-center">Treffen für die Medien, Unterstützer und Geschäftspartner in der
+
+Fanzone</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									19. 1. 2018
+(Freitag)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Investitions-Chance- Tag (Regionale Banken- und Finanzsektor
+
+Geschäftsmöglichkeiten)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">12:00 – 14:00</td>
+								<td class="text-center">Geschäftstreffen</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									23. 1. 2018
+(Deinstag)
+								</td>
+								<td class="text-center text-bold">10:00 – 13:30</td>
+								<td class="text-center">Sportforum - &quot;Was kann Handball von seinem großen Bruder –
+Fußball – lernen&quot; (Ehrengast: der Präsident der UEFA, Herr
+
+Aleksander Čeferin)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">13:30 – 15:00</td>
+								<td class="text-center">Informelles Treffen für Sportforum-Teilnehmer</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="3">
+									25. 1. 2018
+(Donnerstag)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Tourismusforum - "Regionale Möglichkeiten für die gemeinsame
+
+Promotion"</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">12:00 – 14:00</td>
+								<td class="text-center">»B2B« Treffen zwischen Tourismusvertretern</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">14:00 – 16:00</td>
+								<td class="text-center">Informelles Treffen (Catering/Empfang)</td>
+							</tr>
+						</tbody>',
             'date'       => 'Datum',
             'hour'       => 'Zeit',
             'activities' => 'Aktivität',

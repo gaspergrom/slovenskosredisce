@@ -21,13 +21,7 @@
                                 <th class="text-center text-bold">@lang('center.business.events.activities')</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @foreach($events as $event_group)
-                                @foreach($event_group as $event)
-                                    @include('partials._business_event')
-                                @endforeach
-                            @endforeach
-                            </tbody>
+                            @lang('center.business.events.table')
                         </table>
                     </div>
                 </div>

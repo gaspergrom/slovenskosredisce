@@ -188,6 +188,114 @@ return [
                         poslovni in družabno-kulturni dogodki. Izhajajoč iz tega je pripravljen poslovni program izvedbe
                         aktivnosti
                         oziroma organizacije dogodkov v Slovenskem središču - I feel Slovenia.',
+            'table'      => '<tbody>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									13. 1. 2018
+									(sobota)
+								</td>
+								<td class="text-center text-bold">16:00 – 17:00</td>
+								<td class="text-center">Otvoritev Navijaško – družabnega središča v centru mesta Zagreb s predsednikom Rokometne zveze Slovenije</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">19:30 – 21:30</td>
+								<td class="text-center">Ogled tekme – Slovenija : Makedonija</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">
+									14. 1. 2018
+									(nedelja)
+								</td>
+								<td class="text-center text-bold">18:00 – 20:00</td>
+								<td class="text-center">Otvoritev Slovenskega središča (hotel) in sprejem predsednika Rokometne zveze Slovenije za poslovneže, novinarje, navijače in drugo zainteresirano javnost (pogostitev)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									15. 1. 2018 (ponedeljek)
+								</td>
+								<td class="text-center text-bold">18:10 – 20:10</td>
+								<td class="text-center">Ogled tekme -  Slovenija : Nemčija</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">20:30 – 23:00</td>
+								<td class="text-center">Poslovno druženje po rokometni tekmi v Navijaško-družabnem središču v centru mesta Zagreb</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="3">
+									16. 1. 2018 (torek)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Regionalno politično srečanje – »Regijske priložnosti za sodelovanje v luči velikih športnih dogodkov«. (Častni gostitelj: predsednik Vlade RS)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">
+									12:00 – 14:00
+								</td>
+								<td class="text-center">Neformalno druženje med poslovneži in politiki</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">Od 20:00 - </td>
+								<td class="text-center">Druženje v Navijaško - družabnem središču</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="4">
+									17. 1. 2018 (sreda)
+								</td>
+								<td class="text-center text-bold">10:00 – 13:30</td>
+								<td class="text-center">Regionalno gospodarsko srečanje – »Regijske priložnosti za gospodarsko sodelovanje v luči velikih športnih dogodkov«. (Častni gostitelj: predsednik Vlade RS)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">13:30 – 15:00</td>
+								<td class="text-center">Poslovno kosilo gospodarskih delegacij Slovenije in Hrvaške
+									(Častni gostitelj: slovenski minister za gospodarski razvoj in tehnologijo)
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">20:30 – 22:30</td>
+								<td class="text-center">Ogled tekme -  Slovenija : Črna gora</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">Od 22:30 - </td>
+								<td class="text-center">Druženje z novinarji, navijači, poslovnimi partnerji v Navijaško - družabnem središču</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									19. 1. 2018 (petek)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Dan investicijskih priložnosti (bančni in finančni sektor v regiji in regionalne poslovne priložnosti)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">12:00 – 14:00</td>
+								<td class="text-center">Poslovna srečanja med poslovneži</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="2">
+									23. 1. 2018 (torek)
+								</td>
+								<td class="text-center text-bold">10:00 – 13:30</td>
+								<td class="text-center">Športni forum – »Kaj se lahko rokomet nauči od velikega brata nogometa« (Častni gost: g. Aleksander Čeferin, predsednik UEFA)</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">13:30 – 15:00</td>
+								<td class="text-center">Neformalno druženje med udeleženci športnega foruma</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold" rowspan="3">
+									25. 1. 2018 (četrtek)
+								</td>
+								<td class="text-center text-bold">10:00 – 12:00</td>
+								<td class="text-center">Turistični forum – »Regijske priložnosti za skupno promocijo«</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">12:00 – 14:00</td>
+								<td class="text-center">»B2B« srečanja predstavnikov turizma</td>
+							</tr>
+							<tr>
+								<td class="text-center text-bold">14:00 – 16:00</td>
+								<td class="text-center">Pogostitev in neformalno druženje</td>
+							</tr>
+						</tbody>',
             'date'       => 'Datum',
             'hour'       => 'Ura',
             'activities' => 'Aktivnosti',
