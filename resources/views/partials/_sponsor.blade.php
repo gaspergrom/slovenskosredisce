@@ -7,7 +7,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="flex flex--right">
-                    <img src="{{ asset($sponsor->logo) }}" style="height: 90px;">
+                    <img src="{{ asset('storage/'.$sponsor->logo) }}" style="height: 90px;">
                 </div>
             </div>
         </div>

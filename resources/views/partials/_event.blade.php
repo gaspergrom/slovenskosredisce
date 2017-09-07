@@ -2,7 +2,7 @@
     <a href="{{ url('event/'.$event->id) }}">
         <div class="box link--zoom">
             <div class="width100 quadric--medium bg--image radius--top relative"
-                 style="background-image: url('{{ asset($event->image) }}')">
+                 style="background-image: url('{{ asset('storage/'.$event->image) }}')">
                 <div class="event__date bg--gradient pt20">
                     <div class="pl5 pr5 text-center" style="padding-bottom: 2px;">
                         <span class="text-normal text--white">{{ $event->begins_at->format('d. m.') }}</span>
