@@ -3,10 +3,10 @@
 return [
     'home'    => [
         'title'                => 'Z ROKO V ROKI. <span class="text--green">ROKOMET.</span>',
-        'business_description' => '',
-        'fans_description'     => '',
-        'tourism_description'  => '',
-        'news_description'     => '',
+        'business_description' => 'Poslovno središče predstavlja stičišče za poslovna in družbena srečevanja ter prostor za organizacijo poslovnih dogodkov.',
+        'fans_description'     => 'Rokomet v Sloveniji uvrščamo med bolj razvite športne panoge. Temu primerni so klubski in reprezentančni dosežki ter podpora javnosti.',
+        'tourism_description'  => 'Država Evropske unije, ki leži v osrčju Evrope, na stičišču Alp, Mediterana, Krasa in Panonskega sveta. Slovenija navdihuje v vseh pogledih.',
+        'news_description'     => 'Vse aktualne novice o dogajanju v Slovenskem središču in slovenski reprezentanci na Evropskem prvenstvu v rokometu na Hrvaškem.',
         'news'                 => 'Novice',
         'upcoming_events'      => 'PRIHAJAJOČI DOGODKI',
         'partners_sponsors'    => 'PARTNERJI IN SPONZORJI'

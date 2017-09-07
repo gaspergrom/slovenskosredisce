@@ -5,6 +5,6 @@ return [
         'title' => 'Galerija'
     ],
     'videos' => [
-        'title' => 'Videoposnetki'
+        'title' => 'Videos'
     ]
 ];
