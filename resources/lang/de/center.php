@@ -166,7 +166,7 @@ Unterstützer der slowenischen Nationalmannschaft zusammenkommen und sich gesell
 können. Das Business-Center verfügt über einen einzigartigen Bereich
 (Ausstellungsraum/Showroom), der sich speziell für wirtschaftliche, politische, kulturelle, mediale,
 sportliche und andere Treffen sowie für Geselligkeit eignet. <b>Dieses Projekt wird unter der
-Ehrenpatronage des Premierministers von Slowenien, Herrn Miro Cerar, organisiert.</b>b><br><br>
+Ehrenpatronage des Premierministers von Slowenien, Herrn Miro Cerar, organisiert.</b><br><br>
                         Ziel ist es, dieses Projekt zu organisieren und zu etablieren, um unser Land sowie die slowenische
 Wirtschaft und die endlosen Netzwerkmöglichkeiten zwischen den Gastgebern der
 Sportveranstaltung und allen anderen interessierten Ländern effizient zu fördern. Das Ziel des
