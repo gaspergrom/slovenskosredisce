@@ -30,7 +30,7 @@ return [
         'popup'  => [
             'title'    => 'Prijava na dogodek',
             'business' => [
-                'title'     => 'podjetje',
+                'title'     => 'Podjetje',
                 'name'      => 'Ime podjetja',
                 'address'   => 'Naslov',
                 'telephone' => 'Telefonska številka',

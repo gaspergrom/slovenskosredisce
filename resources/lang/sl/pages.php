@@ -30,7 +30,7 @@ return [
         'popup'  => [
             'title'    => 'Prijava na dogodek',
             'business' => [
-                'title'     => 'podjetje',
+                'title'     => 'Podjetje',
                 'name'      => 'Ime podjetja',
                 'address'   => 'Naslov',
                 'telephone' => 'Telefonska številka',
@@ -63,16 +63,19 @@ return [
                 ]
             ],
             'person'   => [
-                'title'     => 'samoplačnik',
-                'contact'   => 'Kontaktni podatki',
-                'name'      => 'Ime in priimek',
-                'email'     => 'E-mail naslov',
-                'telephone' => 'Telefon',
-                'status'    => 'Status',
-                'employed'  => 'Zaposlen',
-                'student'   => 'Študent',
-                'other'     => 'Drugo',
-                'message'   => 'Sporočilo'
+                'title'       => 'Samoplačnik',
+                'contact'     => 'Kontaktni podatki',
+                'name'        => 'Ime in priimek',
+                'email'       => 'E-mail naslov',
+                'telephone'   => 'Telefon',
+                'status'      => 'Status',
+                'employed'    => 'Zaposlen',
+                'student'     => 'Študent',
+                'other'       => 'Drugo',
+                'message'     => 'Sporočilo',
+                'work_place'  => 'Delovno mesto',
+                'study_field' => 'Smer Izobraževanja',
+                'other'       => 'Drugo',
             ],
             'submit'   => 'Prijava',
         ]
