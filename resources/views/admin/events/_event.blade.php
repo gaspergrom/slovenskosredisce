@@ -8,6 +8,6 @@
     <td class="text-center">
         <a href="{{ route('dogodki.edit', $event->id) }}">Uredi</a>
         &nbsp;
-        <a onClick="deleteEvent({{ $event->id }});">Zbriši</a>
+        <button onClick="deleteEvent({{ $event->id }});">Zbriši</button>
     </td>
 </tr>

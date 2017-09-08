@@ -24,8 +24,8 @@ class EventController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
-            $data = array_merge($data, [ 'image' => $path ]);
+            $path = $request->file('image')->store('events', ['disk' => 'public']);
+            $data = array_merge($data, ['image' => $path]);
         }
 
         Event::create($data);
@@ -35,7 +35,7 @@ class EventController extends Controller
 
     public function edit(Event $dogodki)
     {
-        return view('admin.events.edit')->with([ 'event' => $dogodki->toArray() ]);
+        return view('admin.events.edit')->with(['event' => $dogodki->toArray()]);
     }
 
     public function update(Event $dogodki, EventRequest $request)
@@ -44,8 +44,8 @@ class EventController extends Controller
 
         if ($request->hasFile('image')) {
             Storage::delete('public/' . $dogodki->image);
-            $path = $request->file('image')->store('events', [ 'disk' => 'public' ]);
-            $data = array_merge($data, [ 'image' => $path ]);
+            $path = $request->file('image')->store('events', ['disk' => 'public']);
+            $data = array_merge($data, ['image' => $path]);
         }
 
         $dogodki->update($data);
