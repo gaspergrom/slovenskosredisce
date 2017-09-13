@@ -1,5 +1,5 @@
 <?php
-
+// EN
 return [
     'center'        => 'Slovenia center',
     'center_text'   => 'Prestigious international sporting events are being increasingly used for promoting business

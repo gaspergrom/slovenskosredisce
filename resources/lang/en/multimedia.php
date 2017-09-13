@@ -2,7 +2,7 @@
 // EN
 return [
     'gallery' => [
-        'title' => 'Galerija'
+        'title' => 'Gallery'
     ],
     'videos' => [
         'title' => 'Videos'

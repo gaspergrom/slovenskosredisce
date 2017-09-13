@@ -5,6 +5,7 @@
         <div class="container pt150 pb60">
             <h1 class="text-center">Galerija</h1>
             <hr>
+            @include('partials._errors')
             <div class="flex flex--center">
                 <div class="col-md-8">
                     {!! Form::open(['url' => '/admin/galerija', 'files' => true]) !!}

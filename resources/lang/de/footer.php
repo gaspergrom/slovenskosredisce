@@ -1,5 +1,5 @@
 <?php
-
+// DE
 return [
     'center'        => 'Slovenisches zentrum',
     'center_text'   => 'Für die Förderung der geschäftlichen Zusammenarbeit und der Organisation von
