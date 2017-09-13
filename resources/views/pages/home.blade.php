@@ -37,7 +37,10 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center">@lang('menu.center.business.index')</h5>
+                            <h5 class="text--grey-dark text-center"><a
+                                        href="{{ url('sredisce/poslovno_sredisce') }}">@lang('menu.center.business.index')</a
+                                >
+                            </h5>
                             <p class="pt10">
                                 @lang('pages.home.business_description')
                             </p>
@@ -67,7 +70,9 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center">@lang('menu.fans.index')</h5>
+                            <h5 class="text--grey-dark text-center"><a
+                                        href="{{ url('navijaci') }}">@lang('menu.fans.index')</a
+                                ></h5>
                             <p class="pt10">
                                 @lang('pages.home.fans_description')
                             </p>
@@ -93,7 +98,8 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center">@lang('menu.slovenia.index')</h5>
+                            <h5 class="text--grey-dark text-center"><a
+                                        href="{{ url('slovenija') }}">@lang('menu.slovenia.index')</a></h5>
                             <p class="pt10">
                                 @lang('pages.home.tourism_description')
                             </p>
@@ -110,7 +116,9 @@
                                 </div>
                             </div>
                             <div class="pt20 pl20 pr20 pb20">
-                                <h5 class="text--grey-dark text-center">@lang('pages.home.news')</h5>
+                                <h5 class="text--grey-dark text-center"><a
+                                            href="{{ url('novice') }}">@lang('pages.home.news')</a
+                                    ></h5>
                                 <p class="pt10">
                                     @lang('pages.home.news_description')
                                 </p>
