@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class SubmissionsController extends Controller
 {
-
     public function __construct()
     {
         $this->middleware('auth', ['only' => ['index']]);
@@ -17,7 +16,6 @@ class SubmissionsController extends Controller
 
     public function index()
     {
-
     }
 
     public function store_company(SubmissionRequest $request)
