@@ -155,7 +155,7 @@
             <div class="row flex--center">
                 <div class="col-md-10">
                     <div id="sponzorji" class="owl-carousel">
-                        @foreach($sponsors as $sponsor_logo)
+                        @foreach($sponsors as $sponsor)
                             @include('partials._sponsor_small')
                         @endforeach
                     </div>

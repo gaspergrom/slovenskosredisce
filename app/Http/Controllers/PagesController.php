@@ -16,7 +16,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-        $sponsors = Sponsor::pluck('logo');
+        $sponsors = Sponsor::all();
         $events   = Event::whereType('slo')->latest(6)->get();
 
         return view('pages.home', compact('sponsors', 'events'));
