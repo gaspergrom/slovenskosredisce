@@ -17,6 +17,7 @@
     </div>
 </div>
 <div class="flex flex--center pb30">
+    {!! Form::text('url', null, ['class' => 'box mb15', 'placeholder' => 'Spletna stran']) !!}
     <label for="file" class="flex flex--middle">
         Logotip
         {!! Form::file('logo', ['id' => 'file']) !!}
