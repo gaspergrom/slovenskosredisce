@@ -136,29 +136,28 @@
                     <h5 class="text--grey-dark mb5">@lang('pages.events.popup.person.status')</h5>
                     <div class="flex">
                         <label class="radio flex flex--middle mb10 round mr10">
-                            <input type="radio" v-model="status" name="status" value="0">
+                            <input type="radio" v-model="status" name="status" value="zaposlen">
                             <span class="mr10"></span>
                             @lang('pages.events.popup.person.employed')
                         </label>
                         <label class="radio flex flex--middle mb10 round mr10">
-                            <input type="radio" v-model="status" name="status" value="1">
+                            <input type="radio" v-model="status" name="status" value="student">
                             <span class="mr10"></span>
                             @lang('pages.events.popup.person.student')
                         </label>
                         <label class="radio flex flex--middle mb10 round">
-                            <input type="radio" v-model="status" name="status" value="2">
+                            <input type="radio" v-model="status" name="status" value="drugo">
                             <span class="mr10"></span>
                             @lang('pages.events.popup.person.other')
                         </label>
+                        <input type="text" v-model="delo"
+                               :placeholder="status=='zaposlen'?('@lang('pages.events.popup.person.work_place')'):(status=='student'?'@lang('pages.events.popup.person.study_field')':'@lang('pages.events.popup.person.other')')"
+                               class="box mb10">
                     </div>
-
                     <textarea v-model="sporocilo" placeholder="@lang('pages.events.popup.person.message')"
                               class="box mb10"></textarea>
                 </template>
                 <!-- samoplacnik -->
-                <input type="text" v-model="delo"
-                       :placeholder="status==0?('@lang('pages.events.popup.person.work_place')'):(status==1?'@lang('pages.events.popup.person.study_field')':'@lang('pages.events.popup.person.other')')"
-                       class="box mb10">
                 <div class="flex flex--center pt20">
                     <button class="btn btn__default btn--round"
                             @click="prijava">@lang('pages.events.popup.submit')</button>
@@ -199,43 +198,52 @@
                 ime: "",
                 email: "",
                 telefon: "",
-                status: 0,
+                status: 'zaposlen',
                 delo: "",
                 sporocilo: ""
             },
             methods: {
                 prijava: function () {
                     var data = {};
-                    data["samoplacnik"] = this.samoplacnik;
+                    data["self_payer"] = this.samoplacnik;
                     if (this.samoplacnik) {
-                        data["samoplacnikIme"] = this.ime;
-                        data["samoplacnikEmail"] = this.email;
-                        data["samoplacnikTelefon"] = this.telefon;
-                        data["samoplacnikStatus"] = this.status;
-                        data["samoplacnikDelo"] = this.delo;
-                        data["samoplacnikSporocilo"] = this.sporocilo;
+                        data["name"] = this.ime;
+                        data["email"] = this.email;
+                        data["phone"] = this.telefon;
+                        data["status"] = this.status;
+                        data["work"] = this.delo;
+                        data["message"] = this.sporocilo;
                     }
                     else {
-                        data["podjetjeIme"] = this.podjetjeIme;
-                        data["podjetjeNaslov"] = this.podjetjeNaslov;
-                        data["podjetjeTelefon"] = this.podjetjeTelefon;
-                        data["podjetjeFax"] = this.podjetjeFax;
-                        data["podjetjeEmail"] = this.podjetjeEmail;
-                        data["podjetjeRacun"] = this.podjetjeRacun;
-                        data["podjetjeSpletnaStran"] = this.podjetjeSpletnaStran;
-                        data["podjetjeDavcniZavezanec"] = this.podjetjeDavcniZavezanec;
-                        data["podjetjeKontaktIme"] = this.podjetjeKontaktIme;
-                        data["podjetjeKontaktEmail"] = this.podjetjeKontaktEmail;
-                        data["podjetjeKontaktTelefon"] = this.podjetjeKontaktTelefon;
-                        data["podjetjeOsebe"] = this.podjetjeOsebe;
-                        data["podjetjeAktivnosti"] = this.podjetjeAktivnosti;
-                        data["podjetjeZaposleni"] = this.podjetjeZaposleni;
-                        data["podjetjePromet"] = this.podjetjePromet;
-                        data["podjetjeInteres"] = this.podjetjeInteres;
-                        data["podjetjeSodelovanje"] = this.podjetjeSodelovanje;
+                        data["name"] = this.podjetjeIme;
+                        data["address"] = this.podjetjeNaslov;
+                        data["phone"] = this.podjetjeTelefon;
+                        data["fax"] = this.podjetjeFax;
+                        data["email"] = this.podjetjeEmail;
+                        data["account"] = this.podjetjeRacun;
+                        data["web"] = this.podjetjeSpletnaStran;
+                        data["ddv"] = this.podjetjeDavcniZavezanec;
+                        data["contact_name"] = this.podjetjeKontaktIme;
+                        data["contact_email"] = this.podjetjeKontaktEmail;
+                        data["contact_phone"] = this.podjetjeKontaktTelefon;
+                        data["persons"] = this.podjetjeOsebe;
+                        data["activity"] = this.podjetjeAktivnosti;
+                        data["employees"] = this.podjetjeZaposleni;
+                        data["revenue"] = this.podjetjePromet;
+                        data["interest"] = this.podjetjeInteres;
+                        data["cooperation"] = this.podjetjeSodelovanje;
                     }
-                    console.log(JSON.stringify(data));
-                    //TODO: send ajax
+                    $.ajax({
+                        type: 'POST',
+                        url: this.samoplacnik ? '/api/events_person' : '/api/events_company',
+                        data: data,
+                        success: function (response) {
+                            if (response === "success") {
+                                $("input").val('');
+                                $("textarea").val('');
+                            }
+                        }
+                    });
                 },
                 dodajOsebo: function () {
                     this.podjetjeOsebe.push({ime: "", email: "", funkcija: "", telefon: ""});
