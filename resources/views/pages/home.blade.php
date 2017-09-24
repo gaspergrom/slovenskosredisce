@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center"><a
+                            <h5 class="text--grey-dark text-center text-uppercase"><a
                                         href="{{ url('sredisce/poslovno_sredisce') }}">@lang('menu.center.business.index')</a
                                 >
                             </h5>
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center"><a
+                            <h5 class="text--grey-dark text-center text-uppercase"><a
                                         href="{{ url('navijaci') }}">@lang('menu.fans.index')</a
                                 ></h5>
                             <p class="pt10">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
-                            <h5 class="text--grey-dark text-center"><a
+                            <h5 class="text--grey-dark text-center text-uppercase"><a
                                         href="{{ url('slovenija') }}">@lang('menu.slovenia.index')</a></h5>
                             <p class="pt10">
                                 @lang('pages.home.tourism_description')
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <div class="pt20 pl20 pr20 pb20">
-                                <h5 class="text--grey-dark text-center"><a
+                                <h5 class="text--grey-dark text-center text-uppercase"><a
                                             href="{{ url('novice') }}">@lang('pages.home.news')</a
                                     ></h5>
                                 <p class="pt10">

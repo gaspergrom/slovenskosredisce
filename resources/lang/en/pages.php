@@ -2,7 +2,7 @@
 // EN
 return [
     'home'    => [
-        'title'                => 'HAND IN HAND. <span class="text--green">ROKOMET.</span>',
+        'title'                => 'HAND IN HAND. <span class="text--green">HANDBALL.</span>',
         'business_description' => 'The business center is a point of business and social gathering, as well as an excellent avenue for organizing business meetings and events.',
         'fans_description'     => 'Handball is considered to be one of the most developed sports disciplines in Slovenia, which is demonstrated by the achievements of the national and club teams, as well as public support.',
         'tourism_description'  => 'Slovenia is an EU member state and lies in the heart of Europe, at the carrefour of the Alps, the Mediterranean, the Karst region and the Pannonian Basin. Slovenia inspires in every aspect.',
