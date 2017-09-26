@@ -13,7 +13,7 @@ Media- und Sporttreffpunkt.',
     'contact'       => 'Kontakt',
     'links'         => 'Links',
     'rzs'           => 'Rokometna zveza Slovenije',
-    'tourist_org'   => 'Slovenska turistična organizacija',
+    'tourist_org'   => 'Slowenische Touristenorganisation',
     'euro_handball' => 'Evropska rokometna zveza',
     'join_us'       => 'Folge uns',
 ];
