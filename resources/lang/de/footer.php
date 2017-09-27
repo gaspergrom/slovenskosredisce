@@ -12,8 +12,8 @@ Das ist ein Zentrum für geschäftliche und soziale Netzwerke und ist ein Gesch�
 Media- und Sporttreffpunkt.',
     'contact'       => 'Kontakt',
     'links'         => 'Links',
-    'rzs'           => 'Rokometna zveza Slovenije',
+    'rzs'           => 'Slowenischer Handballverband',
     'tourist_org'   => 'Slowenische Touristenorganisation',
-    'euro_handball' => 'Evropska rokometna zveza',
+    'euro_handball' => 'Europäische Handballföderation',
     'join_us'       => 'Folge uns',
 ];

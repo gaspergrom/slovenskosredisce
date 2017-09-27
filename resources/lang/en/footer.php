@@ -11,7 +11,7 @@ stimulate business and social networking and represents the point of business, c
 and sports gathering.',
     'contact'       => 'Contact us',
     'links'         => 'Links',
-    'rzs'           => 'Rokometna zveza Slovenije',
+    'rzs'           => 'Handball Federation of Slovenia',
     'tourist_org'   => 'Slovenian Tourist Board',
     'euro_handball' => 'European Handball Federation',
     'join_us'       => 'Follow us',
