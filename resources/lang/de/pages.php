@@ -2,7 +2,7 @@
 // DE
 return [
     'home'    => [
-        'title'                => 'HAND IN HAND. <span class="text--green">ROKOMET.</span>',
+        'title'                => 'HAND IN HAND. <span class="text--green">HANDBALL.</span>',
         'business_description' => 'Das Geschäftszentrum ist ein Zentrum für geschäftliche und soziale Netzwerke sowie ein Ort für die Organisation von Geschäftsmeetings.',
         'fans_description'     => 'Handball in Slowenien gehört zu den weiterentwickelten Sportdisziplinen. Die Unterstützung der Öffentlichkeit und die Errungenschaften der Slowenischen Nationalmannschaft und des Clubs sind ebenso auf dem gleichen Niveau.',
         'tourism_description'  => 'Die Republik Slowenien ist ein EU-mitgliedstaat und liegt an der Kreuzung der Alpen, des Mittelmeeres, des Pannonischen Beckens und den Dinarischen Alpen. Slowenien inspiriert in jeder hinsicht.',
