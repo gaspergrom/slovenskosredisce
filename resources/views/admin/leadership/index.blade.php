@@ -17,7 +17,6 @@
                         <table class="responsive">
                             <tr>
                                 <td class="text-center text-bold">Ime in priimek</td>
-                                <td class="text-center text-bold">Pozicija</td>
                                 <td class="text-center text-bold">Akcija</td>
                             </tr>
                             @each('admin.leadership._leader', $leaderships, 'leader')
