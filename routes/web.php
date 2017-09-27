@@ -103,8 +103,8 @@ Route::prefix('admin')->group(function () {
         Route::resource('novice', 'PostController');
         Route::resource('galerija', 'GalleryController');
         Route::resource('videoposnetki', 'VideoController');
+        Route::delete('/images/{image}', 'GalleryController@deleteImage');
     });
-    Route::delete('/images/{image}', 'GalleryController@deleteImage');
 });
 
 Auth::routes();
