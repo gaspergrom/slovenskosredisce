@@ -67,8 +67,7 @@ return [
                             <li>Poljska (2016): 14. mesto.</li>
                         </ul>
                         <br/><br/>
-                        Selektor ženske reprezentance pa je od septembra 2015 dalje Uroš Bregar, ki je na slovensko klop sedel kot naslednik svojevrstne mentorice Marte Bon, kateri je v preteklosti pomagal tako v klubu kot reprezentanci. Položaja kapetanke si je lastila Nina Jeriček, ki pa je svojo slovo naznanila ob uvrstitvi reprezentance na svetovno prvenstvo v Nemčiji, katero se bo odvijalo proti koncu leta.
-Ženska reprezentanca je nastopila na štirih svetovnih prvenstvih:
+                        Selektor ženske reprezentance pa je od septembra 2015 dalje Uroš Bregar, ki je na slovensko klop sedel kot naslednik svojevrstne mentorice Marte Bon, kateri je v preteklosti pomagal tako v klubu kot reprezentanci. Ženska reprezentanca je nastopila na štirih svetovnih prvenstvih:
                         <br><br>
                         <ul>
                             <li>Nemčija (1997): 18. mesto,</li>
@@ -86,9 +85,7 @@ return [
                             <li>Švedska (2006): 16. mesto,</li>
                             <li>Danska/Norveška (2010): 16. mesto,</li>
                             <li>Švedska (2016): 14. mesto.</li>
-                        </ul>
-                        <br><br>
-                        Največja uspeha sta tako moška srebrna medalja z Evropskega prvenstva leta 2004 na <b>domačem terenu</b> in moška bronasta medalja na svetovnem prvenstvu 2017 v Franciji.'
+                        </ul>'
     ],
     'club_competitions' => [
         'title' => 'Klubska temovanja',
