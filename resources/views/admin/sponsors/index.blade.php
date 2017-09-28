@@ -30,7 +30,7 @@
     <script>
         function deleteSponsor(id) {
             $.ajax({
-                url: '/admin/sponzorji' + id,
+                url: '/admin/sponzorji/' + id,
                 type: 'DELETE',
                 data: {'_token': '{{ csrf_token() }}'},
                 success: function () {
