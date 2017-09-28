@@ -27,6 +27,7 @@
         {!! Form::textarea('description[de]', null, ['class' => 'box mb15', 'placeholder' => 'Opis (ger)']) !!}
     </div>
 </div>
+{!! Form::text('location', null, ['class' => 'box mb15', 'placeholder' => 'Lokacija dogodka']) !!}
 {!! Form::number('price', null, ['class' => 'box mb15', 'placeholder' => 'Cena dogodka']) !!}
 {!! Form::date('begins_at', null, ['class' => 'box mb15', 'placeholder' => 'Datum dogodka']) !!}
 <div class="flex flex--center">
