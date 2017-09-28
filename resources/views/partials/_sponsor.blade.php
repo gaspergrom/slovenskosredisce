@@ -8,7 +8,9 @@
             <div class="col-sm-6">
                 <a href="{{ $sponsor->url }}" target="_blank" rel="noreferrer noopener">
                     <div class="flex flex--right">
-                        <img src="{{ asset('storage/'.$sponsor->logo) }}" style="height: 90px;">
+                        <div>
+                            <img src="{{ asset('storage/'.$sponsor->logo) }}" style="height: auto; width: 100%;">
+                        </div>
                     </div>
                 </a>
             </div>
