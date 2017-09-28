@@ -96,14 +96,7 @@
                 </div>
             </div>
             <div class="copyright flex flex--between pt20 pb20">
-                <div>
-                    © Copyright Slovensko Središče 2017&nbsp;&nbsp;•&nbsp;&nbsp;
-                    Izdelava: <a target="_blank"
-                                 rel="noreferrer noopener"
-                                 href="http://gromgasper.com">Gašper
-                        Grom</a> in
-                    <a target="_blank" rel="noreferrer noopener" href="http://zigastrgar.com">Žiga Strgar</a>
-                </div>
+                © Copyright Slovensko Središče 2017
             </div>
         </div>
     </footer>
