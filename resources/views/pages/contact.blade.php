@@ -14,7 +14,7 @@
                         Leskoškova 9e<br>
                         SI - 1000 Ljubljana<br>
                         <a href="tel:+38615476622">+386 1 547 66 22</a><br>
-                        <a href="mailto:info@slovensko-sredisce.si">info@slovensko-sredisce.si</a><br>
+                        <a href="mailto:info@slovensko-sredisce.com">info@slovensko-sredisce.com</a><br>
                     </p>
                     <iframe
                             height="450"

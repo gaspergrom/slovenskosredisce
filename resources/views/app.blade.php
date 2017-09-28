@@ -47,8 +47,8 @@
                         Rokometna zveza Slovenije<br>
                         Leskoškova 9e<br>
                         SI - 1000 Ljubljana<br>
-                        <a href="#">+386 1 547 66 22</a><br>
-                        <a href="#">info@slovensko-sredisce.si</a>
+                        <a href="tel:+38615476622">+386 1 547 66 22</a><br>
+                        <a href="mailto:info@slovensko-sredisce.com">info@slovensko-sredisce.com</a>
                     </p>
                     <h4 class="pt45 text--white">@lang('footer.join_us')</h4>
                     <hr class="ml0 mb30">
@@ -96,7 +96,11 @@
                 </div>
             </div>
             <div class="copyright flex flex--between pt20 pb20">
-                © Copyright Slovensko Središče 2017
+                © Copyright Slovensko Središče 2017&nbsp;&nbsp;•&nbsp;&nbsp;Izdelava: <a target="_blank"
+                                                                                         rel="noreferrer noopener"
+                                                                                         href="http://gromgasper.com">Gašper
+                    Grom</a> in
+                <a target="_blank" rel="noreferrer noopener" href="http://zigastrgar.com">Žiga Strgar</a>
             </div>
         </div>
     </footer>

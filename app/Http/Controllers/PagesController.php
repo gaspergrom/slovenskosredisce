@@ -102,8 +102,7 @@ class PagesController extends Controller
 
     public function contact(ContactRequest $request)
     {
-        // TODO Ask for email address
-        Mail::to('')->send(new Contact($request));
+        Mail::to('info@slovensko-sredisce.com')->send(new Contact($request));
 
         return view('pages.contact');
     }
