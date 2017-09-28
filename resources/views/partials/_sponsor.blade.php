@@ -9,7 +9,7 @@
                 <a href="{{ $sponsor->url }}" target="_blank" rel="noreferrer noopener">
                     <div class="flex flex--right">
                         <div>
-                            <img src="{{ asset('storage/'.$sponsor->logo) }}" style="height: auto; width: 100%;">
+                            <img src="{{ asset('storage/'.$sponsor->logo) }}" style="max-height: 100px; width: auto;">
                         </div>
                     </div>
                 </a>
