@@ -154,8 +154,7 @@ all other interested countries. The objective of the Slovenia Center is (1) to e
 between the Slovenian business entities and the business and economic entities from the host country,
 along with other interested countries, (2) to comprehensively promote Slovenia, (3) to bring together the
 Slovenian and foreign interested public under one roof through a major handball event such as the 2018
-European handball championship.<br /><br/>The Slovenia Business Center in Croatia will take place in one of the most prestigious hotels in Zagreb,
-located in the very heart of Zagreb’s old town center.'
+European handball championship.<br /><br/>The Slovenia Business Center in Croatia will take place in one of the most prestigious hotels (<a href="http://www.westinzagreb.com/" rel="noreferrer noopener" target="_blank">Westin Zagreb</a>) in Zagreb, located in the very heart of Zagreb’s old town center.'
         ],
         'events'       => [
             'title'      => 'Events in the business center',

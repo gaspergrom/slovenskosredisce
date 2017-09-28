@@ -166,7 +166,7 @@ return [
                         (2) izvede promocija države Slovenije kot celote, (3) na enem mestu združi slovensko in tujo
                         zainteresirano
                         javnost v sklopu Evropskega rokometnega prvenstva 2018.<br><br>
-                        Poslovno središče bo v enem izmed najprestižnejših hotelov v mestu Zagreb, in sicer ..... , ki
+                        Poslovno središče bo v enem izmed najprestižnejših hotelov v mestu Zagreb, in sicer v hotelu <a href="http://www.westinzagreb.com/" rel="noreferrer noopener" target="_blank">Westin Zagreb</a>, ki
                         je lociran v
                         središču oziroma starem delu mesta. Poslovni in družabni dogodki bodo organizirani v notranjih
                         konferenčnih prostorih.'

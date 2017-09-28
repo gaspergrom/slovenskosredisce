@@ -174,7 +174,7 @@ Zentrums in Kroatien ist es, (1) die geschäftliche Zusammenarbeit zwischen Wirt
 Slowenien, Kroatien sowie aus anderen Staaten zu etablieren, (2) eine umfassende Förderung
 Sloweniens durchzuführen, (3) die slowenische und ausländische interessierte Öffentlichkeit durch
 Handball und die Europameisterschaft 2018 zusammenzubringen.<br><br>
-                        Das Slowenisches Zentrum in Kroatien findet in einem der prestigeträchtigsten Hotels in Zagreb statt, das im Herzen der Altstadt liegt.'
+                        Das Slowenisches Zentrum in Kroatien findet in einem der prestigeträchtigsten Hotels (<a href="http://www.westinzagreb.com/" rel="noreferrer noopener" target="_blank">Westin Zagreb</a>) in Zagreb statt, das im Herzen der Altstadt liegt.'
         ],
         'events'       => [
             'title'      => 'Veranstaltungen im Slowenisches Zentrumu',
