@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <section class="video__bg hide-sm">
+    <section class="video__bg">
         <video autoplay loop preload muted>
             <source src="{{ asset('images/main.mp4') }}" type="video/mp4">
             <source src="{{ asset('images/main.mp4') }}" type="video/ogg">
@@ -9,10 +9,6 @@
         <div class="video__overlay flex flex--center flex--middle">
 
         </div>
-    </section>
-
-    <section class="bg--image show-sm-flex vh100 flex--center flex--middle pl15 pr15"
-             style="background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 100%, rgba(0, 0, 0, 0.4) 100%), url('{{ asset('images/1.jpg') }}')  no-repeat center; background-size: cover">
     </section>
 
     <section class="line--bottom">
