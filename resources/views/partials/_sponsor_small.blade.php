@@ -7,7 +7,7 @@
         </div>
         <div class="overlay pt10 pb10 pl10 pr10 flex flex--middle flex--center">
             <div class="flex flex--column">
-                <h6 class="text-center text--white">{{ $sponsor->name }}</h6>
+                <h5 class="text-center text--white">{{ $sponsor->name }}</h5>
             </div>
         </div>
     </div>
