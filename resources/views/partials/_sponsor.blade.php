@@ -1,11 +1,11 @@
 <div class="col-md-10 pb45">
     <div class="box bg--white pt30 pb30 pl45 pr45 link--zoom">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <h4>{{ $sponsor->name }}</h4>
                 <hr class="ml0">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <a href="{{ $sponsor->url }}" target="_blank" rel="noreferrer noopener">
                     <div class="flex flex--right">
                         <div>
