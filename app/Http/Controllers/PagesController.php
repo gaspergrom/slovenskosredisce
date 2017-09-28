@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
+
     public function home()
     {
         $sponsors = Sponsor::all();
-        $events   = Event::latest(3)->get();
+        $events   = Event::inFuture()->latest(3)->get();
 
         return view('pages.home', compact('sponsors', 'events'));
     }
