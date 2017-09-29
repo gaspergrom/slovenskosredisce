@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -23,6 +24,10 @@ class EventController extends Controller
     public function store(EventRequest $request)
     {
         $data = $request->all();
+
+        $this->validate($request, [
+            'image' => 'required|file|image',
+        ]);
 
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('events', ['disk' => 'public']);
