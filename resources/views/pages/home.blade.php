@@ -34,7 +34,7 @@
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
                             <h5 class="text--grey-dark text-center text-uppercase"><a
-                                        href="{{ url('sredisce/poslovno_sredisce') }}">@lang('menu.center.business.index')</a
+                                        href="{{ url('events') }}">@lang('menu.center.business.index')</a
                                 >
                             </h5>
                             <p class="pt10">
