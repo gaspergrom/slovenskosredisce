@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
-
     public function home()
     {
         $sponsors = Sponsor::all();

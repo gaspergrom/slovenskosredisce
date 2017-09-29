@@ -10,7 +10,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class Contact extends Mailable
 {
-
     use Queueable, SerializesModels;
 
     protected $data = [];
