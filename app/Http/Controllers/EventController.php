@@ -64,6 +64,9 @@ class EventController extends Controller
             $data = array_merge($data, ['image' => $path]);
         }
 
+        dump($request);
+        dd($data);
+
         $dogodki->update($data);
 
         return redirect('admin/dogodki');
