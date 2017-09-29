@@ -109,7 +109,9 @@ class PagesController extends Controller
 
     public function contact(ContactRequest $request)
     {
-        Mail::to('ziga.strgar@gmail.com')->send(new Contact($request));
+        $mail = new Contact($request);
+        dd($mail);
+        Mail::to('ziga.strgar@gmail.com')->send();
 
         return 'Sporočilo uspešno poslano';
     }
