@@ -14,7 +14,7 @@
                         <h1 class="text-center h2">{{ $event->name }}</h1>
                         <hr>
                         <p>
-                            {{ $event->description }}
+                            {!! $event->description !!}
                         </p>
                     </div>
                     @if($event->type == "slo")

@@ -10,7 +10,7 @@
             <div class="flex flex--center">
                 <div class="col-md-10">
                     <p>
-                        {{ $post->content }}
+                        {!! $post->content !!}
                     </p>
                 </div>
             </div>
