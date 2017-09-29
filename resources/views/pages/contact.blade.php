@@ -26,12 +26,16 @@
                 </div>
                 <div class="col-md-5">
                     <form class="pt20 pl15 pr15 pb20" data-ajax novalidate action="/kontakt" method="POST">
-                        <input class="mb10 box" type="text" name="name" placeholder="@lang('pages.contact.name')" required
+                        {{ csrf_field() }}
+                        <input class="mb10 box" type="text" name="name" placeholder="@lang('pages.contact.name')"
+                               required
                                data-required="@lang('contact.name_required')">
-                        <input class="mb10 box" type="email" name="email" placeholder="@lang('pages.contact.email')" required
+                        <input class="mb10 box" type="email" name="email" placeholder="@lang('pages.contact.email')"
+                               required
                                data-required="@lang('pages.contact.email_required')"
                                data-invalid="@lang('pages.contact.email_invalid')">
-                        <textarea placeholder="@lang('pages.contact.message')" class="mb10 box" name="message"></textarea>
+                        <textarea placeholder="@lang('pages.contact.message')" class="mb10 box"
+                                  name="message"></textarea>
                         <div class="flex flex--center">
                             <button class="btn btn--round btn__default">@lang('pages.contact.button')</button>
                         </div>
