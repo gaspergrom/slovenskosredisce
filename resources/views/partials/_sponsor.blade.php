@@ -15,9 +15,8 @@
                 </a>
             </div>
         </div>
-
         <p>
-            {{ $sponsor->description }}
+            {!! $sponsor->description !!}
         </p>
     </div>
 </div>
