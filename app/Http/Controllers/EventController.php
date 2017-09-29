@@ -48,6 +48,10 @@ class EventController extends Controller
     {
         $data = $request->all();
 
+        if ( ! $request->filled('type')) {
+            $data['type'] = 'fans';
+        }
+
         if ($request->hasFile('image')) {
             Storage::delete('public/' . $dogodki->image);
             $path = $request->file('image')->store('events', ['disk' => 'public']);
