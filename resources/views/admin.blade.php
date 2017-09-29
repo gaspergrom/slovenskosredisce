@@ -34,7 +34,8 @@
                                 <li><a href="{{ url('admin/videoposnetki') }}">Videoposnetki</a></li>
                             </ul>
                         </li>
-                        <li><a href="" class="text-uppercase">Odjava</a></li>
+                        <li><a href="#" onclick="document.getElementById('logMeOut').submit()" class="text-uppercase">Odjava</a>
+                        </li>
                     </ul>
                 </nav>
                 <button class="header__btn">
@@ -55,6 +56,8 @@
 
     </footer>
 </main>
+{!! Form::open(['url' => 'logout', 'method' => 'POST', 'id' => 'logMeOut']) !!}
+{!! Form::close() !!}
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"
         integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="></script>
 <script src="{{ asset('js/libraries.js') }}"></script>
