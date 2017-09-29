@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('includes.header_image', ['image' => 'bg2.jpg'])
+    @include('includes.header_image_storage', ['image' => $post->image])
 
     <section>
         <div class="container pt45 pb60">
