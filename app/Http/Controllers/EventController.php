@@ -57,7 +57,9 @@ class EventController extends Controller
         }
 
         if ($request->hasFile('image')) {
-            Storage::delete('public/' . $dogodki->image);
+            if ( ! empty($dogodki->image)) {
+                Storage::delete('public/' . $dogodki->image);
+            }
             $path = $request->file('image')->store('events', ['disk' => 'public']);
             $data = array_merge($data, ['image' => $path]);
         }
@@ -69,7 +71,9 @@ class EventController extends Controller
 
     public function destroy(Event $dogodki)
     {
-        Storage::delete('public/' . $dogodki->image);
+        if ( ! empty($dogodki->image)) {
+            Storage::delete('public/' . $dogodki->image);
+        }
         $dogodki->delete();
 
         return "success";
