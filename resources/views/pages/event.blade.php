@@ -6,29 +6,33 @@
     <section>
         <div class="container pt45 pb60">
             <div class="row">
-                <div class="col-md-9">
-                    <h1 class="text-center h2">{{ $event->name }}</h1>
-                    <hr>
-                    <p>
-                        {{ $event->description }}
-                    </p>
-                </div>
                 @if($event->type == "slo")
-                    <div class="col-md-3 pt60">
-                        <div class="box">
-                            <div class="bg--gradient">
-                                <h3 class="text-center text--white">{{ $event->price }} €</h3>
-                            </div>
-                            <div class="flex flex--center pt20 pb20">
-                                <button class="btn btn__default btn--round" data-popup="prijava">
-                                    @lang('pages.events.button')
-                                </button>
+                    <div class="col-md-9">
+                @else
+                    <div class="col-md-12">
+                @endif
+                        <h1 class="text-center h2">{{ $event->name }}</h1>
+                        <hr>
+                        <p>
+                            {{ $event->description }}
+                        </p>
+                    </div>
+                    @if($event->type == "slo")
+                        <div class="col-md-3 pt60">
+                            <div class="box">
+                                <div class="bg--gradient">
+                                    <h3 class="text-center text--white">{{ $event->price }} €</h3>
+                                </div>
+                                <div class="flex flex--center pt20 pb20">
+                                    <button class="btn btn__default btn--round" data-popup="prijava">
+                                        @lang('pages.events.button')
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endif
+                    @endif
+                </div>
             </div>
-        </div>
     </section>
 
     <div class="popup__overlay flex flex--center flex--middle" id="prijava">
