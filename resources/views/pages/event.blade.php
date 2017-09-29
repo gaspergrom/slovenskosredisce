@@ -13,18 +13,20 @@
                         {{ $event->description }}
                     </p>
                 </div>
-                <div class="col-md-3 pt60">
-                    <div class="box">
-                        <div class="bg--gradient">
-                            <h3 class="text-center text--white">{{ $event->price }} €</h3>
-                        </div>
-                        <div class="flex flex--center pt20 pb20">
-                            <button class="btn btn__default btn--round" data-popup="prijava">
-                                @lang('pages.events.button')
-                            </button>
+                @if($event->type == "slo")
+                    <div class="col-md-3 pt60">
+                        <div class="box">
+                            <div class="bg--gradient">
+                                <h3 class="text-center text--white">{{ $event->price }} €</h3>
+                            </div>
+                            <div class="flex flex--center pt20 pb20">
+                                <button class="btn btn__default btn--round" data-popup="prijava">
+                                    @lang('pages.events.button')
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>

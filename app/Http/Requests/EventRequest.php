@@ -29,7 +29,7 @@ class EventRequest extends FormRequest
             'description.*' => 'required|string',
             'excerpt.*'     => 'required|string',
             'location'      => 'required|string',
-            'price'         => 'required_if:type,fans,slo|integer|nullable',
+            'price'         => 'integer|nullable',
             'type'          => 'in:fans,slo',
             //'image'         => 'required_if:type,fans,slo|file|sometimes|image',
             'begins_at'     => 'required|date',
