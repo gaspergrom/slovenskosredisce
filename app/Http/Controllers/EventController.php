@@ -50,6 +50,8 @@ class EventController extends Controller
 
     public function update(Event $dogodki, EventRequest $request)
     {
+        phpinfo();
+        die();
         $data = $request->all();
 
         if ( ! $request->filled('type')) {
