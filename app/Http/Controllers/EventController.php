@@ -50,8 +50,6 @@ class EventController extends Controller
 
     public function update(Event $dogodki, EventRequest $request)
     {
-        phpinfo();
-        die();
         $data = $request->all();
 
         if ( ! $request->filled('type')) {
@@ -65,9 +63,6 @@ class EventController extends Controller
             $path = $request->file('image')->store('events', ['disk' => 'public']);
             $data = array_merge($data, ['image' => $path]);
         }
-
-        dump($request);
-        dd($data);
 
         $dogodki->update($data);
 
