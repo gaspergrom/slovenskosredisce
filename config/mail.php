@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@slovensko-sredisce.si'),
+        'address' => env('MAIL_FROM_ADDRESS', 'info@slovensko-sredisce.com'),
         'name' => env('MAIL_FROM_NAME', 'Slovensko Središče Rokometa'),
     ],
 
