@@ -26,6 +26,7 @@ return [
         'read_more' => 'Preberi več'
     ],
     'events'  => [
+        'title' => 'Dogodki',
         'button' => 'Prijava',
         'popup'  => [
             'title'    => 'Prijava na dogodek',

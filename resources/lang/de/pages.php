@@ -26,6 +26,7 @@ return [
         'read_more' => 'Mehr sehen'
     ],
     'events'  => [
+        'title'  => 'Veranstaltungen',
         'button' => 'Registrierung',
         'popup'  => [
             'title'    => 'Registrieren Sie sich',

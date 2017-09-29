@@ -26,6 +26,7 @@ return [
         'read_more' => 'See more'
     ],
     'events'  => [
+        'title'  => 'Events',
         'button' => 'Registration',
         'popup'  => [
             'title'    => 'Register for an event',

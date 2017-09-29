@@ -1,5 +1,5 @@
 <div class="col-sm-4 pb30">
-    <a href="{{ url('event/'.$event->id) }}">
+    <a href="{{ url('events/'.$event->id) }}">
         <div class="box link--zoom">
             <div class="width100 quadric--medium bg--image radius--top relative"
                  style="background-image: url('{{ asset('storage/'.$event->image) }}')">

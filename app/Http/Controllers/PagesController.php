@@ -90,6 +90,13 @@ class PagesController extends Controller
         return view('pages.multimedia.videos', compact('videos'));
     }
 
+    public function events()
+    {
+        $events = Event::inFuture()->get();
+
+        return view('pages.events', compact('events'));
+    }
+
     public function event(Event $event)
     {
         return view('pages.event', compact('event'));
