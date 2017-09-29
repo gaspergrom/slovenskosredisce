@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Mail;
 
 class PagesController extends Controller
 {
+
     public function home()
     {
         $sponsors = Sponsor::all();
@@ -110,6 +111,6 @@ class PagesController extends Controller
     {
         Mail::to('info@slovensko-sredisce.com')->send(new Contact($request));
 
-        return view('pages.contact');
+        return 'Sporočilo uspešno poslano';
     }
 }
