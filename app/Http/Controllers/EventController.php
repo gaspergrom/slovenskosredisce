@@ -41,7 +41,11 @@ class EventController extends Controller
 
     public function edit(Event $dogodki)
     {
-        return view('admin.events.edit')->with(['event' => $dogodki->toArray()]);
+        $data              = $dogodki->toArray();
+        $data['begins_at'] = $dogodki->formBeginsAtAttribute($dogodki->begins_at);
+        $data['type']      = $dogodki->formTypeAttribute($dogodki->type);
+
+        return view('admin.events.edit')->with(['event' => $data]);
     }
 
     public function update(Event $dogodki, EventRequest $request)
