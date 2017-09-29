@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\Http\Requests\EventRequest;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
