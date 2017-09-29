@@ -34,7 +34,7 @@
                         </div>
                         <div class="pt20 pl20 pr20 pb20">
                             <h5 class="text--grey-dark text-center text-uppercase"><a
-                                        href="{{ url('events') }}">@lang('menu.center.business.index')</a
+                                        href="{{ url('sredisce/poslovno_sredisce') }}">@lang('menu.center.business.index')</a
                                 >
                             </h5>
                             <p class="pt10">
@@ -135,7 +135,7 @@
                 @endforeach
             </div>
             <div class="flex flex--center pt45">
-                <a href="{{ url('sredisce/slovensko_sredisce_dogodki') }}">
+                <a href="{{ url('events') }}">
                     <button class="btn btn__default btn--round">
                         @lang('general.more_events')
                     </button>
