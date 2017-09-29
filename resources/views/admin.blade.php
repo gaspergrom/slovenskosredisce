@@ -14,6 +14,8 @@
     <meta name="theme-color" content="#161616">
     <!-- css -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,600,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('tinymce/skins/lightgray/content.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('tinymce/skins/lightgray/skin.min.css') }}">
     <link rel="stylesheet" href="{{ asset("css/main.css") }}">
     @yield('css')
 </head>
@@ -62,6 +64,7 @@
         integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="></script>
 <script src="{{ asset('js/libraries.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
 @yield('scripts')
 </body>
 </html>

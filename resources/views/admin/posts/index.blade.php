@@ -40,4 +40,5 @@
             })
         }
     </script>
+    @include('includes.tinymce')
 @endsection

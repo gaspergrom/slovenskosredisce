@@ -12,22 +12,22 @@
         <h4>Slo</h4>
         {!! Form::text('name[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Ime dogodka (slo)']) !!}
         {!! Form::textarea('excerpt[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Kratek opis (slo)']) !!}
-        {!! Form::textarea('description[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Opis (slo)']) !!}
+        {!! Form::textarea('description[sl]', null, ['class' => 'box mb30 content', 'placeholder' => 'Opis (slo)']) !!}
     </div>
     <div id="eng" style="display: none">
         <h4>Eng</h4>
         {!! Form::text('name[en]', null, ['class' => 'box mb15', 'placeholder' => 'Ime dogodka (eng)']) !!}
         {!! Form::textarea('excerpt[en]', null, ['class' => 'box mb15', 'placeholder' => 'Kratek opis (eng)']) !!}
-        {!! Form::textarea('description[en]', null, ['class' => 'box mb15', 'placeholder' => 'Opis (eng)']) !!}
+        {!! Form::textarea('description[en]', null, ['class' => 'box mb30 content', 'placeholder' => 'Opis (eng)']) !!}
     </div>
     <div id="ger" style="display: none">
         <h4>Ger</h4>
         {!! Form::text('name[de]', null, ['class' => 'box mb15', 'placeholder' => 'Ime dogodka (ger)']) !!}
         {!! Form::textarea('excerpt[de]', null, ['class' => 'box mb15', 'placeholder' => 'Kratek opis (ger)']) !!}
-        {!! Form::textarea('description[de]', null, ['class' => 'box mb15', 'placeholder' => 'Opis (ger)']) !!}
+        {!! Form::textarea('description[de]', null, ['class' => 'box mb30 content', 'placeholder' => 'Opis (ger)']) !!}
     </div>
 </div>
-{!! Form::text('location', null, ['class' => 'box mb15', 'placeholder' => 'Lokacija dogodka']) !!}
+{!! Form::text('location', null, ['class' => 'box mt15 mb15', 'placeholder' => 'Lokacija dogodka']) !!}
 {!! Form::number('price', null, ['class' => 'box mb15', 'placeholder' => 'Cena dogodka']) !!}
 {!! Form::date('begins_at', null, ['class' => 'box mb15', 'placeholder' => 'Datum dogodka']) !!}
 <div class="flex flex--center">

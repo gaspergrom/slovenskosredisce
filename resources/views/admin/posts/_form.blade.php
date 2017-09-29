@@ -4,19 +4,19 @@
         <h4>Slo</h4>
         {!! Form::text('title[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov novice (slo)']) !!}
         {!! Form::textarea('excerpt[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Krateka vsebina novice (slo)']) !!}
-        {!! Form::textarea('content[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Vsebina novice (slo)']) !!}
+        {!! Form::textarea('content[sl]', null, ['class' => 'box mb15 content', 'placeholder' => 'Vsebina novice (slo)']) !!}
     </div>
     <div id="eng" style="display: none">
         <h4>Eng</h4>
         {!! Form::text('title[en]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov novice (eng)']) !!}
         {!! Form::textarea('excerpt[en]', null, ['class' => 'box mb15', 'placeholder' => 'Krateka vsebina novice (eng)']) !!}
-        {!! Form::textarea('content[en]', null, ['class' => 'box mb15', 'placeholder' => 'Vsebina novice (eng)']) !!}
+        {!! Form::textarea('content[en]', null, ['class' => 'box mb15 content', 'placeholder' => 'Vsebina novice (eng)']) !!}
     </div>
     <div id="ger" style="display: none">
         <h4>Ger</h4>
         {!! Form::text('title[de]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov novice (ger)']) !!}
         {!! Form::textarea('excerpt[de]', null, ['class' => 'box mb15', 'placeholder' => 'Krateka vsebina novice (ger)']) !!}
-        {!! Form::textarea('content[de]', null, ['class' => 'box mb15', 'placeholder' => 'Vsebina novice (ger)']) !!}
+        {!! Form::textarea('content[de]', null, ['class' => 'box mb15 content', 'placeholder' => 'Vsebina novice (ger)']) !!}
     </div>
 </div>
 <div class="flex flex--center">
