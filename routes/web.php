@@ -80,6 +80,7 @@ Route::prefix('multimedija')->group(function () {
 Route::get('kontakt', function () {
     return view('pages.contact');
 });
+
 Route::post('kontakt', 'PagesController@contact');
 
 Route::get('novice', 'PagesController@news');
