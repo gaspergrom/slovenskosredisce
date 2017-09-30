@@ -52,14 +52,14 @@ class PagesController extends Controller
 
     public function slo_events()
     {
-        $events = Event::inFuture()->whereType('slo')->orderBy('begins_at', 'DESC')->get();
+        $events = Event::inFuture()->whereType('slo')->orderBy('begins_at', 'ASC')->get();
 
         return view('pages.center.events', compact('events'));
     }
 
     public function fans_events()
     {
-        $events = Event::inFuture()->whereType('fans')->orderBy('begins_at', 'DESC')->get();
+        $events = Event::inFuture()->whereType('fans')->orderBy('begins_at', 'ASC')->get();
 
         return view('pages.fans.events', compact('events'));
     }
@@ -92,7 +92,7 @@ class PagesController extends Controller
 
     public function events()
     {
-        $events = Event::inFuture()->get();
+        $events = Event::inFuture()->orderBy('begins_at', 'ASC')->get();
 
         return view('pages.events', compact('events'));
     }
