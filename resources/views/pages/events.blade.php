@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    @include('includes.header_image', ['image' => 'GW1_0681.jpg'])
+    @include('includes.header_image', ['image' => 'GW1_4606.jpg'])
 
     <section>
         <div class="container pt45 pb60">
