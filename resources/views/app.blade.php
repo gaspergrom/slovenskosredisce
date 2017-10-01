@@ -18,7 +18,7 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     @yield('styles')
 </head>
-<body>
+<body lang="@lang('settings.lang')">
 <main>
     @include('includes.menu')
     @yield('content')
