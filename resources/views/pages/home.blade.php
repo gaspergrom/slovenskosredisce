@@ -11,6 +11,8 @@
         </div>
     </section>
 
+    <img src="{{asset('images/1.jpg')}}" class="img show-sm-block">
+
     <section class="line--bottom">
         <div class="container pt90 pb60">
             <h1 class="text-center">@lang('pages.home.title')</h1>
