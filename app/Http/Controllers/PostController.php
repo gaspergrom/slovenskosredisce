@@ -23,7 +23,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
         $data = $request->all();
-        $this->validate($data, [
+        $this->validate($request, [
             'image' => 'required|file|image'
         ]);
         $path = $request->file('image')->store('posts', [ 'disk' => 'public' ]);
@@ -42,7 +42,7 @@ class PostController extends Controller
         $data = $request->all();
 
         if ($request->hasFile('image')) {
-            $this->validate($data, [
+            $this->validate($request, [
                 'image' => 'file|image|required'
             ]);
             Storage::delete('public/' . $novice->image);
