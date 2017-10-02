@@ -207,7 +207,7 @@ organizacije dogodkov v Slovenskem središču - I feel Slovenia.
 							</tr>
 							<tr>
 								<td class="text-center text-bold">11:00 – 11:30</td>
-								<td class="text-center">Odmor (kava, sadje)/td>
+								<td class="text-center">Odmor (kava, sadje)</td>
 							</tr>
 							<tr>
 								<td class="text-center text-bold">11:30 – 12:00</td>
@@ -246,7 +246,8 @@ mesta Zagreb</td>
 							</tr>
 							<tr>
 								<td class="text-center text-bold">11:00 – 11:30</td>
-								<td class="text-center">Odmor (kava, sadje)
+								<td class="text-center">
+								Odmor (kava, sadje)
 								</td>
 							</tr>
 							<tr>

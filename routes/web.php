@@ -105,6 +105,7 @@ Route::prefix('admin')->group(function () {
         Route::resource('novice', 'PostController');
         Route::resource('galerija', 'GalleryController');
         Route::resource('videoposnetki', 'VideoController');
+        Route::resource('poslovni', 'BusinessEventsController');
         Route::delete('/images/{image}', 'GalleryController@deleteImage');
     });
 });

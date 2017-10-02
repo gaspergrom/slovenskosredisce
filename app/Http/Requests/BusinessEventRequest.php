@@ -4,8 +4,9 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class VideoRequest extends FormRequest
+class BusinessEventRequest extends FormRequest
 {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,7 +25,9 @@ class VideoRequest extends FormRequest
     public function rules()
     {
         return [
-            'video' => 'required|file|mimes:mp4,ogx,oga,ogv,ogg,webm'
+            'excerpt.*' => 'required|string',
+            'begins_at' => 'required|date',
+            'hour'      => 'required|string'
         ];
     }
 }

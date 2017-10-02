@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BusinessEvent;
 use App\Event;
 use App\Gallery;
 use App\Http\Requests\ContactRequest;
@@ -39,9 +40,11 @@ class PagesController extends Controller
 
     public function business_events()
     {
-        $events = Event::whereType('business')->get();
+        $events = BusinessEvent::all();
 
-        $events = $events->sortBy('begins_at')->map(function ($event) {
+        $events = $events->sortBy(function ($event) {
+            return sprintf('%-12s%s', $event->begins_at, $event->hour);
+        })->map(function ($event) {
             $event['day'] = $event['begins_at']->format('Y-m-d');
 
             return $event;

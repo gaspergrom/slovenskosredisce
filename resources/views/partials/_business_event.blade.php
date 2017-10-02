@@ -5,6 +5,6 @@
             ({{ $event->begins_at->formatLocalized('%A') }})
         </td>
     @endif
-    <td class="text-center text-bold">{{ $event->begins_at->format('H:i') }} – {{ $event->ends_at->format('H:i') }}</td>
+    <td class="text-center text-bold">{{ $event->hour }}</td>
     <td class="text-center">{{ $event->excerpt }}</td>
 </tr>

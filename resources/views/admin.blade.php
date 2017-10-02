@@ -26,6 +26,7 @@
                 <nav class="header__links flex flex--middle">
                     <ul class="flex">
                         <li><a href="{{ url('admin/dogodki') }}" class="text-uppercase">Dogodki</a></li>
+                        <li><a href="{{ url('admin/poslovni') }}" class="text-uppercase">Poslovni dogodki</a></li>
                         <li><a href="{{ url('admin/novice') }}" class="text-uppercase">Novice</a></li>
                         <li><a href="{{ url('admin/vodstvo') }}" class="text-uppercase">Vodstvo</a></li>
                         <li><a href="{{ url('admin/sponzorji') }}" class="text-uppercase">Sponzorji</a></li>

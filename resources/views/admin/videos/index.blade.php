@@ -8,7 +8,7 @@
             @include('partials._errors')
             <div class="flex flex--center">
                 <div class="col-md-8">
-                    {!! Form::open() !!}
+                    {!! Form::open(['url' => '/admin/videoposnetki', 'files' => true]) !!}
                     @include('admin.videos._form', ['submitBtn' => 'Dodaj'])
                     {!! Form::close() !!}
                 </div>
