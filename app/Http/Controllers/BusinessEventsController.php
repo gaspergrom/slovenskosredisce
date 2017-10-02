@@ -44,7 +44,10 @@ class BusinessEventsController extends Controller
      */
     public function edit(BusinessEvent $poslovni)
     {
-        return view('admin.business_events.edit')->with(['event' => $poslovni->toArray()]);
+        $data              = $poslovni->toArray();
+        $data['begins_at'] = $poslovni->formBeginsAtAttribute($poslovni->begins_at);
+
+        return view('admin.business_events.edit')->with(['event' => $data]);
     }
 
     /**
