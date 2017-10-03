@@ -94,6 +94,8 @@ class VideoController extends Controller
             $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
 
             $data['image'] = $img;
+            Storage::delete('public/' . $videoposnetki->path);
+            Storage::delete('public/' . $videoposnetki->image);
         }
         $videoposnetki->update($data);
 
@@ -103,6 +105,7 @@ class VideoController extends Controller
     public function destroy(Video $videoposnetki)
     {
         Storage::delete('public/' . $videoposnetki->path);
+        Storage::delete('public/' . $videoposnetki->image);
         $videoposnetki->delete();
 
         return "success";
