@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\VideoRequest;
 use App\Video;
-use Illuminate\Http\Request;
+use FFMpeg\FFMpeg;
+use FFMpeg\Coordinate;
 use Illuminate\Support\Facades\Storage;
-use Lakshmaji\Thumbnail\Facade\Thumbnail;
 
 class VideoController extends Controller
 {
@@ -25,20 +25,35 @@ class VideoController extends Controller
 
     public function store(VideoRequest $request)
     {
+        $this->validate($request, [
+            'video' => 'required|file|mimes:mp4,ogx,oga,ogv,ogg,webm'
+        ]);
         /*$this->validate($request, [
             'image' => 'required|file|image'
         ]);
 
         $image = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);*/
-        $video = $request->file('video')->store('videos', ['disk' => 'public']);
+        $video_path = $request->file('video')->store('videos', ['disk' => 'public']);
 
         $img_name = time() . ".jpg";
         $img_path = storage_path("app/public/thumbnails");
         $img      = "thumbnails/" . $img_name;
 
-        Thumbnail::getThumbnail($video, $img_path, $img_name, 2);
+        $ffmpeg = FFMpeg::create([
+            'ffmpeg.binaries'  => config('thumbnail.binaries.path.ffmpeg'),
+            'ffprobe.binaries' => config('thumbnail.binaries.path.ffprobe'),
+            'timeout'          => config('thumbnail.binaries.path.timeout'),
+            'ffmpeg.threads'   => config('thumbnail.binaries.path.threads'),
+        ]);
 
-        Video::create(['path' => $video, 'name' => $request->name, 'image' => $img]);
+        $video        = $ffmpeg->open(storage_path('app/public/' . $video_path));
+        $result_image = $img_path . '/' . $img_name;
+
+        $video->filters()->resize(new Coordinate\Dimension(config('thumbnail.dimensions.height'),
+            config('thumbnail.dimensions.width')))->synchronize();
+        $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
+
+        Video::create(['path' => $video_path, 'name' => $request->name, 'image' => $img]);
 
         return redirect('/admin/videoposnetki');
     }
@@ -50,7 +65,7 @@ class VideoController extends Controller
 
     public function update(Video $videoposnetki, VideoRequest $request)
     {
-        $data = $request->all();
+        $data = $request->all(['name']);
         /*if ( $request->hasFile('image') ) {
             $this->validate($request, [
                 'image' => 'required|file|image'
@@ -64,7 +79,20 @@ class VideoController extends Controller
             $img_path     = storage_path("app/public/thumbnails");
             $img          = "thumbnails/" . $img_name;
 
-            Thumbnail::getThumbnail($data['path'], $img_path, $img_name, 2);
+            $ffmpeg = FFMpeg::create([
+                'ffmpeg.binaries'  => config('thumbnail.binaries.path.ffmpeg'),
+                'ffprobe.binaries' => config('thumbnail.binaries.path.ffprobe'),
+                'timeout'          => config('thumbnail.binaries.path.timeout'),
+                'ffmpeg.threads'   => config('thumbnail.binaries.path.threads'),
+            ]);
+
+            $video        = $ffmpeg->open(storage_path('app/public/' . $data['path']));
+            $result_image = $img_path . '/' . $img_name;
+
+            $video->filters()->resize(new Coordinate\Dimension(config('thumbnail.dimensions.height'),
+                config('thumbnail.dimensions.width')))->synchronize();
+            $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
+
             $data['image'] = $img;
         }
         $videoposnetki->update($data);

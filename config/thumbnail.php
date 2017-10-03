@@ -8,7 +8,7 @@
 |
 */
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -25,8 +25,8 @@ return array(
     'binaries' => [
         'enabled' => env('FFMPEG_BINARIES', false),
         'path'    => [
-            'ffmpeg'  => env('FFMPEG_PATH', '/opt/local/ffmpeg/bin/ffmpeg'),
-            'ffprobe' => env('FFPROBE_PATH', '/opt/local/ffmpeg/bin/ffprobe'),
+            'ffmpeg'  => env('FFMPEG_PATH', '/usr/local/bin/ffmpeg'),
+            'ffprobe' => env('FFPROBE_PATH', '/usr/local/bin/ffprobe'),
             'timeout' => env('FFMPEG_TIMEOUT', 3600), // The timeout for the underlying process
             'threads' => env('FFMPEG_THREADS', 12), // The number of threads that FFMpeg should use
         ],
@@ -76,9 +76,9 @@ return array(
     |
     */
 
-    'THUMBNAIL_X' => '<YOUR_THUMBNAIL_X>',
+    'THUMBNAIL_X' => '240',
 
-);
+];
 
 // php artisan vendor:publish
 

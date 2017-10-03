@@ -26,7 +26,7 @@ class VideoRequest extends FormRequest
     {
         return [
             'name.*' => 'required|string',
-            'video'  => 'required|file|mimes:mp4,ogx,oga,ogv,ogg,webm'
+            'video'  => 'file|mimes:mp4,ogx,oga,ogv,ogg,webm'
         ];
     }
 }
