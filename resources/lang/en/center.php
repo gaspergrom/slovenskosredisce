@@ -3,7 +3,7 @@
 return [
     'presentation' => [
         'index'   => [
-            'title' => 'Slovenian center',
+            'title' => 'Slovenia center',
             'text'  => 'Prestigious international sporting events are being increasingly utilized for promoting business cooperation
 and organizing business activities, which are held as side events in the margins of major sporting
 competitions. In a wish to present and promote Slovenia as an integrated whole through major handball
