@@ -170,6 +170,7 @@ return [
         Spatie\Translatable\TranslatableServiceProvider::class,
         //Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Lakshmaji\Thumbnail\ThumbnailServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,6 +231,7 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'Html'         => Collective\Html\HtmlFacade::class,
         'Form'         => Collective\Html\FormFacade::class,
+        'Thumbnail'    => Lakshmaji\Thumbnail\Facade\Thumbnail::class,
 
     ],
 

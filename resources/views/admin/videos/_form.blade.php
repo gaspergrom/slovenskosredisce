@@ -1,3 +1,18 @@
+@include('admin._flags')
+<div>
+    <div id="slo">
+        <h4>Slo</h4>
+        {!! Form::text('name[sl]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov videa (slo)']) !!}
+    </div>
+    <div id="eng" style="display: none">
+        <h4>Eng</h4>
+        {!! Form::text('name[en]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov videa (eng)']) !!}
+    </div>
+    <div id="ger" style="display: none">
+        <h4>Ger</h4>
+        {!! Form::text('name[de]', null, ['class' => 'box mb15', 'placeholder' => 'Naslov videa (ger)']) !!}
+    </div>
+</div>
 <div class="flex flex--center pb30">
     <label for="file" class="flex flex--middle">
         Video
