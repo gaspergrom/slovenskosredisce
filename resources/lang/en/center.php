@@ -158,14 +158,9 @@ European handball championship.<br /><br/>The Slovenia Business Center in Croati
         ],
         'events'       => [
             'title'      => 'Events in the business center',
-            'text'       => 'The business center is a space, especially made for business as well as political meetings. The wide-ranging
-programme will include events, which enhance the business cooperation between Slovenian and Croatian
-companies, a regional economic and political meeting, a tourism forum, a sport forum, a business lunch
-between the two delegations, individual business partner meetings and similar events, which will al take
-place in the conference rooms of the ....... hotel.
-                        <br><br>In order to realise the business center’s objectives, diverse social and business events will be held in the
-hotel’s conference rooms, and that is why we have prepared a business activity programme of all the
-events held in the Center.',
+            'text'       => 'The business center is a space, especially made for business, sports as well as political meetings. The wide-ranging program will include events, which shall strive to enhance the business cooperation between Slovenia, Croatia and the entire region. The business and social events shall take place in the conference rooms of the Westin Hotel in Zagreb (salon Opera). Please find below a program of all the events and activities held in the Slovenia Center – I feel Slovenia.
+ <br /><br/>
+Event registration - <a href="https://www.slovensko-sredisce.com/sredisce/slovensko_sredisce_dogodki">click here</a>.',
             'table'      => '<tbody>
 							<tr>
 								<td class="text-center text-bold" rowspan="2">
