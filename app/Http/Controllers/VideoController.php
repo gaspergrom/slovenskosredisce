@@ -11,8 +11,17 @@ use Illuminate\Support\Facades\Storage;
 class VideoController extends Controller
 {
 
+    protected $ffmpeg;
+
     public function __construct()
     {
+        $this->ffmpeg = $ffmpeg = FFMpeg::create([
+            'ffmpeg.binaries'  => config('thumbnail.binaries.path.ffmpeg'),
+            'ffprobe.binaries' => config('thumbnail.binaries.path.ffprobe'),
+            'timeout'          => config('thumbnail.binaries.path.timeout'),
+            'ffmpeg.threads'   => config('thumbnail.binaries.path.threads'),
+        ]);
+
         $this->middleware('auth');
     }
 
@@ -34,26 +43,9 @@ class VideoController extends Controller
 
         $image = $request->file('image')->store('videos/images', [ 'disk' => 'public' ]);*/
         $video_path = $request->file('video')->store('videos', ['disk' => 'public']);
+        $this->makeThumbnail($video_path, $time = time());
 
-        $img_name = time() . ".jpg";
-        $img_path = storage_path("app/public/thumbnails");
-        $img      = "thumbnails/" . $img_name;
-
-        $ffmpeg = FFMpeg::create([
-            'ffmpeg.binaries'  => config('thumbnail.binaries.path.ffmpeg'),
-            'ffprobe.binaries' => config('thumbnail.binaries.path.ffprobe'),
-            'timeout'          => config('thumbnail.binaries.path.timeout'),
-            'ffmpeg.threads'   => config('thumbnail.binaries.path.threads'),
-        ]);
-
-        $video        = $ffmpeg->open(storage_path('app/public/' . $video_path));
-        $result_image = $img_path . '/' . $img_name;
-
-        $video->filters()->resize(new Coordinate\Dimension(config('thumbnail.dimensions.height'),
-            config('thumbnail.dimensions.width')))->synchronize();
-        $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
-
-        Video::create(['path' => $video_path, 'name' => $request->name, 'image' => $img]);
+        Video::create(['path' => $video_path, 'name' => $request->name, 'image' => "thumbnails/{$time}.jpg"]);
 
         return redirect('/admin/videoposnetki');
     }
@@ -75,25 +67,9 @@ class VideoController extends Controller
         }*/
         if ($request->hasFile('video')) {
             $data['path'] = $request->file('video')->store('videos', ['disk' => 'public']);
-            $img_name     = time() . ".jpg";
-            $img_path     = storage_path("app/public/thumbnails");
-            $img          = "thumbnails/" . $img_name;
+            $this->makeThumbnail($data['path'], $time = time());
 
-            $ffmpeg = FFMpeg::create([
-                'ffmpeg.binaries'  => config('thumbnail.binaries.path.ffmpeg'),
-                'ffprobe.binaries' => config('thumbnail.binaries.path.ffprobe'),
-                'timeout'          => config('thumbnail.binaries.path.timeout'),
-                'ffmpeg.threads'   => config('thumbnail.binaries.path.threads'),
-            ]);
-
-            $video        = $ffmpeg->open(storage_path('app/public/' . $data['path']));
-            $result_image = $img_path . '/' . $img_name;
-
-            $video->filters()->resize(new Coordinate\Dimension(config('thumbnail.dimensions.height'),
-                config('thumbnail.dimensions.width')))->synchronize();
-            $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
-
-            $data['image'] = $img;
+            $data['image'] = "thumbnails/{$time}.jpg";
             Storage::delete('public/' . $videoposnetki->path);
             Storage::delete('public/' . $videoposnetki->image);
         }
@@ -109,5 +85,18 @@ class VideoController extends Controller
         $videoposnetki->delete();
 
         return "success";
+    }
+
+    protected function makeThumbnail($video_path, $time)
+    {
+        $img_name = "{$time}.jpg";
+        $img_path = storage_path("app/public/thumbnails");
+
+        $video        = $this->ffmpeg->open(storage_path('app/public/' . $video_path));
+        $result_image = $img_path . '/' . $img_name;
+
+        $video->filters()->resize(new Coordinate\Dimension(config('thumbnail.dimensions.height'),
+            config('thumbnail.dimensions.width')))->synchronize();
+        $video->frame(Coordinate\TimeCode::fromSeconds(4))->save($result_image);
     }
 }
