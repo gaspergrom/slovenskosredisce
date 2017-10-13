@@ -178,9 +178,7 @@ Handball und die Europameisterschaft 2018 zusammenzubringen.<br><br>
         ],
         'events'       => [
             'title'      => 'Veranstaltungen im Slowenisches Zentrumu',
-            'text'       => 'Das Business Zentrum ist vor allem für Geschäfts-, Sport- und politische Treffen bestimmt. Das umfangreiche Programm umfasst Veranstaltungen, die dazu bestimmt sind, die Zusammenarbeit zwischen Slowenien, Kroatien und der gesamten Region zu verbessern. Die geschäftlichen und gesellschaftlichen Veranstaltungen finden in den Konferenzräumen des Westin Hotels in Zagreb (Salon Opera) statt. Unten sind aufgeführt alle Veranstaltungen und Aktivitäten, die im Slowenischen Zentrum - ich fühle Slowenien statt finden.
- <br /><br />
-Klicken Sie <a href="https://www.slovensko-sredisce.com/sredisce/slovensko_sredisce_dogodki">hier</a>, um sich zu registrieren.',
+            'text'       => 'Das Business Zentrum ist vor allem für Geschäfts-, Sport- und politische Treffen bestimmt. Das umfangreiche Programm umfasst Veranstaltungen, die dazu bestimmt sind, die Zusammenarbeit zwischen Slowenien, Kroatien und der gesamten Region zu verbessern. Die geschäftlichen und gesellschaftlichen Veranstaltungen finden in den Konferenzräumen des Westin Hotels in Zagreb (Salon Opera) statt. Unten sind aufgeführt alle Veranstaltungen und Aktivitäten, die im Slowenischen Zentrum - ich fühle Slowenien statt finden.',
             'table'      => '<tbody>
 							<tr>
 								<td class="text-center text-bold" rowspan="2">

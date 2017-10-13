@@ -178,8 +178,7 @@ vsebinskega vidika bodo v sklopu tega organizirani različni poslovni in družab
 namenjeni okrepitvi poslovnega sodelovanja med podjetji iz Slovenije in Hrvaške ter regije. Poslovni
 in družabni dogodki bodo organizirani v notranjih konferenčnih prostorih hotela Westin Zagreb
 (salon Opera). Izhajajoč iz tega je pripravljen poslovni program izvedbe aktivnosti oziroma
-organizacije dogodkov v Slovenskem središču - I feel Slovenia.
-<br /><br />Za prijavo na dogodke kliknite <a href="https://www.slovensko-sredisce.com/sredisce/slovensko_sredisce_dogodki">TUKAJ</a> in izberite dogodke ter se prijavite.',
+organizacije dogodkov v Slovenskem središču - I feel Slovenia.',
             'table'      => '<tbody>
 							<tr>
 								<td class="text-center text-bold" rowspan="3">
