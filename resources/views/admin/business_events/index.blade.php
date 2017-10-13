@@ -31,6 +31,7 @@
 @endsection
 
 @section('scripts')
+    @include('includes.tinymce')
     <script>
         function deleteEvent(id) {
             $.ajax({

@@ -6,5 +6,5 @@
         </td>
     @endif
     <td class="text-center text-bold">{{ $event->hour }}</td>
-    <td class="text-center">{{ $event->excerpt }}</td>
+    <td class="text-center">{!! $event->excerpt !!}</td>
 </tr>

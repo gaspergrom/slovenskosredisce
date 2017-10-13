@@ -16,3 +16,7 @@
         </div>
     </section>
 @endsection
+
+@section('scripts')
+    @include('includes.tinymce')
+@endsection
