@@ -307,7 +307,7 @@ mesta Zagreb</td>
             'import'     => 'Uvoz blaga',
             'sum'        => 'Skupaj',
             'saldo'      => 'Saldo',
-            'source'     => 'Vir: Ministrstvo Republike Slovenije za zunanje zadeve, Veleposlaništvo v ZagrebU (2017)',
+            'source'     => 'Vir: Ministrstvo Republike Slovenije za zunanje zadeve, Veleposlaništvo v Zagrebu (2017)',
         ]
     ],
     'fans'         => [
