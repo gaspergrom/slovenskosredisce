@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <!-- page details -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Gasper Grom">
+    <meta name="description" content="Slovensko središče - I feel Slovenia">
+    <meta name="keywords" content="slovensko sredisce, slovensko, sredisce, rokomet, slovensko sredisce rokometa, rokomet v sloveniji, evropsko prvensto zagreb 2018, I feel Slovenia, z roko v roki. rokomet">
+    <meta name="author" content="Slovensko Sredisce">
+    <meta name="google-site-verification" content="H-W1U9_ZO5fyQ7r2uWPg8gFFdPIdwuRMTwF8pmn7AoA" />
 
     <!-- visual info -->
     <title>Slovensko Središče Rokometa</title>
