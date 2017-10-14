@@ -49,6 +49,7 @@
                             @endif
                     </div>
             </div>
+            @include('includes.facebook_share')
     </section>
 
     <div class="popup__overlay flex flex--center flex--middle" id="prijava">

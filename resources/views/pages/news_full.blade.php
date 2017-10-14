@@ -13,6 +13,7 @@
                         {!! $post->content !!}
                     </p>
                 </div>
+                @include('includes.facebook_share')
             </div>
         </div>
     </section>
