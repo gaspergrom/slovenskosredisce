@@ -1,0 +1,7 @@
+skip_missing_workers: true
+jpegoptim:
+  allow_lossy: true
+  max_quality: 65
+jpegrecompress:
+  quality: 1
+
