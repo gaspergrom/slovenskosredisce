@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <!-- page details -->
     <meta name="description" content="Slovensko središče - I feel Slovenia">
-    <meta name="keywords" content="slovensko sredisce, slovensko, sredisce, rokomet, slovensko sredisce rokometa, rokomet v sloveniji, evropsko prvensto zagreb 2018, I feel Slovenia, z roko v roki. rokomet">
+    <meta name="keywords"
+          content="slovensko sredisce, slovensko, sredisce, rokomet, slovensko sredisce rokometa, rokomet v sloveniji, evropsko prvensto zagreb 2018, I feel Slovenia, z roko v roki. rokomet">
     <meta name="author" content="Slovensko Sredisce">
-    <meta name="google-site-verification" content="H-W1U9_ZO5fyQ7r2uWPg8gFFdPIdwuRMTwF8pmn7AoA" />
+    <meta name="google-site-verification" content="H-W1U9_ZO5fyQ7r2uWPg8gFFdPIdwuRMTwF8pmn7AoA"/>
 
     <!-- visual info -->
     <title>Slovensko Središče Rokometa</title>
@@ -97,7 +98,14 @@
                 </div>
             </div>
             <div class="copyright flex flex--between pt20 pb20">
-                © Copyright Slovensko Središče 2017
+                <div>
+                    © Copyright Slovensko Središče 2017&nbsp;&nbsp;•&nbsp;&nbsp;
+                    Izdelava: <a target="_blank"
+                                 rel="noreferrer noopener"
+                                 href="http://gromgasper.com">Gašper
+                        Grom</a> in
+                    <a target="_blank" rel="noreferrer noopener" href="http://zigastrgar.com">Žiga Strgar</a>
+                </div>
             </div>
         </div>
     </footer>
