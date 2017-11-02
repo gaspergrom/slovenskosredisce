@@ -161,7 +161,7 @@
                                    href="http://cro2018.ehf-euro.com/schedule-results/final-tournament/preliminary-round/group-c/">@lang('menu.fans.schedule')</a>
                             </li>
                             <li>
-                                <a href="http://www.ulaznice.hr/ehf-euro-2018/ctl_evt.jsp?act=priredbe_org&t=78&org_id=2"
+                                <a href="http://www.kompas.si/destinacijeRezultat.asp?katalog=496"
                                    target="_blank" rel="noreferrer noopener">@lang('menu.fans.tickets')</a></li>
                             <li><a target="_blank" rel="noreferrer noopener" rel="noreferrer noopener"
                                    href="https://www.stadionshop.com/si/slovenija/rokometna-zveza-slovenije.html">@lang('menu.fans.gear')</a>
