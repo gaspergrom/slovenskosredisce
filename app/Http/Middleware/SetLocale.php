@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Carbon\Carbon;
 use Closure;
 use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Crypt;
 
 class SetLocale
@@ -35,9 +36,9 @@ class SetLocale
 
             return $next($request);
         } catch (DecryptException $exception) {
-            $cookie = cookie('locale', 'sl', time()-1);
+            $cookie = cookie('locale', '', 24 * 365 * 60 * 1);
 
-            return redirect()->to('/')->withCookie($cookie);
+            return redirect()->to('/locale/sl')->withCookie($cookie);
         }
     }
 }
